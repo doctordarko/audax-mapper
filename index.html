@@ -1,0 +1,1009 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Audax Ride Overlay & Overlaps Dashboard</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Leaflet Map CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+    
+    <!-- Project Stylesheet -->
+    <link rel="stylesheet" href="index.css" />
+</head>
+<body>
+    <div class="dashboard-container">
+        
+        <!-- Top Filter Bar -->
+        <header class="top-bar glass">
+            <div class="top-bar-left" style="display: none;"></div>
+            
+            <div class="top-bar-filters">
+                <!-- Search Bar -->
+                <div class="filter-group-horizontal">
+                    <span class="filter-label">Search</span>
+                    <div class="search-input-wrapper">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <input type="text" id="search-bar" class="search-input" placeholder="Search ride...">
+                    </div>
+                </div>
+                
+                <!-- Ride Type Filter -->
+                <div class="filter-group-horizontal">
+                    <span class="filter-label">Type</span>
+                    <div class="segment-control" id="type-filter">
+                        <button class="segment-btn active" data-type="all">All</button>
+                        <button class="segment-btn" data-type="brm">BRM</button>
+                        <button class="segment-btn" data-type="ba">BA</button>
+                    </div>
+                </div>
+                
+                <!-- Organiser Filter -->
+                <div class="filter-group-horizontal">
+                    <span class="filter-label">Organiser</span>
+                    <select id="organiser-filter" class="search-input">
+                        <option value="all">All Organisers</option>
+                    </select>
+                </div>
+                
+                <!-- Distance Filter -->
+                <div class="filter-group-horizontal">
+                    <span class="filter-label">Distance</span>
+                    <div class="segment-control" id="distance-filter">
+                        <button class="segment-btn active" data-dist="all">All</button>
+                        <button class="segment-btn" data-dist="short">&lt;150k</button>
+                        <button class="segment-btn" data-dist="medium">150k-300k</button>
+                        <button class="segment-btn" data-dist="long">300k+</button>
+                    </div>
+                </div>
+                
+                <!-- Month Filter -->
+                <div class="filter-group-horizontal">
+                    <span class="filter-label">Month</span>
+                    <select id="month-filter" class="search-input">
+                        <option value="all">All Months</option>
+                        <option value="01">January</option>
+                        <option value="02">February</option>
+                        <option value="03">March</option>
+                        <option value="04">April</option>
+                        <option value="05">May</option>
+                        <option value="06">June</option>
+                        <option value="07">July</option>
+                        <option value="08">August</option>
+                        <option value="09">September</option>
+                        <option value="10">October</option>
+                        <option value="11">November</option>
+                        <option value="12">December</option>
+                    </select>
+                </div>
+                
+                <!-- Sorting Selector -->
+                <div class="filter-group-horizontal">
+                    <span class="filter-label">Sort By</span>
+                    <select id="sort-filter" class="search-input" style="width: 150px;">
+                        <option value="date-asc">Date: Earliest</option>
+                        <option value="date-desc">Date: Latest</option>
+                        <option value="name-asc">Event Name: A-Z</option>
+                        <option value="dist-desc">Distance: Max First</option>
+                        <option value="dist-asc">Distance: Min First</option>
+                    </select>
+                </div>
+            </div>
+        </header>
+        
+        <!-- Workspace Area -->
+        <div class="workspace-area">
+            
+            <!-- Left Sidebar Pane (Dedicated entirely to event listings) -->
+            <aside class="sidebar glass">
+                <div class="sidebar-content">
+                    
+                    <!-- Sidebar Title Branding (Laptop Fit) -->
+                    <div class="sidebar-header" style="border: none; padding: 0 0 4px 0; margin-bottom: 4px;">
+                        <h1 class="sidebar-title" style="font-size: 1.4rem;">
+                            <i class="fa-solid fa-map-location-dot" style="color: var(--accent-cyan);"></i>
+                            Audax Route Overlay
+                        </h1>
+                        <p class="sidebar-subtitle" style="font-size: 0.75rem; color: var(--text-secondary); margin-top: 2px;">
+                            Identify overlaps, gaps & calendar distribution
+                        </p>
+                    </div>
+                    
+                    <!-- Quick Stats -->
+                    <div class="stats-grid">
+                        <div class="stat-card">
+                            <div class="stat-val" id="stat-routes">0</div>
+                            <div class="stat-label">Routes</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-val" id="stat-distance">0k</div>
+                            <div class="stat-label">Total Km</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-val" id="stat-events">0</div>
+                            <div class="stat-label">Events</div>
+                        </div>
+                    </div>
+                    
+                    <!-- Route Isolation Banner -->
+                    <div class="isolation-banner" id="isolation-banner" style="display: none;">
+                        <span>Viewing Isolated Selection</span>
+                        <button class="clear-isolation-btn" id="clear-isolation-btn">
+                            <i class="fa-solid fa-rotate-left"></i> Show All
+                        </button>
+                    </div>
+                    
+                    <!-- Scrollable Event Group list -->
+                    <div class="filter-group" style="flex: 1; min-height: 0;">
+                        <div class="route-list-header" style="border: none; padding-top: 0; margin-bottom: 8px;">
+                            <span class="filter-label" id="list-count-label">Events (0) • Routes (0)</span>
+                            <span style="font-size: 0.65rem; color: var(--text-muted);">Hover titles to overlay event</span>
+                        </div>
+                        <div class="route-list" id="route-list-container" style="max-height: none; flex: 1;">
+                            <!-- Dynamic nested groups -->
+                        </div>
+                    </div>
+                    
+                </div>
+            </aside>
+            
+            <!-- Map Container -->
+            <main class="map-container">
+                <div id="map"></div>
+                
+                <!-- Map Settings Toggle (Gear button) -->
+                <button id="settings-toggle-btn" class="settings-toggle-btn glass" title="Map Settings">
+                    <i class="fa-solid fa-gear"></i>
+                </button>
+                
+                <!-- Map Settings Floating Card Panel -->
+                <div class="settings-card glass" id="settings-card-panel">
+                    <div class="map-card-title">
+                        <span>Map Settings</span>
+                    </div>
+                    
+                    <!-- Section: Base Map -->
+                    <div style="display: flex; flex-direction: column;">
+                        <div class="settings-section-lbl">Base Map style</div>
+                        <div class="basemap-grid">
+                            <div class="basemap-option active" data-map="dark">
+                                <i class="fa-solid fa-moon"></i>
+                                <span>Dark Matter</span>
+                            </div>
+                            <div class="basemap-option" data-map="light">
+                                <i class="fa-solid fa-sun"></i>
+                                <span>Positron</span>
+                            </div>
+                            <div class="basemap-option" data-map="outdoor">
+                                <i class="fa-solid fa-mountain-sun"></i>
+                                <span>Outdoor</span>
+                            </div>
+                            <div class="basemap-option" data-map="satellite">
+                                <i class="fa-solid fa-earth-americas"></i>
+                                <span>Satellite</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Section: Route Styling Mode -->
+                    <div style="display: flex; flex-direction: column;">
+                        <div class="settings-section-lbl">Route Overlay Style</div>
+                        <div class="segment-control" id="theme-mode-filter" style="width: 100%; grid-template-columns: 1fr 1fr;">
+                            <button class="segment-btn active" data-mode="heatmap">Density Heatmap</button>
+                            <button class="segment-btn" data-mode="distinct">Distinct Hues</button>
+                        </div>
+                    </div>
+                    
+                    <!-- Section: Opacity / Transparency Slider -->
+                    <div style="display: flex; flex-direction: column; gap: 6px;">
+                        <div style="display: flex; justify-content: space-between; align-items: center; width: 100%;">
+                            <span class="settings-section-lbl" style="margin-bottom: 0;">Line Transparency</span>
+                            <span id="opacity-val" style="color: var(--accent-cyan); font-size: 0.72rem; font-weight: 700;">25%</span>
+                        </div>
+                        <input type="range" id="opacity-slider" class="range-slider" min="5" max="95" value="25">
+                    </div>
+                </div>
+                
+                <!-- Map Selected Route Details Dialog -->
+                <div class="map-card info-card glass" id="info-card-panel">
+                    <div class="map-card-title">
+                        <span>Route Selected</span>
+                        <button class="close-btn" id="close-info-card"><i class="fa-solid fa-xmark"></i></button>
+                    </div>
+                    <div class="info-card-header">
+                        <div class="info-card-title" id="info-title">Route Name</div>
+                        <div class="info-card-event" id="info-event">Part of Wellington Loops 2026</div>
+                    </div>
+                    
+                    <div class="info-card-stats">
+                        <div class="info-stat">
+                            <div class="info-stat-lbl">Distance</div>
+                            <div class="info-stat-val" id="info-stat-dist">0 km</div>
+                        </div>
+                        <div class="info-stat">
+                            <div class="info-stat-lbl">Climbing</div>
+                            <div class="info-stat-val" id="info-stat-climb">0 m</div>
+                        </div>
+                    </div>
+                    
+                    <!-- Custom Elevation Chart -->
+                    <div class="elevation-profile-container">
+                        <canvas id="elevation-chart" class="elevation-canvas"></canvas>
+                        <div class="elevation-label-x">
+                            <span>Start</span>
+                            <span>Elevation Profile</span>
+                            <span>Finish</span>
+                        </div>
+                    </div>
+                </div>
+            </main>
+            
+        </div>
+        
+    </div>
+    
+    <!-- Leaflet JS -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+    
+    <!-- Dashboard Core Script -->
+    <script>
+        // Core application state
+        let map;
+        let allRoutes = [];
+        let mapLayers = {}; // eventId_routeId -> Leaflet PolyLine layer
+        let activeTileLayer; // Active Leaflet tile layer reference
+        
+        let currentMode = "heatmap"; 
+        let selectedRouteId = null;
+        let hoveredRouteId = null;
+        let hoveredEventId = null; 
+        
+        // Isolation state
+        let isolatedEventId = null;
+        let isolatedRouteId = null;
+        
+        // Setup Map
+        function initMap() {
+            // Center map on Adelaide, South Australia
+            map = L.map('map', {
+                zoomControl: false
+            }).setView([-34.9285, 138.6007], 9);
+            
+            L.control.zoom({ position: 'topleft' }).addTo(map);
+            
+            // Set default dark matter layer
+            changeBaseMap('dark');
+        }
+        
+        // Handle Tile Layer Switching
+        function changeBaseMap(type) {
+            if (activeTileLayer) {
+                map.removeLayer(activeTileLayer);
+            }
+            
+            let url, attrib;
+            if (type === 'dark') {
+                url = 'https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png';
+                attrib = '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>';
+            } else if (type === 'light') {
+                url = 'https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png';
+                attrib = '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>';
+            } else if (type === 'satellite') {
+                url = 'https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}';
+                attrib = 'Tiles &copy; Esri &mdash; Source: Esri, i-cubed, USDA, USGS, AEX, GeoEye, Getmapping, Aerogrid, IGN, IGP, UPR-EGP, and the GIS User Community';
+            } else if (type === 'outdoor') {
+                url = 'https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png';
+                attrib = '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>';
+            }
+            
+            activeTileLayer = L.tileLayer(url, {
+                attribution: attrib,
+                maxZoom: 20
+            }).addTo(map);
+        }
+        
+        // Date formatting YYYY-MM-DD -> DD/MM/YYYY
+        function formatDate(dateStr) {
+            if (!dateStr) return "";
+            const parts = dateStr.split('-');
+            if (parts.length === 3) {
+                return `${parts[2]}/${parts[1]}/${parts[0]}`;
+            }
+            return dateStr;
+        }
+        
+        // Helper to hash string to a color hue
+        function getHueForRoute(routeId) {
+            let hash = 0;
+            const idStr = String(routeId);
+            for (let i = 0; i < idStr.length; i++) {
+                hash = idStr.charCodeAt(i) + ((hash << 5) - hash);
+            }
+            return Math.abs(hash % 360);
+        }
+        
+        // Fetch and load route tracks
+        async function loadRoutesData() {
+            try {
+                const response = await fetch('data/compiled_routes.json');
+                allRoutes = await response.json();
+                console.log(`Loaded ${allRoutes.length} compiled routes.`);
+                
+                populateOrganisersDropdown();
+                renderMapRoutes();
+                renderRouteList();
+                updateStats();
+            } catch (error) {
+                console.error("Error loading compiled routes:", error);
+                alert("Failed to load compiled_routes.json. Make sure python scrape_calendar.py completed successfully.");
+            }
+        }
+        
+        // Extract unique organizers and fill dropdown
+        function populateOrganisersDropdown() {
+            const dropdown = document.getElementById('organiser-filter');
+            dropdown.innerHTML = '<option value="all">All Organisers</option>';
+            
+            const organisers = new Set();
+            allRoutes.forEach(r => {
+                if (r.organiser && r.organiser !== "Unknown") {
+                    organisers.add(r.organiser);
+                }
+            });
+            
+            Array.from(organisers).sort().forEach(org => {
+                const opt = document.createElement('option');
+                opt.value = org;
+                opt.textContent = org;
+                dropdown.appendChild(opt);
+            });
+        }
+        
+        // Render polylines on map
+        function renderMapRoutes() {
+            // Remove existing layers using the unique keys
+            Object.keys(mapLayers).forEach(key => {
+                map.removeLayer(mapLayers[key]);
+            });
+            mapLayers = {};
+            
+            const filtered = getFilteredRoutes();
+            const opacity = parseFloat(document.getElementById('opacity-slider').value) / 100;
+            
+            filtered.forEach(route => {
+                if (!route.track || route.track.length === 0) return;
+                
+                let color;
+                if (currentMode === "heatmap") {
+                    color = "#f43f5e";
+                } else {
+                    color = `hsl(${getHueForRoute(route.route_id)}, 85%, 60%)`;
+                }
+                
+                const latlngs = route.track.map(pt => [pt[0], pt[1]]);
+                
+                const isSelected = selectedRouteId === route.route_id;
+                const isHovered = hoveredRouteId === route.route_id;
+                const isEventHovered = hoveredEventId === route.event_id;
+                
+                let strokeColor = color;
+                let weight = 3;
+                let strokeOpacity = opacity;
+                
+                if (isSelected) {
+                    strokeColor = "#06b6d4";
+                    weight = 5;
+                    strokeOpacity = 1.0;
+                } else if (isHovered) {
+                    strokeColor = "#f59e0b";
+                    weight = 4.5;
+                    strokeOpacity = 0.9;
+                } else if (isEventHovered) {
+                    strokeColor = "#ff7849";
+                    weight = 4;
+                    strokeOpacity = 0.8;
+                }
+                
+                const layer = L.polyline(latlngs, {
+                    color: strokeColor,
+                    weight: weight,
+                    opacity: strokeOpacity,
+                    className: 'route-path-line'
+                }).addTo(map);
+                
+                layer.bindTooltip(`
+                    <div style="font-weight: 700; color: #fff;">${route.route_name}</div>
+                    <div style="font-size: 0.75rem; color: #9ca3af; margin-top: 2px;">
+                        Type: ${route.route_type} • ${route.distance_km} km • ${route.elevation_gain_m}m climb
+                    </div>
+                `, { sticky: true });
+                
+                layer.on('mouseover', () => {
+                    if (selectedRouteId !== route.route_id) {
+                        hoveredRouteId = route.route_id;
+                        updateMapStyles();
+                        highlightListItem(route.route_id);
+                    }
+                });
+                
+                layer.on('mouseout', () => {
+                    if (hoveredRouteId === route.route_id) {
+                        hoveredRouteId = null;
+                        updateMapStyles();
+                        unhighlightListItem(route.route_id);
+                    }
+                });
+                
+                layer.on('click', () => {
+                    selectRoute(route);
+                });
+                
+                // Use unique composite key to prevent duplicates from orphaning
+                const layerKey = `${route.event_id}_${route.route_id}`;
+                mapLayers[layerKey] = layer;
+            });
+        }
+        
+        // Update styling of map polylines
+        function updateMapStyles() {
+            const opacity = parseFloat(document.getElementById('opacity-slider').value) / 100;
+            
+            allRoutes.forEach(route => {
+                const layerKey = `${route.event_id}_${route.route_id}`;
+                const layer = mapLayers[layerKey];
+                if (!layer) return;
+                
+                const isSelected = selectedRouteId === route.route_id;
+                const isHovered = hoveredRouteId === route.route_id;
+                const isEventHovered = hoveredEventId === route.event_id;
+                
+                let color;
+                if (currentMode === "heatmap") {
+                    color = "#f43f5e";
+                } else {
+                    color = `hsl(${getHueForRoute(route.route_id)}, 85%, 60%)`;
+                }
+                
+                let strokeColor = color;
+                let weight = 3;
+                let strokeOpacity = opacity;
+                
+                if (isSelected) {
+                    strokeColor = "#06b6d4";
+                    weight = 5;
+                    strokeOpacity = 1.0;
+                } else if (isHovered) {
+                    strokeColor = "#f59e0b";
+                    weight = 4.5;
+                    strokeOpacity = 0.9;
+                } else if (isEventHovered) {
+                    strokeColor = "#ff7849";
+                    weight = 4;
+                    strokeOpacity = 0.8;
+                }
+                
+                layer.setStyle({
+                    color: strokeColor,
+                    weight: weight,
+                    opacity: strokeOpacity
+                });
+                
+                if (isSelected || isHovered || isEventHovered) {
+                    layer.bringToFront();
+                }
+            });
+        }
+        
+        // Select route and open info card
+        function selectRoute(route) {
+            selectedRouteId = route.route_id;
+            updateMapStyles();
+            
+            document.querySelectorAll('.route-subitem').forEach(el => {
+                el.classList.remove('active');
+                if (el.dataset.id === route.route_id) {
+                    el.classList.add('active');
+                    el.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+                }
+            });
+            
+            const card = document.getElementById('info-card-panel');
+            card.style.display = 'block';
+            
+            document.getElementById('info-title').textContent = route.route_name;
+            document.getElementById('info-event').textContent = `Type: ${route.route_type} | Event: ${route.event_title} (${formatDate(route.event_date)})`;
+            document.getElementById('info-stat-dist').textContent = `${route.distance_km} km`;
+            document.getElementById('info-stat-climb').textContent = `${route.elevation_gain_m} m`;
+            
+            const layerKey = `${route.event_id}_${route.route_id}`;
+            const layer = mapLayers[layerKey];
+            if (layer) {
+                map.fitBounds(layer.getBounds(), { padding: [50, 50] });
+            }
+            
+            drawElevationProfile(route.track);
+        }
+        
+        // Zoom map to fit ALL routes of an event
+        function zoomToEvent(eventId) {
+            const eventRoutes = allRoutes.filter(r => r.event_id === eventId);
+            const bounds = [];
+            
+            eventRoutes.forEach(r => {
+                const layerKey = `${r.event_id}_${r.route_id}`;
+                const layer = mapLayers[layerKey];
+                if (layer) {
+                    bounds.push(layer.getBounds());
+                }
+            });
+            
+            if (bounds.length > 0) {
+                let combinedBounds = bounds[0];
+                for (let i = 1; i < bounds.length; i++) {
+                    combinedBounds.extend(bounds[i]);
+                }
+                map.fitBounds(combinedBounds, { padding: [40, 40] });
+            }
+        }
+        
+        // Draw HTML5 Canvas Elevation Profile
+        function drawElevationProfile(track) {
+            const canvas = document.getElementById('elevation-chart');
+            const ctx = canvas.getContext('2d');
+            
+            canvas.width = canvas.clientWidth * window.devicePixelRatio;
+            canvas.height = canvas.clientHeight * window.devicePixelRatio;
+            ctx.scale(window.devicePixelRatio, window.devicePixelRatio);
+            
+            const width = canvas.width / window.devicePixelRatio;
+            const height = canvas.height / window.devicePixelRatio;
+            
+            ctx.clearRect(0, 0, width, height);
+            
+            const elevations = track.map(p => p[2] || 0);
+            if (elevations.length < 2) return;
+            
+            const minElev = Math.min(...elevations);
+            const maxElev = Math.max(...elevations);
+            const elevRange = maxElev - minElev || 1;
+            
+            ctx.beginPath();
+            ctx.moveTo(0, height);
+            
+            const pointsCount = elevations.length;
+            for (let i = 0; i < pointsCount; i++) {
+                const x = (i / (pointsCount - 1)) * width;
+                const y = height - 10 - ((elevations[i] - minElev) / elevRange) * (height - 20);
+                ctx.lineTo(x, y);
+            }
+            ctx.lineTo(width, height);
+            ctx.closePath();
+            
+            const gradient = ctx.createLinearGradient(0, 0, 0, height);
+            gradient.addColorStop(0, 'rgba(6, 182, 212, 0.45)');
+            gradient.addColorStop(1, 'rgba(6, 182, 212, 0.0)');
+            
+            ctx.fillStyle = gradient;
+            ctx.fill();
+            
+            ctx.beginPath();
+            for (let i = 0; i < pointsCount; i++) {
+                const x = (i / (pointsCount - 1)) * width;
+                const y = height - 10 - ((elevations[i] - minElev) / elevRange) * (height - 20);
+                if (i === 0) ctx.moveTo(x, y);
+                else ctx.lineTo(x, y);
+            }
+            ctx.strokeStyle = 'var(--accent-cyan)';
+            ctx.lineWidth = 2;
+            ctx.stroke();
+            
+            ctx.font = '500 9px sans-serif';
+            ctx.fillStyle = 'var(--text-muted)';
+            ctx.fillText(`${Math.round(maxElev)}m`, 5, 12);
+            ctx.fillText(`${Math.round(minElev)}m`, 5, height - 2);
+        }
+        
+        // Filter logic
+        function getFilteredRoutes() {
+            if (isolatedRouteId !== null) {
+                return allRoutes.filter(r => r.route_id === isolatedRouteId);
+            }
+            
+            if (isolatedEventId !== null) {
+                return allRoutes.filter(r => r.event_id === isolatedEventId);
+            }
+            
+            const searchQuery = document.getElementById('search-bar').value.toLowerCase().trim();
+            const activeDistance = document.querySelector('#distance-filter .segment-btn.active').dataset.dist;
+            const activeType = document.querySelector('#type-filter .segment-btn.active').dataset.type;
+            const activeOrganiser = document.getElementById('organiser-filter').value;
+            const activeMonth = document.getElementById('month-filter').value;
+            
+            return allRoutes.filter(route => {
+                const nameMatch = route.route_name.toLowerCase().includes(searchQuery);
+                const eventMatch = route.event_title.toLowerCase().includes(searchQuery);
+                const orgMatch = route.organiser.toLowerCase().includes(searchQuery);
+                const idMatch = String(route.route_id).includes(searchQuery) || String(route.event_id).includes(searchQuery);
+                if (searchQuery && !nameMatch && !eventMatch && !orgMatch && !idMatch) return false;
+                
+                if (activeType !== 'all') {
+                    const rType = route.route_type.toLowerCase();
+                    if (activeType === 'brm' && rType !== 'brm') return false;
+                    if (activeType === 'ba' && rType !== 'ba') return false;
+                }
+                
+                if (activeOrganiser !== 'all' && route.organiser !== activeOrganiser) return false;
+                
+                const dist = route.distance_km;
+                if (activeDistance === 'short' && dist >= 150) return false;
+                if (activeDistance === 'medium' && (dist < 150 || dist >= 300)) return false;
+                if (activeDistance === 'long' && dist < 300) return false;
+                
+                if (activeMonth !== 'all') {
+                    const dateParts = route.event_date.split('-');
+                    if (dateParts.length >= 2) {
+                        const m = dateParts[1];
+                        if (m !== activeMonth) return false;
+                    } else {
+                        return false;
+                    }
+                }
+                
+                return true;
+            });
+        }
+        
+        // Isolation trigger methods
+        function toggleEventIsolation(eventId) {
+            if (isolatedEventId === eventId) {
+                isolatedEventId = null;
+            } else {
+                isolatedEventId = eventId;
+                isolatedRouteId = null; 
+                zoomToEvent(eventId);
+            }
+            updateIsolationUI();
+            renderMapRoutes();
+            renderRouteList();
+            updateStats();
+        }
+        
+        function toggleRouteIsolation(routeId) {
+            if (isolatedRouteId === routeId) {
+                isolatedRouteId = null;
+            } else {
+                isolatedRouteId = routeId;
+                isolatedEventId = null; 
+                
+                const route = allRoutes.find(r => r.route_id === routeId);
+                if (route) selectRoute(route);
+            }
+            updateIsolationUI();
+            renderMapRoutes();
+            renderRouteList();
+            updateStats();
+        }
+        
+        function clearIsolation() {
+            isolatedEventId = null;
+            isolatedRouteId = null;
+            updateIsolationUI();
+            renderMapRoutes();
+            renderRouteList();
+            updateStats();
+        }
+        
+        function updateIsolationUI() {
+            const banner = document.getElementById('isolation-banner');
+            if (isolatedEventId !== null || isolatedRouteId !== null) {
+                banner.style.display = 'flex';
+                if (isolatedRouteId !== null) {
+                    const r = allRoutes.find(route => route.route_id === isolatedRouteId);
+                    banner.querySelector('span').textContent = `Viewing Isolated Route: ${r ? r.route_name : 'Selected'}`;
+                } else {
+                    const ev = allRoutes.find(route => route.event_id === isolatedEventId);
+                    banner.querySelector('span').textContent = `Viewing Isolated Event: ${ev ? ev.event_title : 'Selected'}`;
+                }
+            } else {
+                banner.style.display = 'none';
+            }
+        }
+        
+        // Render grouped routes list in sidebar
+        function renderRouteList() {
+            const container = document.getElementById('route-list-container');
+            container.innerHTML = '';
+            
+            const filtered = getFilteredRoutes();
+            
+            // Group filtered routes by event ID
+            const eventGroups = {};
+            filtered.forEach(route => {
+                if (!eventGroups[route.event_id]) {
+                    eventGroups[route.event_id] = {
+                        event_id: route.event_id,
+                        title: route.event_title,
+                        date: route.event_date,
+                        organiser: route.organiser,
+                        routes: []
+                    };
+                }
+                eventGroups[route.event_id].routes.push(route);
+            });
+            
+            const eventCount = Object.keys(eventGroups).length;
+            document.getElementById('list-count-label').textContent = `Events (${eventCount}) • Routes (${filtered.length})`;
+            
+            // Convert to array and sort according to sort selector
+            const groupsArray = Object.values(eventGroups);
+            const activeSort = document.getElementById('sort-filter').value;
+            
+            groupsArray.sort((a, b) => {
+                if (activeSort === 'date-asc') {
+                    return a.date.localeCompare(b.date);
+                } else if (activeSort === 'date-desc') {
+                    return b.date.localeCompare(a.date);
+                } else if (activeSort === 'name-asc') {
+                    return a.title.localeCompare(b.title);
+                } else if (activeSort === 'dist-desc') {
+                    const maxA = Math.max(...a.routes.map(r => r.distance_km));
+                    const maxB = Math.max(...b.routes.map(r => r.distance_km));
+                    return maxB - maxA;
+                } else if (activeSort === 'dist-asc') {
+                    const minA = Math.min(...a.routes.map(r => r.distance_km));
+                    const minB = Math.min(...b.routes.map(r => r.distance_km));
+                    return minA - minB;
+                }
+                return 0;
+            });
+            
+            groupsArray.forEach(groupData => {
+                const eventId = groupData.event_id;
+                const groupEl = document.createElement('div');
+                groupEl.className = 'event-group';
+                
+                const isEventIsolated = isolatedEventId === eventId;
+                
+                // Group Header
+                const headerEl = document.createElement('div');
+                headerEl.className = 'event-group-header';
+                headerEl.innerHTML = `
+                    <div class="event-group-title-container">
+                        <div class="event-group-title">${groupData.title}</div>
+                        <div class="event-group-meta">
+                            <span>Organiser: ${groupData.organiser}</span>
+                            <span>Date: ${formatDate(groupData.date)}</span>
+                        </div>
+                    </div>
+                    <button class="isolate-btn tooltip ${isEventIsolated ? 'active' : ''}" title="${isEventIsolated ? 'Show All Events' : 'Isolate Event'}" data-eventid="${eventId}">
+                        <i class="fa-solid ${isEventIsolated ? 'fa-eye' : 'fa-eye-slash'}"></i>
+                    </button>
+                `;
+                
+                // Bind hover events to title
+                const titleContainer = headerEl.querySelector('.event-group-title-container');
+                titleContainer.addEventListener('mouseenter', () => {
+                    hoveredEventId = eventId;
+                    updateMapStyles();
+                });
+                
+                titleContainer.addEventListener('mouseleave', () => {
+                    hoveredEventId = null;
+                    updateMapStyles();
+                });
+                
+                titleContainer.addEventListener('click', () => {
+                    zoomToEvent(eventId);
+                });
+                
+                // Bind isolate event button click
+                const eventIsolateBtn = headerEl.querySelector('.isolate-btn');
+                eventIsolateBtn.addEventListener('click', (e) => {
+                    e.stopPropagation();
+                    toggleEventIsolation(eventId);
+                });
+                
+                // Routes container
+                const routesContainer = document.createElement('div');
+                routesContainer.className = 'event-group-routes';
+                
+                // Sort routes in event by distance ascending
+                groupData.routes.sort((a, b) => a.distance_km - b.distance_km);
+                
+                groupData.routes.forEach(route => {
+                    const routeEl = document.createElement('div');
+                    routeEl.className = 'route-subitem';
+                    routeEl.dataset.id = route.route_id;
+                    
+                    if (selectedRouteId === route.route_id) {
+                        routeEl.classList.add('active');
+                    }
+                    
+                    const badgeClass = route.route_type.toLowerCase() === 'brm' ? 'type-brm' : 'type-ba';
+                    const isRouteIsolated = isolatedRouteId === route.route_id;
+                    
+                    routeEl.innerHTML = `
+                        <span class="route-subitem-name">${route.route_name}</span>
+                        <div class="route-subitem-meta">
+                            <span class="route-subitem-type ${badgeClass}">${route.route_type}</span>
+                            <span class="route-subitem-dist">${route.distance_km} km</span>
+                            <button class="isolate-btn tooltip ${isRouteIsolated ? 'active' : ''}" title="${isRouteIsolated ? 'Show All Routes' : 'Isolate Route'}" style="width: 18px; height: 18px; font-size: 0.7rem; margin-left: 2px;">
+                                <i class="fa-solid ${isRouteIsolated ? 'fa-eye' : 'fa-eye-slash'}"></i>
+                            </button>
+                        </div>
+                    `;
+                    
+                    routeEl.addEventListener('mouseenter', () => {
+                        hoveredRouteId = route.route_id;
+                        updateMapStyles();
+                        routeEl.classList.add('hovered');
+                    });
+                    
+                    routeEl.addEventListener('mouseleave', () => {
+                        hoveredRouteId = null;
+                        updateMapStyles();
+                        routeEl.classList.remove('hovered');
+                    });
+                    
+                    routeEl.addEventListener('click', () => {
+                        selectRoute(route);
+                    });
+                    
+                    // Bind isolate route button click
+                    const routeIsolateBtn = routeEl.querySelector('.isolate-btn');
+                    routeIsolateBtn.addEventListener('click', (e) => {
+                        e.stopPropagation();
+                        toggleRouteIsolation(route.route_id);
+                    });
+                    
+                    routesContainer.appendChild(routeEl);
+                });
+                
+                groupEl.appendChild(headerEl);
+                groupEl.appendChild(routesContainer);
+                container.appendChild(groupEl);
+            });
+        }
+        
+        // List styling triggers from map events
+        function highlightListItem(routeId) {
+            const item = document.querySelector(`.route-subitem[data-id="${routeId}"]`);
+            if (item) item.classList.add('hovered');
+        }
+        
+        function unhighlightListItem(routeId) {
+            const item = document.querySelector(`.route-subitem[data-id="${routeId}"]`);
+            if (item) item.classList.remove('hovered');
+        }
+        
+        // Update Quick Statistics counts
+        function updateStats() {
+            const filtered = getFilteredRoutes();
+            document.getElementById('stat-routes').textContent = filtered.length;
+            
+            const totalDist = filtered.reduce((sum, r) => sum + r.distance_km, 0);
+            document.getElementById('stat-distance').textContent = totalDist >= 1000 ? `${(totalDist/1000).toFixed(1)}k` : `${Math.round(totalDist)}k`;
+            
+            const uniqueEvents = new Set(filtered.map(r => r.event_id));
+            document.getElementById('stat-events').textContent = uniqueEvents.size;
+        }
+        
+        // Event Listeners Initialization
+        function initListeners() {
+            // Search Bar Input
+            document.getElementById('search-bar').addEventListener('input', () => {
+                renderMapRoutes();
+                renderRouteList();
+                updateStats();
+            });
+            
+            // Distance Filter Segment Controls
+            document.querySelectorAll('#distance-filter .segment-btn').forEach(btn => {
+                btn.addEventListener('click', (e) => {
+                    document.querySelectorAll('#distance-filter .segment-btn').forEach(b => b.classList.remove('active'));
+                    e.target.classList.add('active');
+                    renderMapRoutes();
+                    renderRouteList();
+                    updateStats();
+                });
+            });
+            
+            // Type Filter Segment Controls
+            document.querySelectorAll('#type-filter .segment-btn').forEach(btn => {
+                btn.addEventListener('click', (e) => {
+                    document.querySelectorAll('#type-filter .segment-btn').forEach(b => b.classList.remove('active'));
+                    e.target.classList.add('active');
+                    renderMapRoutes();
+                    renderRouteList();
+                    updateStats();
+                });
+            });
+            
+            // Organiser Dropdown Filter
+            document.getElementById('organiser-filter').addEventListener('change', () => {
+                renderMapRoutes();
+                renderRouteList();
+                updateStats();
+            });
+            
+            // Month Dropdown Filter
+            document.getElementById('month-filter').addEventListener('change', () => {
+                renderMapRoutes();
+                renderRouteList();
+                updateStats();
+            });
+            
+            // Sorting Filter Dropdown
+            document.getElementById('sort-filter').addEventListener('change', () => {
+                renderRouteList();
+            });
+            
+            // Map Settings Gear Button Toggle
+            const settingsBtn = document.getElementById('settings-toggle-btn');
+            const settingsCard = document.getElementById('settings-card-panel');
+            settingsBtn.addEventListener('click', () => {
+                const isOpen = settingsCard.style.display === 'flex';
+                settingsCard.style.display = isOpen ? 'none' : 'flex';
+                settingsBtn.classList.toggle('active', !isOpen);
+            });
+            
+            // Basemap Options Click Selection
+            document.querySelectorAll('.basemap-option').forEach(opt => {
+                opt.addEventListener('click', (e) => {
+                    document.querySelectorAll('.basemap-option').forEach(o => o.classList.remove('active'));
+                    const el = e.target.closest('.basemap-option');
+                    el.classList.add('active');
+                    changeBaseMap(el.dataset.map);
+                });
+            });
+            
+            // Map Styling Toggle (Heatmap / Distinct colors) inside settings card
+            document.querySelectorAll('#theme-mode-filter .segment-btn').forEach(btn => {
+                btn.addEventListener('click', (e) => {
+                    document.querySelectorAll('#theme-mode-filter .segment-btn').forEach(b => b.classList.remove('active'));
+                    e.target.classList.add('active');
+                    currentMode = e.target.dataset.mode;
+                    renderMapRoutes();
+                });
+            });
+            
+            // Opacity slider changes inside settings card
+            const opacitySlider = document.getElementById('opacity-slider');
+            const opacityVal = document.getElementById('opacity-val');
+            opacitySlider.addEventListener('input', (e) => {
+                const val = e.target.value;
+                opacityVal.textContent = `${val}%`;
+                updateMapStyles();
+            });
+            
+            // Clear isolation click
+            document.getElementById('clear-isolation-btn').addEventListener('click', () => {
+                clearIsolation();
+            });
+            
+            // Close info card overlay
+            document.getElementById('close-info-card').addEventListener('click', () => {
+                selectedRouteId = null;
+                document.getElementById('info-card-panel').style.display = 'none';
+                updateMapStyles();
+                document.querySelectorAll('.route-subitem').forEach(el => el.classList.remove('active'));
+            });
+        }
+        
+        // Window Load
+        window.addEventListener('load', () => {
+            initMap();
+            initListeners();
+            loadRoutesData();
+        });
+    </script>
+</body>
+</html>

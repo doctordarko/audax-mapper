@@ -1,0 +1,15 @@
+# Python virtual environment
+venv/
+
+# Scratch, debug, and test scripts
+test/
+
+# Scraper raw HTML/JSON cache (remains local to keep repo clean)
+data/raw_events/
+data/raw_routes/
+
+# Operating system / IDE metadata
+.DS_Store
+.vscode/
+.idea/
+*.log
