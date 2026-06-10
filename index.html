@@ -289,6 +289,11 @@
 
             L.control.zoom({ position: 'topleft' }).addTo(map);
 
+            // Clicking empty map space deselects any selected route
+            map.on('click', () => {
+                if (selectedRouteId) deselectRoute();
+            });
+
             // Set default dark matter layer
             changeBaseMap('dark');
         }
@@ -455,7 +460,14 @@
                     if (prevHovered) unhighlightListItem(prevHovered);
                 });
 
-                layer.on('click', () => {
+                // Suppress tooltip when a route is selected — tooltips are
+                // managed by Leaflet independently of our mouseover handler
+                layer.on('tooltipopen', () => {
+                    if (selectedRouteId) layer.closeTooltip();
+                });
+
+                layer.on('click', (e) => {
+                    L.DomEvent.stopPropagation(e); // prevent map click deselect firing
                     selectRoute(route);
                 });
 
@@ -515,6 +527,15 @@
                     layer.bringToFront();
                 }
             });
+        }
+
+        // Deselect route and close info card
+        function deselectRoute() {
+            selectedRouteId = null;
+            hoveredRouteId = null;
+            document.getElementById('info-card-panel').style.display = 'none';
+            updateMapStyles();
+            document.querySelectorAll('.route-subitem').forEach(el => el.classList.remove('active'));
         }
 
         // Select route and open info card
@@ -1010,11 +1031,9 @@
 
             // Close info card overlay
             document.getElementById('close-info-card').addEventListener('click', () => {
-                selectedRouteId = null;
-                document.getElementById('info-card-panel').style.display = 'none';
-                updateMapStyles();
-                document.querySelectorAll('.route-subitem').forEach(el => el.classList.remove('active'));
+                deselectRoute();
             });
+
         }
 
         // Window Load
