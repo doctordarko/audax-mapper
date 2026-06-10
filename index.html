@@ -460,7 +460,7 @@
                 let strokeOpacity = opacity;
 
                 if (isSelected) {
-                    strokeColor = "#06b6d4";
+                    strokeColor = (document.documentElement.getAttribute('data-theme') === 'light') ? "#0c4a6e" : "#06b6d4";
                     weight = 5;
                     strokeOpacity = 1.0;
                 } else if (isHovered) {
@@ -563,7 +563,7 @@
                 let strokeOpacity = opacity;
 
                 if (isSelected) {
-                    strokeColor = "#06b6d4";
+                    strokeColor = (document.documentElement.getAttribute('data-theme') === 'light') ? "#0c4a6e" : "#06b6d4";
                     weight = 5;
                     strokeOpacity = 1.0;
                 } else if (isHovered) {
@@ -791,8 +791,14 @@
             ctx.lineTo(width, height);
             ctx.closePath();
             const gradient = ctx.createLinearGradient(0, 0, 0, height);
-            gradient.addColorStop(0, 'rgba(6, 182, 212, 0.45)');
-            gradient.addColorStop(1, 'rgba(6, 182, 212, 0.0)');
+            const isLight = document.documentElement.getAttribute('data-theme') === 'light';
+            if (isLight) {
+                gradient.addColorStop(0, 'rgba(12, 74, 110, 0.35)');
+                gradient.addColorStop(1, 'rgba(12, 74, 110, 0.0)');
+            } else {
+                gradient.addColorStop(0, 'rgba(6, 182, 212, 0.45)');
+                gradient.addColorStop(1, 'rgba(6, 182, 212, 0.0)');
+            }
             ctx.fillStyle = gradient;
             ctx.fill();
 
@@ -841,7 +847,8 @@
             // Vertical dashed line
             ctx.save();
             ctx.setLineDash([3, 3]);
-            ctx.strokeStyle = 'rgba(6, 182, 212, 0.7)';
+            const isLight = document.documentElement.getAttribute('data-theme') === 'light';
+            ctx.strokeStyle = isLight ? 'rgba(12, 74, 110, 0.6)' : 'rgba(6, 182, 212, 0.7)';
             ctx.lineWidth = 1;
             ctx.beginPath();
             ctx.moveTo(x, 0);
@@ -852,7 +859,7 @@
             // Dot on line
             ctx.beginPath();
             ctx.arc(x, y, 4, 0, Math.PI * 2);
-            ctx.fillStyle = '#06b6d4';
+            ctx.fillStyle = 'var(--accent-cyan)';
             ctx.fill();
             ctx.strokeStyle = '#fff';
             ctx.lineWidth = 1.5;
@@ -861,7 +868,7 @@
             // Elevation label
             const elev = Math.round(elevations[clampedIdx]);
             ctx.font = '600 9px sans-serif';
-            ctx.fillStyle = '#06b6d4';
+            ctx.fillStyle = 'var(--accent-cyan)';
             const labelX = x > width - 42 ? x - 44 : x + 5;
             const labelY = y > 15 ? y - 6 : y + 14;
             ctx.fillText(`${elev}m`, labelX, labelY);
@@ -1285,6 +1292,13 @@
                 const newTheme = isLight ? 'dark' : 'light';
                 applyTheme(newTheme);
                 localStorage.setItem('audax-theme', newTheme);
+
+                // Redraw map routes to update highlighted/selected color if any
+                renderMapRoutes();
+                // Redraw elevation profile if there is a selected route
+                if (currentTrack) {
+                    drawElevationProfile(currentTrack);
+                }
             });
 
             // Elevation chart hover → scrub + map cursor
@@ -1301,9 +1315,12 @@
                 // Move or create the cyan cursor marker on the map
                 const pt = currentTrack[idx];
                 if (pt && pt[0] != null && pt[1] != null) {
+                    const isLight = document.documentElement.getAttribute('data-theme') === 'light';
+                    const markerBg = isLight ? '#0c4a6e' : '#06b6d4';
+                    const markerShadow = isLight ? 'rgba(12, 74, 110, 0.8)' : 'rgba(6, 182, 212, 0.8)';
                     const cursorIcon = L.divIcon({
-                        html: `<div style="background:#06b6d4;width:10px;height:10px;border-radius:50%;` +
-                              `border:2px solid #fff;box-shadow:0 0 6px rgba(6,182,212,0.8);"></div>`,
+                        html: `<div style="background:${markerBg};width:10px;height:10px;border-radius:50%;` +
+                              `border:2px solid #fff;box-shadow:0 0 6px ${markerShadow};"></div>`,
                         iconSize: [10, 10], iconAnchor: [5, 5], className: ''
                     });
                     if (!elevCursorMarker) {

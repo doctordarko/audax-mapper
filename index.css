@@ -32,14 +32,14 @@
     --bg-card: rgba(255, 255, 255, 0.70);
     --bg-card-hover: rgba(255, 255, 255, 0.95);
     --border-color: rgba(0, 0, 0, 0.09);
-    --border-active: rgba(6, 182, 212, 0.5);
+    --border-active: rgba(12, 74, 110, 0.4);
 
     --text-primary: #0f172a;
     --text-secondary: #475569;
     --text-muted: #94a3b8;
 
-    --accent-cyan: #0891b2;
-    --accent-cyan-glow: rgba(8, 145, 178, 0.18);
+    --accent-cyan: #0c4a6e;
+    --accent-cyan-glow: rgba(12, 74, 110, 0.15);
     --accent-pink: #e11d48;
     --accent-pink-glow: rgba(225, 29, 72, 0.18);
 }
