@@ -446,11 +446,12 @@
                 });
 
                 layer.on('mouseout', () => {
-                    if (hoveredRouteId === route.route_id) {
-                        hoveredRouteId = null;
-                        updateMapStyles();
-                        unhighlightListItem(route.route_id);
-                    }
+                    // Always clear hover — don't check route_id match, to
+                    // avoid sticky-yellow when moving quickly between routes
+                    const prevHovered = hoveredRouteId;
+                    hoveredRouteId = null;
+                    updateMapStyles();
+                    if (prevHovered) unhighlightListItem(prevHovered);
                 });
 
                 layer.on('click', () => {
@@ -516,6 +517,10 @@
         // Select route and open info card
         function selectRoute(route) {
             selectedRouteId = route.route_id;
+            // Clear any lingering hover so selected (blue) and hovered (yellow)
+            // never appear simultaneously
+            if (hoveredRouteId) unhighlightListItem(hoveredRouteId);
+            hoveredRouteId = null;
             updateMapStyles();
 
             document.querySelectorAll('.route-subitem').forEach(el => {
