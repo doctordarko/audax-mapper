@@ -521,8 +521,11 @@
                     opacity: strokeOpacity
                 });
 
-                // Only bring selected route to front — bringing hovered routes
-                // to front reorders Leaflet layers and breaks tooltip close tracking
+                // Bring hovered/selected routes to front so they render fully
+                // above overlapping routes. Selected is brought last so it wins.
+                if (isHovered || isEventHovered) {
+                    layer.bringToFront();
+                }
                 if (isSelected) {
                     layer.bringToFront();
                 }
