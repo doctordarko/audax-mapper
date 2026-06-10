@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Audax Ride Overlay & Overlaps Dashboard</title>
+    <title>Audax Mapper 2026</title>
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -64,9 +64,9 @@
                     <span class="filter-label">Distance</span>
                     <div class="segment-control" id="distance-filter">
                         <button class="segment-btn active" data-dist="all">All</button>
-                        <button class="segment-btn" data-dist="short">&lt;150k</button>
-                        <button class="segment-btn" data-dist="medium">150k-300k</button>
-                        <button class="segment-btn" data-dist="long">300k+</button>
+                        <button class="segment-btn" data-dist="short">&lt;150km</button>
+                        <button class="segment-btn" data-dist="medium">150-300km</button>
+                        <button class="segment-btn" data-dist="long">>300km</button>
                     </div>
                 </div>
 
@@ -131,7 +131,7 @@
                         </div>
                         <div class="stat-card">
                             <div class="stat-val" id="stat-distance">0k</div>
-                            <div class="stat-label">Total Km</div>
+                            <div class="stat-label">Total km</div>
                         </div>
                         <div class="stat-card">
                             <div class="stat-val" id="stat-events">0</div>
@@ -215,9 +215,9 @@
                         <div style="display: flex; justify-content: space-between; align-items: center; width: 100%;">
                             <span class="settings-section-lbl" style="margin-bottom: 0;">Line Transparency</span>
                             <span id="opacity-val"
-                                style="color: var(--accent-cyan); font-size: 0.72rem; font-weight: 700;">25%</span>
+                                style="color: var(--accent-cyan); font-size: 0.72rem; font-weight: 700;">50%</span>
                         </div>
-                        <input type="range" id="opacity-slider" class="range-slider" min="5" max="95" value="25">
+                        <input type="range" id="opacity-slider" class="range-slider" min="5" max="95" value="50">
                     </div>
                 </div>
 
