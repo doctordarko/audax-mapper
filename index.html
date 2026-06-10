@@ -438,16 +438,17 @@
                 `, { sticky: true });
 
                 layer.on('mouseover', () => {
-                    if (selectedRouteId !== route.route_id) {
-                        hoveredRouteId = route.route_id;
-                        updateMapStyles();
-                        highlightListItem(route.route_id);
-                    }
+                    // When a route is selected, suppress hover effects entirely
+                    // to avoid visual confusion (sticky yellow, tooltip flooding)
+                    if (selectedRouteId) return;
+                    hoveredRouteId = route.route_id;
+                    updateMapStyles();
+                    highlightListItem(route.route_id);
                 });
 
                 layer.on('mouseout', () => {
-                    // Always clear hover — don't check route_id match, to
-                    // avoid sticky-yellow when moving quickly between routes
+                    // Only clear hover when nothing is selected (hover mode)
+                    if (selectedRouteId) return;
                     const prevHovered = hoveredRouteId;
                     hoveredRouteId = null;
                     updateMapStyles();
@@ -508,7 +509,9 @@
                     opacity: strokeOpacity
                 });
 
-                if (isSelected || isHovered || isEventHovered) {
+                // Only bring selected route to front — bringing hovered routes
+                // to front reorders Leaflet layers and breaks tooltip close tracking
+                if (isSelected) {
                     layer.bringToFront();
                 }
             });
