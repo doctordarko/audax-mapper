@@ -853,3 +853,12 @@ select.search-input {
     display: none !important;
 }
 
+/* Prevent ugly black focus outline boxes on map elements */
+.leaflet-container:focus,
+.leaflet-container :focus,
+.leaflet-interactive:focus,
+path.leaflet-interactive:focus,
+.leaflet-marker-icon:focus {
+    outline: none !important;
+}
+
