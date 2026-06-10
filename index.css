@@ -25,6 +25,33 @@
     --transition-normal: 0.35s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+/* ── Light mode theme overrides ───────────────────────────────────── */
+[data-theme="light"] {
+    --bg-base: #f1f5f9;
+    --bg-sidebar: rgba(255, 255, 255, 0.80);
+    --bg-card: rgba(255, 255, 255, 0.70);
+    --bg-card-hover: rgba(255, 255, 255, 0.95);
+    --border-color: rgba(0, 0, 0, 0.09);
+    --border-active: rgba(6, 182, 212, 0.5);
+
+    --text-primary: #0f172a;
+    --text-secondary: #475569;
+    --text-muted: #94a3b8;
+
+    --accent-cyan: #0891b2;
+    --accent-cyan-glow: rgba(8, 145, 178, 0.18);
+    --accent-pink: #e11d48;
+    --accent-pink-glow: rgba(225, 29, 72, 0.18);
+}
+
+[data-theme="light"] ::-webkit-scrollbar-thumb {
+    background: rgba(0, 0, 0, 0.18);
+}
+
+[data-theme="light"] .glass {
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08), 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
 * {
     box-sizing: border-box;
     margin: 0;

@@ -112,15 +112,24 @@
                 <div class="sidebar-content">
 
                     <!-- Sidebar Title Branding (Laptop Fit) -->
-                    <div class="sidebar-header" style="border: none; padding: 0 0 4px 0; margin-bottom: 4px;">
-                        <h1 class="sidebar-title" style="font-size: 1.4rem;">
-                            <i class="fa-solid fa-map-location-dot" style="color: var(--accent-cyan);"></i>
-                            Audax Mapper 2026
-                        </h1>
-                        <p class="sidebar-subtitle"
-                            style="font-size: 0.75rem; color: var(--text-secondary); margin-top: 2px;">
-                            Identify overlaps, gaps & calendar distribution
-                        </p>
+                    <div class="sidebar-header" style="border: none; padding: 0 0 4px 0; margin-bottom: 4px; display:flex; align-items:flex-start; justify-content:space-between;">
+                        <div>
+                            <h1 class="sidebar-title" style="font-size: 1.4rem;">
+                                <i class="fa-solid fa-map-location-dot" style="color: var(--accent-cyan);"></i>
+                                Audax Mapper 2026
+                            </h1>
+                            <p class="sidebar-subtitle"
+                                style="font-size: 0.75rem; color: var(--text-secondary); margin-top: 2px;">
+                                Identify overlaps, gaps &amp; calendar distribution
+                            </p>
+                        </div>
+                        <button id="theme-toggle-btn" title="Toggle dark/light mode"
+                            style="background:none;border:1px solid var(--border-color);border-radius:8px;
+                                   color:var(--text-secondary);cursor:pointer;padding:5px 9px;font-size:0.85rem;
+                                   display:flex;align-items:center;transition:var(--transition-fast);
+                                   flex-shrink:0;margin-top:3px;">
+                            <i class="fa-solid fa-moon" id="theme-toggle-icon"></i>
+                        </button>
                     </div>
 
                     <!-- Quick Stats -->
@@ -1269,6 +1278,14 @@
             document.getElementById('toggle-start-btn').addEventListener('click', () => toggleStartOverlay());
             document.getElementById('toggle-end-btn').addEventListener('click',   () => toggleEndOverlay());
 
+            // Dark / Light mode toggle
+            document.getElementById('theme-toggle-btn').addEventListener('click', () => {
+                const isLight = document.documentElement.getAttribute('data-theme') === 'light';
+                const newTheme = isLight ? 'dark' : 'light';
+                applyTheme(newTheme);
+                localStorage.setItem('audax-theme', newTheme);
+            });
+
             // Elevation chart hover → scrub + map cursor
             const elevCanvas = document.getElementById('elevation-chart');
 
@@ -1313,7 +1330,37 @@
             initMap();
             initListeners();
             loadRoutesData();
+
+            // Restore saved theme preference
+            const savedTheme = localStorage.getItem('audax-theme') || 'dark';
+            if (savedTheme === 'light') applyTheme('light');
         });
+
+        // Apply dark or light theme to the app
+        function applyTheme(theme) {
+            if (theme === 'light') {
+                document.documentElement.setAttribute('data-theme', 'light');
+                document.getElementById('theme-toggle-icon').className = 'fa-solid fa-sun';
+                // Switch to Positron (light) basemap if currently on Dark Matter
+                const activeMap = document.querySelector('.basemap-option.active');
+                if (!activeMap || activeMap.dataset.map === 'dark') {
+                    document.querySelectorAll('.basemap-option').forEach(o => o.classList.remove('active'));
+                    document.querySelector('.basemap-option[data-map="light"]').classList.add('active');
+                    changeBaseMap('light');
+                }
+            } else {
+                document.documentElement.removeAttribute('data-theme');
+                document.getElementById('theme-toggle-icon').className = 'fa-solid fa-moon';
+                // Switch back to Dark Matter basemap if on Positron
+                const activeMap = document.querySelector('.basemap-option.active');
+                if (!activeMap || activeMap.dataset.map === 'light') {
+                    document.querySelectorAll('.basemap-option').forEach(o => o.classList.remove('active'));
+                    document.querySelector('.basemap-option[data-map="dark"]').classList.add('active');
+                    changeBaseMap('dark');
+                }
+            }
+        }
+
     </script>
 </body>
 
