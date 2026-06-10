@@ -112,24 +112,15 @@
                 <div class="sidebar-content">
 
                     <!-- Sidebar Title Branding (Laptop Fit) -->
-                    <div class="sidebar-header" style="border: none; padding: 0 0 4px 0; margin-bottom: 4px; display:flex; align-items:flex-start; justify-content:space-between;">
-                        <div>
-                            <h1 class="sidebar-title" style="font-size: 1.4rem;">
-                                <i class="fa-solid fa-map-location-dot" style="color: var(--accent-cyan);"></i>
-                                Audax Mapper 2026
-                            </h1>
-                            <p class="sidebar-subtitle"
-                                style="font-size: 0.75rem; color: var(--text-secondary); margin-top: 2px;">
-                                Identify overlaps, gaps &amp; calendar distribution
-                            </p>
-                        </div>
-                        <button id="theme-toggle-btn" title="Toggle dark/light mode"
-                            style="background:none;border:1px solid var(--border-color);border-radius:8px;
-                                   color:var(--text-secondary);cursor:pointer;padding:5px 9px;font-size:0.85rem;
-                                   display:flex;align-items:center;transition:var(--transition-fast);
-                                   flex-shrink:0;margin-top:3px;">
-                            <i class="fa-solid fa-moon" id="theme-toggle-icon"></i>
-                        </button>
+                    <div class="sidebar-header" style="border: none; padding: 0 0 4px 0; margin-bottom: 4px;">
+                        <h1 class="sidebar-title" style="font-size: 1.4rem;">
+                            <i class="fa-solid fa-map-location-dot" style="color: var(--accent-cyan);"></i>
+                            Audax Mapper 2026
+                        </h1>
+                        <p class="sidebar-subtitle"
+                            style="font-size: 0.75rem; color: var(--text-secondary); margin-top: 2px;">
+                            Identify overlaps, gaps &amp; calendar distribution
+                        </p>
                     </div>
 
                     <!-- Quick Stats -->
@@ -241,6 +232,16 @@
                             style="width:100%; justify-content: flex-start; gap: 8px; padding: 7px 10px; text-align:left;">
                             <span style="width:9px;height:9px;border-radius:50%;background:#ef4444;display:inline-block;flex-shrink:0;"></span>
                             Show End Points
+                        </button>
+                    </div>
+
+                    <!-- Section: Appearance -->
+                    <div style="display: flex; flex-direction: column; gap: 8px;">
+                        <div class="settings-section-lbl">Appearance</div>
+                        <button id="theme-toggle-btn" class="segment-btn"
+                            style="width:100%; justify-content: flex-start; gap: 8px; padding: 7px 10px; text-align:left;">
+                            <i class="fa-solid fa-moon" id="theme-toggle-icon" style="width:14px;text-align:center;"></i>
+                            <span id="theme-toggle-label">Switch to Light Mode</span>
                         </button>
                     </div>
                 </div>
@@ -1338,9 +1339,15 @@
 
         // Apply dark or light theme to the app
         function applyTheme(theme) {
+            const icon  = document.getElementById('theme-toggle-icon');
+            const label = document.getElementById('theme-toggle-label');
+            const btn   = document.getElementById('theme-toggle-btn');
+
             if (theme === 'light') {
                 document.documentElement.setAttribute('data-theme', 'light');
-                document.getElementById('theme-toggle-icon').className = 'fa-solid fa-sun';
+                icon.className  = 'fa-solid fa-sun';
+                if (label) label.textContent = 'Switch to Dark Mode';
+                if (btn)   btn.classList.add('active');
                 // Switch to Positron (light) basemap if currently on Dark Matter
                 const activeMap = document.querySelector('.basemap-option.active');
                 if (!activeMap || activeMap.dataset.map === 'dark') {
@@ -1350,7 +1357,9 @@
                 }
             } else {
                 document.documentElement.removeAttribute('data-theme');
-                document.getElementById('theme-toggle-icon').className = 'fa-solid fa-moon';
+                icon.className  = 'fa-solid fa-moon';
+                if (label) label.textContent = 'Switch to Light Mode';
+                if (btn)   btn.classList.remove('active');
                 // Switch back to Dark Matter basemap if on Positron
                 const activeMap = document.querySelector('.basemap-option.active');
                 if (!activeMap || activeMap.dataset.map === 'light') {

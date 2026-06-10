@@ -139,6 +139,15 @@ body {
     gap: 10px;
 }
 
+/* Light mode: solid dark-blue (gradient invisible on white bg) */
+[data-theme="light"] .sidebar-title {
+    background: none;
+    -webkit-background-clip: unset;
+    background-clip: unset;
+    -webkit-text-fill-color: unset;
+    color: #0c4a6e;
+}
+
 .top-bar-filters {
     display: flex;
     align-items: center;
