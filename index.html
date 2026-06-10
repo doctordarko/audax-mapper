@@ -219,6 +219,19 @@
                         </div>
                         <input type="range" id="opacity-slider" class="range-slider" min="5" max="95" value="50">
                     </div>
+
+                    <!-- Section: Layer Overlays -->
+                    <div style="display: flex; flex-direction: column; gap: 8px;">
+                        <div class="settings-section-lbl">Layer Overlays</div>
+                        <button id="toggle-startend-btn" class="segment-btn"
+                            style="width:100%; justify-content: flex-start; gap: 8px; padding: 7px 10px; text-align:left;">
+                            <span style="display:inline-flex;gap:4px;align-items:center;">
+                                <span style="width:9px;height:9px;border-radius:50%;background:#22c55e;display:inline-block;"></span>
+                                <span style="width:9px;height:9px;border-radius:50%;background:#ef4444;display:inline-block;"></span>
+                            </span>
+                            Show Start &amp; End Points
+                        </button>
+                    </div>
                 </div>
 
                 <!-- Map Selected Route Details Dialog -->
@@ -285,11 +298,15 @@
         let hoveredEventId = null;
 
         // Track/marker state for selected route
-        let currentTrack = null;       // track array of selected route
-        let elevBaseImageData = null;  // pre-rendered elevation canvas snapshot
+        let currentTrack = null;
+        let elevBaseImageData = null;
         let startMarker = null;
         let endMarker = null;
-        let elevCursorMarker = null;   // cyan dot on map synced to elevation hover
+        let elevCursorMarker = null;
+
+        // Start/End overlay state
+        let showStartEndOverlay = false;
+        let startEndLayerGroup = null;
 
         // Isolation state
         let isolatedEventId = null;
@@ -502,6 +519,9 @@
                 const layerKey = `${route.event_id}_${route.route_id}`;
                 mapLayers[layerKey] = layer;
             });
+
+            // Refresh start/end overlay to match new filtered set
+            refreshStartEndOverlay();
         }
 
         // Update styling of map polylines
@@ -566,6 +586,57 @@
             if (elevCursorMarker) { elevCursorMarker.remove(); elevCursorMarker = null; }
             currentTrack = null;
             elevBaseImageData = null;
+        }
+
+        // Toggle the start/end overlay layer on or off
+        function toggleStartEndOverlay() {
+            showStartEndOverlay = !showStartEndOverlay;
+            document.getElementById('toggle-startend-btn').classList.toggle('active', showStartEndOverlay);
+            refreshStartEndOverlay();
+        }
+
+        // Rebuild start/end markers for all currently filtered routes
+        function refreshStartEndOverlay() {
+            // Clear existing overlay markers
+            if (startEndLayerGroup) {
+                startEndLayerGroup.clearLayers();
+            } else {
+                startEndLayerGroup = L.layerGroup().addTo(map);
+            }
+
+            if (!showStartEndOverlay) return;
+
+            const routes = getFilteredRoutes();
+            routes.forEach(route => {
+                if (!route.track || route.track.length < 2) return;
+
+                const startPt = route.track[0];
+                const endPt   = route.track[route.track.length - 1];
+                const tip     = `<div style="font-weight:700;color:var(--accent-cyan);font-size:0.8rem;">${route.event_title}</div>` +
+                                `<div style="color:#fff;font-size:0.75rem;">${route.route_name} &bull; ${route.distance_km} km</div>`;
+
+                // Start dot (green)
+                L.circleMarker([startPt[0], startPt[1]], {
+                    radius: 6,
+                    color: '#fff',
+                    weight: 1.5,
+                    fillColor: '#22c55e',
+                    fillOpacity: 0.9
+                }).bindTooltip(tip + `<div style="font-size:0.7rem;color:#9ca3af;margin-top:3px;">▶ Start${startPt[2] ? ' · ' + Math.round(startPt[2]) + 'm' : ''}</div>`,
+                    { sticky: true })
+                .addTo(startEndLayerGroup);
+
+                // End dot (red)
+                L.circleMarker([endPt[0], endPt[1]], {
+                    radius: 6,
+                    color: '#fff',
+                    weight: 1.5,
+                    fillColor: '#ef4444',
+                    fillOpacity: 0.9
+                }).bindTooltip(tip + `<div style="font-size:0.7rem;color:#9ca3af;margin-top:3px;">■ Finish${endPt[2] ? ' · ' + Math.round(endPt[2]) + 'm' : ''}</div>`,
+                    { sticky: true })
+                .addTo(startEndLayerGroup);
+            });
         }
 
         // Deselect route and close info card
@@ -1186,6 +1257,11 @@
             // Close info card overlay
             document.getElementById('close-info-card').addEventListener('click', () => {
                 deselectRoute();
+            });
+
+            // Start/End overlay toggle
+            document.getElementById('toggle-startend-btn').addEventListener('click', () => {
+                toggleStartEndOverlay();
             });
 
             // Elevation chart hover → scrub + map cursor
