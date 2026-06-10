@@ -241,6 +241,14 @@
                             <div class="info-stat-lbl">Climbing</div>
                             <div class="info-stat-val" id="info-stat-climb">0 m</div>
                         </div>
+                        <div class="info-stat">
+                            <div class="info-stat-lbl">Start Elev</div>
+                            <div class="info-stat-val" id="info-stat-start-elev">— m</div>
+                        </div>
+                        <div class="info-stat">
+                            <div class="info-stat-lbl">End Elev</div>
+                            <div class="info-stat-val" id="info-stat-end-elev">— m</div>
+                        </div>
                     </div>
 
                     <!-- Custom Elevation Chart -->
@@ -275,6 +283,13 @@
         let selectedRouteId = null;
         let hoveredRouteId = null;
         let hoveredEventId = null;
+
+        // Track/marker state for selected route
+        let currentTrack = null;       // track array of selected route
+        let elevBaseImageData = null;  // pre-rendered elevation canvas snapshot
+        let startMarker = null;
+        let endMarker = null;
+        let elevCursorMarker = null;   // cyan dot on map synced to elevation hover
 
         // Isolation state
         let isolatedEventId = null;
@@ -471,6 +486,18 @@
                     selectRoute(route);
                 });
 
+                // Map mousemove on the SELECTED route → scrub elevation chart
+                layer.on('mousemove', (e) => {
+                    if (selectedRouteId !== route.route_id || !currentTrack) return;
+                    const idx = findNearestTrackIndex(currentTrack, e.latlng);
+                    drawElevationHighlight(idx);
+                });
+
+                layer.on('mouseout', () => {
+                    if (selectedRouteId !== route.route_id || !currentTrack) return;
+                    restoreElevationBase();
+                });
+
                 // Use unique composite key to prevent duplicates from orphaning
                 const layerKey = `${route.event_id}_${route.route_id}`;
                 mapLayers[layerKey] = layer;
@@ -532,10 +559,20 @@
             });
         }
 
+        // Remove start/end/cursor markers from map
+        function clearRouteMarkers() {
+            if (startMarker)      { startMarker.remove();      startMarker = null; }
+            if (endMarker)        { endMarker.remove();        endMarker = null; }
+            if (elevCursorMarker) { elevCursorMarker.remove(); elevCursorMarker = null; }
+            currentTrack = null;
+            elevBaseImageData = null;
+        }
+
         // Deselect route and close info card
         function deselectRoute() {
             selectedRouteId = null;
             hoveredRouteId = null;
+            clearRouteMarkers();
             document.getElementById('info-card-panel').style.display = 'none';
             updateMapStyles();
             document.querySelectorAll('.route-subitem').forEach(el => el.classList.remove('active'));
@@ -566,10 +603,46 @@
             document.getElementById('info-stat-dist').textContent = `${route.distance_km} km`;
             document.getElementById('info-stat-climb').textContent = `${route.elevation_gain_m} m`;
 
+            // Start / end elevation from track
+            const track = route.track;
+            if (track && track.length > 0) {
+                const startElev = track[0][2];
+                const endElev   = track[track.length - 1][2];
+                document.getElementById('info-stat-start-elev').textContent =
+                    startElev != null ? `${Math.round(startElev)} m` : '— m';
+                document.getElementById('info-stat-end-elev').textContent =
+                    endElev   != null ? `${Math.round(endElev)}  m` : '— m';
+            }
+
             const layerKey = `${route.event_id}_${route.route_id}`;
             const layer = mapLayers[layerKey];
             if (layer) {
                 map.fitBounds(layer.getBounds(), { padding: [50, 50] });
+            }
+
+            // Clear previous markers before adding new ones
+            clearRouteMarkers();
+            currentTrack = track;
+
+            // Place Start (S) and End (E) markers
+            if (track && track.length >= 2) {
+                const mkIconHTML = (label, bg) =>
+                    `<div style="background:${bg};color:#fff;width:22px;height:22px;border-radius:50%;` +
+                    `display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:800;` +
+                    `border:2px solid #fff;box-shadow:0 2px 8px rgba(0,0,0,0.6);">${label}</div>`;
+
+                const mkIcon = (label, bg) => L.divIcon({
+                    html: mkIconHTML(label, bg),
+                    iconSize: [22, 22], iconAnchor: [11, 11], className: ''
+                });
+
+                startMarker = L.marker([track[0][0], track[0][1]], {
+                    icon: mkIcon('S', '#22c55e'), interactive: false, zIndexOffset: 1000
+                }).addTo(map);
+
+                endMarker = L.marker([track[track.length-1][0], track[track.length-1][1]], {
+                    icon: mkIcon('E', '#ef4444'), interactive: false, zIndexOffset: 1000
+                }).addTo(map);
             }
 
             drawElevationProfile(route.track);
@@ -597,7 +670,7 @@
             }
         }
 
-        // Draw HTML5 Canvas Elevation Profile
+        // Draw HTML5 Canvas Elevation Profile and snapshot base for scrubbing
         function drawElevationProfile(track) {
             const canvas = document.getElementById('elevation-chart');
             const ctx = canvas.getContext('2d');
@@ -606,7 +679,7 @@
             canvas.height = canvas.clientHeight * window.devicePixelRatio;
             ctx.scale(window.devicePixelRatio, window.devicePixelRatio);
 
-            const width = canvas.width / window.devicePixelRatio;
+            const width  = canvas.width  / window.devicePixelRatio;
             const height = canvas.height / window.devicePixelRatio;
 
             ctx.clearRect(0, 0, width, height);
@@ -614,14 +687,15 @@
             const elevations = track.map(p => p[2] || 0);
             if (elevations.length < 2) return;
 
-            const minElev = Math.min(...elevations);
-            const maxElev = Math.max(...elevations);
+            const minElev  = Math.min(...elevations);
+            const maxElev  = Math.max(...elevations);
             const elevRange = maxElev - minElev || 1;
 
+            const pointsCount = elevations.length;
+
+            // Filled area
             ctx.beginPath();
             ctx.moveTo(0, height);
-
-            const pointsCount = elevations.length;
             for (let i = 0; i < pointsCount; i++) {
                 const x = (i / (pointsCount - 1)) * width;
                 const y = height - 10 - ((elevations[i] - minElev) / elevRange) * (height - 20);
@@ -629,14 +703,13 @@
             }
             ctx.lineTo(width, height);
             ctx.closePath();
-
             const gradient = ctx.createLinearGradient(0, 0, 0, height);
             gradient.addColorStop(0, 'rgba(6, 182, 212, 0.45)');
             gradient.addColorStop(1, 'rgba(6, 182, 212, 0.0)');
-
             ctx.fillStyle = gradient;
             ctx.fill();
 
+            // Line
             ctx.beginPath();
             for (let i = 0; i < pointsCount; i++) {
                 const x = (i / (pointsCount - 1)) * width;
@@ -648,10 +721,83 @@
             ctx.lineWidth = 2;
             ctx.stroke();
 
+            // Labels
             ctx.font = '500 9px sans-serif';
             ctx.fillStyle = 'var(--text-muted)';
             ctx.fillText(`${Math.round(maxElev)}m`, 5, 12);
             ctx.fillText(`${Math.round(minElev)}m`, 5, height - 2);
+
+            // Snapshot base so scrubbing can restore without full redraw
+            elevBaseImageData = ctx.getImageData(0, 0, canvas.width, canvas.height);
+        }
+
+        // Draw vertical scrubber at a given track index (restores base first)
+        function drawElevationHighlight(idx) {
+            if (!currentTrack || !elevBaseImageData) return;
+            const canvas = document.getElementById('elevation-chart');
+            const ctx    = canvas.getContext('2d');
+            const width  = canvas.width  / window.devicePixelRatio;
+            const height = canvas.height / window.devicePixelRatio;
+
+            ctx.putImageData(elevBaseImageData, 0, 0);
+
+            const elevations  = currentTrack.map(p => p[2] || 0);
+            const minElev     = Math.min(...elevations);
+            const maxElev     = Math.max(...elevations);
+            const elevRange   = maxElev - minElev || 1;
+            const pointsCount = elevations.length;
+            const clampedIdx  = Math.max(0, Math.min(idx, pointsCount - 1));
+
+            const x = (clampedIdx / (pointsCount - 1)) * width;
+            const y = height - 10 - ((elevations[clampedIdx] - minElev) / elevRange) * (height - 20);
+
+            // Vertical dashed line
+            ctx.save();
+            ctx.setLineDash([3, 3]);
+            ctx.strokeStyle = 'rgba(6, 182, 212, 0.7)';
+            ctx.lineWidth = 1;
+            ctx.beginPath();
+            ctx.moveTo(x, 0);
+            ctx.lineTo(x, height);
+            ctx.stroke();
+            ctx.setLineDash([]);
+
+            // Dot on line
+            ctx.beginPath();
+            ctx.arc(x, y, 4, 0, Math.PI * 2);
+            ctx.fillStyle = '#06b6d4';
+            ctx.fill();
+            ctx.strokeStyle = '#fff';
+            ctx.lineWidth = 1.5;
+            ctx.stroke();
+
+            // Elevation label
+            const elev = Math.round(elevations[clampedIdx]);
+            ctx.font = '600 9px sans-serif';
+            ctx.fillStyle = '#06b6d4';
+            const labelX = x > width - 42 ? x - 44 : x + 5;
+            const labelY = y > 15 ? y - 6 : y + 14;
+            ctx.fillText(`${elev}m`, labelX, labelY);
+            ctx.restore();
+        }
+
+        // Restore elevation canvas to base snapshot (clear scrubber)
+        function restoreElevationBase() {
+            if (!elevBaseImageData) return;
+            const canvas = document.getElementById('elevation-chart');
+            canvas.getContext('2d').putImageData(elevBaseImageData, 0, 0);
+        }
+
+        // Find index of nearest point in track to a Leaflet LatLng
+        function findNearestTrackIndex(track, latlng) {
+            let minDist = Infinity, nearest = 0;
+            for (let i = 0; i < track.length; i++) {
+                const dlat = track[i][0] - latlng.lat;
+                const dlng = track[i][1] - latlng.lng;
+                const d = dlat * dlat + dlng * dlng;
+                if (d < minDist) { minDist = d; nearest = i; }
+            }
+            return nearest;
         }
 
         // Filter logic
@@ -1040,6 +1186,43 @@
             // Close info card overlay
             document.getElementById('close-info-card').addEventListener('click', () => {
                 deselectRoute();
+            });
+
+            // Elevation chart hover → scrub + map cursor
+            const elevCanvas = document.getElementById('elevation-chart');
+
+            elevCanvas.addEventListener('mousemove', (e) => {
+                if (!currentTrack || currentTrack.length < 2) return;
+                const rect  = elevCanvas.getBoundingClientRect();
+                const ratio = Math.max(0, Math.min(1, (e.clientX - rect.left) / rect.width));
+                const idx   = Math.round(ratio * (currentTrack.length - 1));
+
+                drawElevationHighlight(idx);
+
+                // Move or create the cyan cursor marker on the map
+                const pt = currentTrack[idx];
+                if (pt && pt[0] != null && pt[1] != null) {
+                    const cursorIcon = L.divIcon({
+                        html: `<div style="background:#06b6d4;width:10px;height:10px;border-radius:50%;` +
+                              `border:2px solid #fff;box-shadow:0 0 6px rgba(6,182,212,0.8);"></div>`,
+                        iconSize: [10, 10], iconAnchor: [5, 5], className: ''
+                    });
+                    if (!elevCursorMarker) {
+                        elevCursorMarker = L.marker([pt[0], pt[1]], {
+                            icon: cursorIcon, interactive: false, zIndexOffset: 2000
+                        }).addTo(map);
+                    } else {
+                        elevCursorMarker.setLatLng([pt[0], pt[1]]);
+                    }
+                }
+            });
+
+            elevCanvas.addEventListener('mouseleave', () => {
+                restoreElevationBase();
+                if (elevCursorMarker) {
+                    elevCursorMarker.remove();
+                    elevCursorMarker = null;
+                }
             });
 
         }
