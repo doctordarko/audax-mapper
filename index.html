@@ -653,13 +653,17 @@
 
         // Filter logic
         function getFilteredRoutes() {
+            // Start with the full list, then narrow by isolation if active.
+            // Isolated-route shows only that one route (no further filters needed).
             if (isolatedRouteId !== null) {
                 return allRoutes.filter(r => r.route_id === isolatedRouteId);
             }
 
-            if (isolatedEventId !== null) {
-                return allRoutes.filter(r => r.event_id === isolatedEventId);
-            }
+            // Isolated-event: restrict the pool to that event, then apply all
+            // other active filters on top so search/type/distance still work.
+            const pool = isolatedEventId !== null
+                ? allRoutes.filter(r => r.event_id === isolatedEventId)
+                : allRoutes;
 
             const searchQuery = document.getElementById('search-bar').value.toLowerCase().trim();
             const activeDistance = document.querySelector('#distance-filter .segment-btn.active').dataset.dist;
@@ -667,7 +671,7 @@
             const activeOrganiser = document.getElementById('organiser-filter').value;
             const activeMonth = document.getElementById('month-filter').value;
 
-            return allRoutes.filter(route => {
+            return pool.filter(route => {
                 const nameMatch = route.route_name.toLowerCase().includes(searchQuery);
                 const eventMatch = route.event_title.toLowerCase().includes(searchQuery);
                 const orgMatch = route.organiser.toLowerCase().includes(searchQuery);
@@ -700,6 +704,7 @@
                 return true;
             });
         }
+
 
         // Isolation trigger methods
         function toggleEventIsolation(eventId) {
