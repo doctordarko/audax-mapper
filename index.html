@@ -430,8 +430,9 @@
                 }).addTo(map);
 
                 layer.bindTooltip(`
-                    <div style="font-weight: 700; color: #fff;">${route.route_name}</div>
-                    <div style="font-size: 0.75rem; color: #9ca3af; margin-top: 2px;">
+                    <div style="font-weight: 700; color: var(--accent-cyan); font-size: 0.85rem; line-height: 1.2;">${route.event_title}</div>
+                    <div style="font-weight: 600; color: #fff; font-size: 0.78rem; margin-top: 3px; line-height: 1.2;">${route.route_name}</div>
+                    <div style="font-size: 0.72rem; color: #9ca3af; margin-top: 6px; border-top: 1px solid rgba(255, 255, 255, 0.08); padding-top: 4px;">
                         Type: ${route.route_type} • ${route.distance_km} km • ${route.elevation_gain_m}m climb
                     </div>
                 `, { sticky: true });

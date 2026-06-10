@@ -770,3 +770,25 @@ select.search-input {
     border-left: 1px solid var(--border-color) !important;
     border-bottom: 1px solid var(--border-color) !important;
 }
+
+/* Leaflet Tooltip Overrides */
+.leaflet-tooltip {
+    background: rgba(17, 24, 39, 0.95) !important;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    border-radius: 8px !important;
+    padding: 8px 12px !important;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5) !important;
+    font-family: var(--font-body) !important;
+    white-space: normal !important; /* Ensure wrapping works for event and route names */
+    max-width: 320px;
+}
+
+.leaflet-tooltip-top::before,
+.leaflet-tooltip-bottom::before,
+.leaflet-tooltip-left::before,
+.leaflet-tooltip-right::before {
+    display: none !important;
+}
+
