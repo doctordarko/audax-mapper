@@ -223,13 +223,15 @@
                     <!-- Section: Layer Overlays -->
                     <div style="display: flex; flex-direction: column; gap: 8px;">
                         <div class="settings-section-lbl">Layer Overlays</div>
-                        <button id="toggle-startend-btn" class="segment-btn"
+                        <button id="toggle-start-btn" class="segment-btn"
                             style="width:100%; justify-content: flex-start; gap: 8px; padding: 7px 10px; text-align:left;">
-                            <span style="display:inline-flex;gap:4px;align-items:center;">
-                                <span style="width:9px;height:9px;border-radius:50%;background:#22c55e;display:inline-block;"></span>
-                                <span style="width:9px;height:9px;border-radius:50%;background:#ef4444;display:inline-block;"></span>
-                            </span>
-                            Show Start &amp; End Points
+                            <span style="width:9px;height:9px;border-radius:50%;background:#22c55e;display:inline-block;flex-shrink:0;"></span>
+                            Show Start Points
+                        </button>
+                        <button id="toggle-end-btn" class="segment-btn"
+                            style="width:100%; justify-content: flex-start; gap: 8px; padding: 7px 10px; text-align:left;">
+                            <span style="width:9px;height:9px;border-radius:50%;background:#ef4444;display:inline-block;flex-shrink:0;"></span>
+                            Show End Points
                         </button>
                     </div>
                 </div>
@@ -304,9 +306,11 @@
         let endMarker = null;
         let elevCursorMarker = null;
 
-        // Start/End overlay state
-        let showStartEndOverlay = false;
-        let startEndLayerGroup = null;
+        // Start/End overlay state — two independent layers
+        let showStartOverlay = false;
+        let showEndOverlay   = false;
+        let startLayerGroup  = null;
+        let endLayerGroup    = null;
 
         // Isolation state
         let isolatedEventId = null;
@@ -589,22 +593,28 @@
         }
 
         // Toggle the start/end overlay layer on or off
-        function toggleStartEndOverlay() {
-            showStartEndOverlay = !showStartEndOverlay;
-            document.getElementById('toggle-startend-btn').classList.toggle('active', showStartEndOverlay);
+        // Toggle start-points layer
+        function toggleStartOverlay() {
+            showStartOverlay = !showStartOverlay;
+            document.getElementById('toggle-start-btn').classList.toggle('active', showStartOverlay);
             refreshStartEndOverlay();
         }
 
-        // Rebuild start/end markers for all currently filtered routes
-        function refreshStartEndOverlay() {
-            // Clear existing overlay markers
-            if (startEndLayerGroup) {
-                startEndLayerGroup.clearLayers();
-            } else {
-                startEndLayerGroup = L.layerGroup().addTo(map);
-            }
+        // Toggle end-points layer
+        function toggleEndOverlay() {
+            showEndOverlay = !showEndOverlay;
+            document.getElementById('toggle-end-btn').classList.toggle('active', showEndOverlay);
+            refreshStartEndOverlay();
+        }
 
-            if (!showStartEndOverlay) return;
+        // Rebuild both overlay layers for all currently filtered routes
+        function refreshStartEndOverlay() {
+            // Ensure layer groups exist
+            if (!startLayerGroup) startLayerGroup = L.layerGroup().addTo(map);
+            if (!endLayerGroup)   endLayerGroup   = L.layerGroup().addTo(map);
+
+            startLayerGroup.clearLayers();
+            endLayerGroup.clearLayers();
 
             const routes = getFilteredRoutes();
             routes.forEach(route => {
@@ -615,27 +625,23 @@
                 const tip     = `<div style="font-weight:700;color:var(--accent-cyan);font-size:0.8rem;">${route.event_title}</div>` +
                                 `<div style="color:#fff;font-size:0.75rem;">${route.route_name} &bull; ${route.distance_km} km</div>`;
 
-                // Start dot (green)
-                L.circleMarker([startPt[0], startPt[1]], {
-                    radius: 6,
-                    color: '#fff',
-                    weight: 1.5,
-                    fillColor: '#22c55e',
-                    fillOpacity: 0.9
-                }).bindTooltip(tip + `<div style="font-size:0.7rem;color:#9ca3af;margin-top:3px;">▶ Start${startPt[2] ? ' · ' + Math.round(startPt[2]) + 'm' : ''}</div>`,
-                    { sticky: true })
-                .addTo(startEndLayerGroup);
+                if (showStartOverlay) {
+                    L.circleMarker([startPt[0], startPt[1]], {
+                        radius: 6, color: '#fff', weight: 1.5,
+                        fillColor: '#22c55e', fillOpacity: 0.9
+                    }).bindTooltip(tip + `<div style="font-size:0.7rem;color:#9ca3af;margin-top:3px;">&#9654; Start${startPt[2] ? ' &middot; ' + Math.round(startPt[2]) + 'm' : ''}</div>`,
+                        { sticky: true })
+                    .addTo(startLayerGroup);
+                }
 
-                // End dot (red)
-                L.circleMarker([endPt[0], endPt[1]], {
-                    radius: 6,
-                    color: '#fff',
-                    weight: 1.5,
-                    fillColor: '#ef4444',
-                    fillOpacity: 0.9
-                }).bindTooltip(tip + `<div style="font-size:0.7rem;color:#9ca3af;margin-top:3px;">■ Finish${endPt[2] ? ' · ' + Math.round(endPt[2]) + 'm' : ''}</div>`,
-                    { sticky: true })
-                .addTo(startEndLayerGroup);
+                if (showEndOverlay) {
+                    L.circleMarker([endPt[0], endPt[1]], {
+                        radius: 6, color: '#fff', weight: 1.5,
+                        fillColor: '#ef4444', fillOpacity: 0.9
+                    }).bindTooltip(tip + `<div style="font-size:0.7rem;color:#9ca3af;margin-top:3px;">&#9632; Finish${endPt[2] ? ' &middot; ' + Math.round(endPt[2]) + 'm' : ''}</div>`,
+                        { sticky: true })
+                    .addTo(endLayerGroup);
+                }
             });
         }
 
@@ -1259,10 +1265,9 @@
                 deselectRoute();
             });
 
-            // Start/End overlay toggle
-            document.getElementById('toggle-startend-btn').addEventListener('click', () => {
-                toggleStartEndOverlay();
-            });
+            // Start/End overlay toggles (independent layers)
+            document.getElementById('toggle-start-btn').addEventListener('click', () => toggleStartOverlay());
+            document.getElementById('toggle-end-btn').addEventListener('click',   () => toggleEndOverlay());
 
             // Elevation chart hover → scrub + map cursor
             const elevCanvas = document.getElementById('elevation-chart');
