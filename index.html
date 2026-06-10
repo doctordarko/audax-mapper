@@ -225,12 +225,14 @@
                         <div class="settings-section-lbl">Layer Overlays</div>
                         <button id="toggle-start-btn" class="segment-btn"
                             style="width:100%; justify-content: flex-start; gap: 8px; padding: 7px 10px; text-align:left;">
-                            <span style="width:9px;height:9px;border-radius:50%;background:#22c55e;display:inline-block;flex-shrink:0;"></span>
+                            <span
+                                style="width:9px;height:9px;border-radius:50%;background:#22c55e;display:inline-block;flex-shrink:0;"></span>
                             Show Start Points
                         </button>
                         <button id="toggle-end-btn" class="segment-btn"
                             style="width:100%; justify-content: flex-start; gap: 8px; padding: 7px 10px; text-align:left;">
-                            <span style="width:9px;height:9px;border-radius:50%;background:#ef4444;display:inline-block;flex-shrink:0;"></span>
+                            <span
+                                style="width:9px;height:9px;border-radius:50%;background:#ef4444;display:inline-block;flex-shrink:0;"></span>
                             Show End Points
                         </button>
                     </div>
@@ -240,7 +242,8 @@
                         <div class="settings-section-lbl">Appearance</div>
                         <button id="theme-toggle-btn" class="segment-btn"
                             style="width:100%; justify-content: flex-start; gap: 8px; padding: 7px 10px; text-align:left;">
-                            <i class="fa-solid fa-moon" id="theme-toggle-icon" style="width:14px;text-align:center;"></i>
+                            <i class="fa-solid fa-moon" id="theme-toggle-icon"
+                                style="width:14px;text-align:center;"></i>
                             <span id="theme-toggle-label">Switch to Light Mode</span>
                         </button>
                     </div>
@@ -248,7 +251,8 @@
 
                 <!-- Map Selected Route Details Dialog -->
                 <div class="map-card info-card glass" id="info-card-panel">
-                    <button class="close-btn" id="close-info-card" title="Close"><i class="fa-solid fa-xmark"></i></button>
+                    <button class="close-btn" id="close-info-card" title="Close"><i
+                            class="fa-solid fa-xmark"></i></button>
                     <div class="map-card-title">
                         <span>Route Selected</span>
                     </div>
@@ -267,11 +271,11 @@
                             <div class="info-stat-val" id="info-stat-climb">0 m</div>
                         </div>
                         <div class="info-stat">
-                            <div class="info-stat-lbl">Start Elev</div>
+                            <div class="info-stat-lbl">Start Elevation</div>
                             <div class="info-stat-val" id="info-stat-start-elev">— m</div>
                         </div>
                         <div class="info-stat">
-                            <div class="info-stat-lbl">End Elev</div>
+                            <div class="info-stat-lbl">End Elevation</div>
                             <div class="info-stat-val" id="info-stat-end-elev">— m</div>
                         </div>
                     </div>
@@ -318,9 +322,9 @@
 
         // Start/End overlay state — two independent layers
         let showStartOverlay = false;
-        let showEndOverlay   = false;
-        let startLayerGroup  = null;
-        let endLayerGroup    = null;
+        let showEndOverlay = false;
+        let startLayerGroup = null;
+        let endLayerGroup = null;
 
         // Isolation state
         let isolatedEventId = null;
@@ -595,8 +599,8 @@
 
         // Remove start/end/cursor markers from map
         function clearRouteMarkers() {
-            if (startMarker)      { startMarker.remove();      startMarker = null; }
-            if (endMarker)        { endMarker.remove();        endMarker = null; }
+            if (startMarker) { startMarker.remove(); startMarker = null; }
+            if (endMarker) { endMarker.remove(); endMarker = null; }
             if (elevCursorMarker) { elevCursorMarker.remove(); elevCursorMarker = null; }
             currentTrack = null;
             elevBaseImageData = null;
@@ -621,7 +625,7 @@
         function refreshStartEndOverlay() {
             // Ensure layer groups exist
             if (!startLayerGroup) startLayerGroup = L.layerGroup().addTo(map);
-            if (!endLayerGroup)   endLayerGroup   = L.layerGroup().addTo(map);
+            if (!endLayerGroup) endLayerGroup = L.layerGroup().addTo(map);
 
             startLayerGroup.clearLayers();
             endLayerGroup.clearLayers();
@@ -631,9 +635,9 @@
                 if (!route.track || route.track.length < 2) return;
 
                 const startPt = route.track[0];
-                const endPt   = route.track[route.track.length - 1];
-                const tip     = `<div style="font-weight:700;color:var(--accent-cyan);font-size:0.8rem;">${route.event_title}</div>` +
-                                `<div style="color:#fff;font-size:0.75rem;">${route.route_name} &bull; ${route.distance_km} km</div>`;
+                const endPt = route.track[route.track.length - 1];
+                const tip = `<div style="font-weight:700;color:var(--accent-cyan);font-size:0.8rem;">${route.event_title}</div>` +
+                    `<div style="color:#fff;font-size:0.75rem;">${route.route_name} &bull; ${route.distance_km} km</div>`;
 
                 if (showStartOverlay) {
                     L.circleMarker([startPt[0], startPt[1]], {
@@ -641,7 +645,7 @@
                         fillColor: '#22c55e', fillOpacity: 0.9
                     }).bindTooltip(tip + `<div style="font-size:0.7rem;color:#9ca3af;margin-top:3px;">&#9654; Start${startPt[2] ? ' &middot; ' + Math.round(startPt[2]) + 'm' : ''}</div>`,
                         { sticky: true })
-                    .addTo(startLayerGroup);
+                        .addTo(startLayerGroup);
                 }
 
                 if (showEndOverlay) {
@@ -650,7 +654,7 @@
                         fillColor: '#ef4444', fillOpacity: 0.9
                     }).bindTooltip(tip + `<div style="font-size:0.7rem;color:#9ca3af;margin-top:3px;">&#9632; Finish${endPt[2] ? ' &middot; ' + Math.round(endPt[2]) + 'm' : ''}</div>`,
                         { sticky: true })
-                    .addTo(endLayerGroup);
+                        .addTo(endLayerGroup);
                 }
             });
         }
@@ -694,11 +698,11 @@
             const track = route.track;
             if (track && track.length > 0) {
                 const startElev = track[0][2];
-                const endElev   = track[track.length - 1][2];
+                const endElev = track[track.length - 1][2];
                 document.getElementById('info-stat-start-elev').textContent =
                     startElev != null ? `${Math.round(startElev)} m` : '— m';
                 document.getElementById('info-stat-end-elev').textContent =
-                    endElev   != null ? `${Math.round(endElev)}  m` : '— m';
+                    endElev != null ? `${Math.round(endElev)}  m` : '— m';
             }
 
             const layerKey = `${route.event_id}_${route.route_id}`;
@@ -727,7 +731,7 @@
                     icon: mkIcon('S', '#22c55e'), interactive: false, zIndexOffset: 1000
                 }).addTo(map);
 
-                endMarker = L.marker([track[track.length-1][0], track[track.length-1][1]], {
+                endMarker = L.marker([track[track.length - 1][0], track[track.length - 1][1]], {
                     icon: mkIcon('E', '#ef4444'), interactive: false, zIndexOffset: 1000
                 }).addTo(map);
             }
@@ -766,7 +770,7 @@
             canvas.height = canvas.clientHeight * window.devicePixelRatio;
             ctx.scale(window.devicePixelRatio, window.devicePixelRatio);
 
-            const width  = canvas.width  / window.devicePixelRatio;
+            const width = canvas.width / window.devicePixelRatio;
             const height = canvas.height / window.devicePixelRatio;
 
             ctx.clearRect(0, 0, width, height);
@@ -774,8 +778,8 @@
             const elevations = track.map(p => p[2] || 0);
             if (elevations.length < 2) return;
 
-            const minElev  = Math.min(...elevations);
-            const maxElev  = Math.max(...elevations);
+            const minElev = Math.min(...elevations);
+            const maxElev = Math.max(...elevations);
             const elevRange = maxElev - minElev || 1;
 
             const pointsCount = elevations.length;
@@ -828,18 +832,18 @@
         function drawElevationHighlight(idx) {
             if (!currentTrack || !elevBaseImageData) return;
             const canvas = document.getElementById('elevation-chart');
-            const ctx    = canvas.getContext('2d');
-            const width  = canvas.width  / window.devicePixelRatio;
+            const ctx = canvas.getContext('2d');
+            const width = canvas.width / window.devicePixelRatio;
             const height = canvas.height / window.devicePixelRatio;
 
             ctx.putImageData(elevBaseImageData, 0, 0);
 
-            const elevations  = currentTrack.map(p => p[2] || 0);
-            const minElev     = Math.min(...elevations);
-            const maxElev     = Math.max(...elevations);
-            const elevRange   = maxElev - minElev || 1;
+            const elevations = currentTrack.map(p => p[2] || 0);
+            const minElev = Math.min(...elevations);
+            const maxElev = Math.max(...elevations);
+            const elevRange = maxElev - minElev || 1;
             const pointsCount = elevations.length;
-            const clampedIdx  = Math.max(0, Math.min(idx, pointsCount - 1));
+            const clampedIdx = Math.max(0, Math.min(idx, pointsCount - 1));
 
             const x = (clampedIdx / (pointsCount - 1)) * width;
             const y = height - 10 - ((elevations[clampedIdx] - minElev) / elevRange) * (height - 20);
@@ -915,10 +919,10 @@
             const activeMonth = document.getElementById('month-filter').value;
 
             return pool.filter(route => {
-                const nameMatch = route.route_name.toLowerCase().includes(searchQuery);
-                const eventMatch = route.event_title.toLowerCase().includes(searchQuery);
-                const orgMatch = route.organiser.toLowerCase().includes(searchQuery);
-                const idMatch = String(route.route_id).includes(searchQuery) || String(route.event_id).includes(searchQuery);
+                const nameMatch = (route.route_name || "").toLowerCase().includes(searchQuery);
+                const eventMatch = (route.event_title || "").toLowerCase().includes(searchQuery);
+                const orgMatch = (route.organiser || "").toLowerCase().includes(searchQuery);
+                const idMatch = String(route.route_id || "").includes(searchQuery) || String(route.event_id || "").includes(searchQuery);
                 if (searchQuery && !nameMatch && !eventMatch && !orgMatch && !idMatch) return false;
 
                 if (activeType !== 'all') {
@@ -935,6 +939,7 @@
                 if (activeDistance === 'long' && dist < 300) return false;
 
                 if (activeMonth !== 'all') {
+                    if (!route.event_date) return false;
                     const dateParts = route.event_date.split('-');
                     if (dateParts.length >= 2) {
                         const m = dateParts[1];
@@ -1284,7 +1289,7 @@
 
             // Start/End overlay toggles (independent layers)
             document.getElementById('toggle-start-btn').addEventListener('click', () => toggleStartOverlay());
-            document.getElementById('toggle-end-btn').addEventListener('click',   () => toggleEndOverlay());
+            document.getElementById('toggle-end-btn').addEventListener('click', () => toggleEndOverlay());
 
             // Dark / Light mode toggle
             document.getElementById('theme-toggle-btn').addEventListener('click', () => {
@@ -1306,9 +1311,9 @@
 
             elevCanvas.addEventListener('mousemove', (e) => {
                 if (!currentTrack || currentTrack.length < 2) return;
-                const rect  = elevCanvas.getBoundingClientRect();
+                const rect = elevCanvas.getBoundingClientRect();
                 const ratio = Math.max(0, Math.min(1, (e.clientX - rect.left) / rect.width));
-                const idx   = Math.round(ratio * (currentTrack.length - 1));
+                const idx = Math.round(ratio * (currentTrack.length - 1));
 
                 drawElevationHighlight(idx);
 
@@ -1320,7 +1325,7 @@
                     const markerShadow = isLight ? 'rgba(12, 74, 110, 0.8)' : 'rgba(6, 182, 212, 0.8)';
                     const cursorIcon = L.divIcon({
                         html: `<div style="background:${markerBg};width:10px;height:10px;border-radius:50%;` +
-                              `border:2px solid #fff;box-shadow:0 0 6px ${markerShadow};"></div>`,
+                            `border:2px solid #fff;box-shadow:0 0 6px ${markerShadow};"></div>`,
                         iconSize: [10, 10], iconAnchor: [5, 5], className: ''
                     });
                     if (!elevCursorMarker) {
@@ -1341,6 +1346,13 @@
                 }
             });
 
+            // Redraw elevation chart on window resize to prevent canvas stretching/squishing
+            window.addEventListener('resize', () => {
+                if (currentTrack) {
+                    drawElevationProfile(currentTrack);
+                }
+            });
+
         }
 
         // Window Load
@@ -1356,15 +1368,15 @@
 
         // Apply dark or light theme to the app
         function applyTheme(theme) {
-            const icon  = document.getElementById('theme-toggle-icon');
+            const icon = document.getElementById('theme-toggle-icon');
             const label = document.getElementById('theme-toggle-label');
-            const btn   = document.getElementById('theme-toggle-btn');
+            const btn = document.getElementById('theme-toggle-btn');
 
             if (theme === 'light') {
                 document.documentElement.setAttribute('data-theme', 'light');
-                icon.className  = 'fa-solid fa-sun';
+                icon.className = 'fa-solid fa-sun';
                 if (label) label.textContent = 'Switch to Dark Mode';
-                if (btn)   btn.classList.add('active');
+                if (btn) btn.classList.add('active');
                 // Switch to Positron (light) basemap if currently on Dark Matter
                 const activeMap = document.querySelector('.basemap-option.active');
                 if (!activeMap || activeMap.dataset.map === 'dark') {
@@ -1374,9 +1386,9 @@
                 }
             } else {
                 document.documentElement.removeAttribute('data-theme');
-                icon.className  = 'fa-solid fa-moon';
+                icon.className = 'fa-solid fa-moon';
                 if (label) label.textContent = 'Switch to Light Mode';
-                if (btn)   btn.classList.remove('active');
+                if (btn) btn.classList.remove('active');
                 // Switch back to Dark Matter basemap if on Positron
                 const activeMap = document.querySelector('.basemap-option.active');
                 if (!activeMap || activeMap.dataset.map === 'light') {
