@@ -90,6 +90,18 @@
                     </select>
                 </div>
 
+                <!-- Terrain Filter -->
+                <div class="filter-group-horizontal">
+                    <span class="filter-label">Terrain</span>
+                    <select id="terrain-filter" class="search-input">
+                        <option value="all">All Terrains</option>
+                        <option value="flat">Flat (&lt;0.5%)</option>
+                        <option value="rolling">Rolling (0.5%–1.0%)</option>
+                        <option value="hilly">Hilly (1.0%–1.5%)</option>
+                        <option value="mountainous">Mountainous (&ge;1.5%)</option>
+                    </select>
+                </div>
+
                 <!-- Sorting Selector -->
                 <div class="filter-group-horizontal">
                     <span class="filter-label">Sort By</span>
@@ -271,12 +283,20 @@
                             <div class="info-stat-val" id="info-stat-climb">0 m</div>
                         </div>
                         <div class="info-stat">
+                            <div class="info-stat-lbl">Avg Grade</div>
+                            <div class="info-stat-val" id="info-stat-grade">—%</div>
+                        </div>
+                        <div class="info-stat">
                             <div class="info-stat-lbl">Start Elevation</div>
                             <div class="info-stat-val" id="info-stat-start-elev">— m</div>
                         </div>
                         <div class="info-stat">
                             <div class="info-stat-lbl">End Elevation</div>
                             <div class="info-stat-val" id="info-stat-end-elev">— m</div>
+                        </div>
+                        <div class="info-stat">
+                            <div class="info-stat-lbl">Terrain</div>
+                            <div class="info-stat-val" id="info-stat-terrain">—</div>
                         </div>
                     </div>
 
@@ -393,6 +413,30 @@
                 hash = idStr.charCodeAt(i) + ((hash << 5) - hash);
             }
             return Math.abs(hash % 360);
+        }
+
+        // Calculate average gradient percentage for a route
+        function getRouteGradient(route) {
+            const dist = route.distance_km || 0;
+            const climb = route.elevation_gain_m || 0;
+            if (dist > 0) {
+                return (climb / (dist * 1000)) * 100;
+            }
+            return 0;
+        }
+
+        // Get class and label for terrain based on gradient
+        function getTerrainClassAndLabel(route) {
+            const grade = getRouteGradient(route);
+            if (grade < 0.5) {
+                return { class: 'terrain-flat', label: 'Flat', grade: grade.toFixed(1) + '%' };
+            } else if (grade < 1.0) {
+                return { class: 'terrain-rolling', label: 'Rolling', grade: grade.toFixed(1) + '%' };
+            } else if (grade < 1.5) {
+                return { class: 'terrain-hilly', label: 'Hilly', grade: grade.toFixed(1) + '%' };
+            } else {
+                return { class: 'terrain-mountainous', label: 'Mountainous', grade: grade.toFixed(1) + '%' };
+            }
         }
 
         // Fetch and load route tracks
@@ -694,6 +738,10 @@
             document.getElementById('info-stat-dist').textContent = `${route.distance_km} km`;
             document.getElementById('info-stat-climb').textContent = `${route.elevation_gain_m} m`;
 
+            const terrainInfo = getTerrainClassAndLabel(route);
+            document.getElementById('info-stat-grade').textContent = terrainInfo.grade;
+            document.getElementById('info-stat-terrain').textContent = terrainInfo.label;
+
             // Start / end elevation from track
             const track = route.track;
             if (track && track.length > 0) {
@@ -917,6 +965,7 @@
             const activeType = document.querySelector('#type-filter .segment-btn.active').dataset.type;
             const activeOrganiser = document.getElementById('organiser-filter').value;
             const activeMonth = document.getElementById('month-filter').value;
+            const activeTerrain = document.getElementById('terrain-filter').value;
 
             return pool.filter(route => {
                 const nameMatch = (route.route_name || "").toLowerCase().includes(searchQuery);
@@ -947,6 +996,14 @@
                     } else {
                         return false;
                     }
+                }
+
+                if (activeTerrain !== 'all') {
+                    const grade = getRouteGradient(route);
+                    if (activeTerrain === 'flat' && grade >= 0.5) return false;
+                    if (activeTerrain === 'rolling' && (grade < 0.5 || grade >= 1.0)) return false;
+                    if (activeTerrain === 'hilly' && (grade < 1.0 || grade >= 1.5)) return false;
+                    if (activeTerrain === 'mountainous' && grade < 1.5) return false;
                 }
 
                 return true;
@@ -1121,12 +1178,14 @@
                     }
 
                     const badgeClass = route.route_type.toLowerCase() === 'brm' ? 'type-brm' : 'type-ba';
+                    const terrainInfo = getTerrainClassAndLabel(route);
                     const isRouteIsolated = isolatedRouteId === route.route_id;
 
                     routeEl.innerHTML = `
                         <span class="route-subitem-name">${route.route_name}</span>
                         <div class="route-subitem-meta">
                             <span class="route-subitem-type ${badgeClass}">${route.route_type}</span>
+                            <span class="route-subitem-terrain ${terrainInfo.class}">${terrainInfo.grade} Avg</span>
                             <span class="route-subitem-dist">${route.distance_km} km</span>
                             <button class="isolate-btn tooltip ${isRouteIsolated ? 'active' : ''}" title="${isRouteIsolated ? 'Show All Routes' : 'Isolate Route'}" style="width: 18px; height: 18px; font-size: 0.7rem; margin-left: 2px;">
                                 <i class="fa-solid ${isRouteIsolated ? 'fa-eye' : 'fa-eye-slash'}"></i>
@@ -1229,6 +1288,13 @@
 
             // Month Dropdown Filter
             document.getElementById('month-filter').addEventListener('change', () => {
+                renderMapRoutes();
+                renderRouteList();
+                updateStats();
+            });
+
+            // Terrain Dropdown Filter
+            document.getElementById('terrain-filter').addEventListener('change', () => {
                 renderMapRoutes();
                 renderRouteList();
                 updateStats();
