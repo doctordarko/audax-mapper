@@ -634,13 +634,13 @@ select.search-input {
     color: var(--accent-yellow);
 }
 
-.route-subitem-terrain.terrain-hilly {
+.route-subitem-terrain.terrain-moderate {
     background: rgba(255, 120, 73, 0.1);
     border: 1px solid rgba(255, 120, 73, 0.2);
     color: var(--accent-orange);
 }
 
-.route-subitem-terrain.terrain-mountainous {
+.route-subitem-terrain.terrain-hilly {
     background: rgba(244, 63, 94, 0.1);
     border: 1px solid rgba(244, 63, 94, 0.2);
     color: var(--accent-pink);
