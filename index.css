@@ -289,11 +289,14 @@ body {
     transition: var(--transition-fast);
 }
 
-.search-input:focus {
+.search-input:focus,
+.search-input.active-filter,
+.segment-control.active-filter {
     border-color: var(--accent-cyan);
     box-shadow: 0 0 8px rgba(6, 182, 212, 0.15);
     background: var(--bg-card-hover);
 }
+
 
 select.search-input {
     padding-left: 10px;

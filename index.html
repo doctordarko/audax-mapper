@@ -714,6 +714,15 @@
 
             const isFiltered = hasSearch || hasType || hasDist || hasOrg || hasMonth || hasTerrain || hasSort || hasIsolation;
             
+            // Toggle highlight class for active filters/sorting
+            document.getElementById('search-bar').classList.toggle('active-filter', hasSearch);
+            document.getElementById('type-filter').classList.toggle('active-filter', hasType);
+            document.getElementById('distance-filter').classList.toggle('active-filter', hasDist);
+            document.getElementById('organiser-filter').classList.toggle('active-filter', hasOrg);
+            document.getElementById('month-filter').classList.toggle('active-filter', hasMonth);
+            document.getElementById('terrain-filter').classList.toggle('active-filter', hasTerrain);
+            document.getElementById('sort-filter').classList.toggle('active-filter', hasSort);
+
             const btn = document.getElementById('reset-filters-btn');
             if (btn) {
                 if (isFiltered) {
