@@ -363,7 +363,12 @@
 
         // Dynamically load track geodata for a specific state if not already loaded
         async function ensureGeodataLoaded(state) {
-            if (!state || state === 'all') return;
+            if (!state) return;
+            if (state === 'all') {
+                const uniqueStates = [...new Set(allRoutes.map(r => r.state))].filter(s => s);
+                await Promise.all(uniqueStates.map(s => ensureGeodataLoaded(s)));
+                return;
+            }
             const stateUpper = state.toUpperCase();
             if (loadedStatesGeodata.has(stateUpper)) return;
 
