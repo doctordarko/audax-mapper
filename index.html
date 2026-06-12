@@ -111,7 +111,17 @@
                         <option value="name-asc">Event Name: A-Z</option>
                         <option value="dist-desc">Distance: Max First</option>
                         <option value="dist-asc">Distance: Min First</option>
+                        <option value="grade-desc">Grade: Hilliest First</option>
+                        <option value="grade-asc">Grade: Flattest First</option>
                     </select>
+                </div>
+
+                <!-- Reset Filters Button -->
+                <div class="filter-group-horizontal">
+                    <button id="reset-filters-btn" class="clear-isolation-btn" style="padding: 6px 12px; height: 30px; font-size: 0.72rem; display: flex; align-items: center; gap: 6px; margin-top: auto; margin-bottom: 2px; opacity: 0.4; pointer-events: none; transition: opacity var(--transition-fast);">
+                        <i class="fa-solid fa-filter-circle-xmark"></i>
+                        Reset Filters
+                    </button>
                 </div>
             </div>
         </header>
@@ -650,6 +660,72 @@
             elevBaseImageData = null;
         }
 
+        // Reset all active filters back to their default "view all" state
+        function resetAllFilters() {
+            // Reset search input
+            document.getElementById('search-bar').value = '';
+
+            // Reset segment buttons for Type
+            document.querySelectorAll('#type-filter .segment-btn').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            document.querySelector('#type-filter .segment-btn[data-type="all"]').classList.add('active');
+
+            // Reset segment buttons for Distance
+            document.querySelectorAll('#distance-filter .segment-btn').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            document.querySelector('#distance-filter .segment-btn[data-dist="all"]').classList.add('active');
+
+            // Reset dropdowns
+            document.getElementById('organiser-filter').value = 'all';
+            document.getElementById('month-filter').value = 'all';
+            document.getElementById('terrain-filter').value = 'all';
+            document.getElementById('sort-filter').value = 'date-asc'; // default sort
+
+            // Reset isolation state
+            isolatedEventId = null;
+            isolatedRouteId = null;
+            updateIsolationUI();
+
+            // Refresh UI
+            deselectRoute(); // Also deselects active route and closes info card
+            renderMapRoutes();
+            renderRouteList();
+            updateStats();
+            updateResetButtonState();
+        }
+
+        // Dynamically update reset button opacity and pointer-events depending on if any filter is active
+        function updateResetButtonState() {
+            const hasSearch = document.getElementById('search-bar').value.trim() !== '';
+            
+            const activeTypeEl = document.querySelector('#type-filter .segment-btn.active');
+            const hasType = activeTypeEl ? activeTypeEl.dataset.type !== 'all' : false;
+            
+            const activeDistEl = document.querySelector('#distance-filter .segment-btn.active');
+            const hasDist = activeDistEl ? activeDistEl.dataset.dist !== 'all' : false;
+            
+            const hasOrg = document.getElementById('organiser-filter').value !== 'all';
+            const hasMonth = document.getElementById('month-filter').value !== 'all';
+            const hasTerrain = document.getElementById('terrain-filter').value !== 'all';
+            const hasSort = document.getElementById('sort-filter').value !== 'date-asc';
+            const hasIsolation = isolatedEventId !== null || isolatedRouteId !== null;
+
+            const isFiltered = hasSearch || hasType || hasDist || hasOrg || hasMonth || hasTerrain || hasSort || hasIsolation;
+            
+            const btn = document.getElementById('reset-filters-btn');
+            if (btn) {
+                if (isFiltered) {
+                    btn.style.opacity = '1';
+                    btn.style.pointerEvents = 'auto';
+                } else {
+                    btn.style.opacity = '0.4';
+                    btn.style.pointerEvents = 'none';
+                }
+            }
+        }
+
         // Toggle the start/end overlay layer on or off
         // Toggle start-points layer
         function toggleStartOverlay() {
@@ -711,6 +787,7 @@
             document.getElementById('info-card-panel').style.display = 'none';
             updateMapStyles();
             document.querySelectorAll('.route-subitem').forEach(el => el.classList.remove('active'));
+            updateResetButtonState();
         }
 
         // Select route and open info card
@@ -1024,6 +1101,7 @@
             renderMapRoutes();
             renderRouteList();
             updateStats();
+            updateResetButtonState();
         }
 
         function toggleRouteIsolation(routeId) {
@@ -1040,6 +1118,7 @@
             renderMapRoutes();
             renderRouteList();
             updateStats();
+            updateResetButtonState();
         }
 
         function clearIsolation() {
@@ -1049,6 +1128,7 @@
             renderMapRoutes();
             renderRouteList();
             updateStats();
+            updateResetButtonState();
         }
 
         function updateIsolationUI() {
@@ -1110,6 +1190,14 @@
                 } else if (activeSort === 'dist-asc') {
                     const minA = Math.min(...a.routes.map(r => r.distance_km));
                     const minB = Math.min(...b.routes.map(r => r.distance_km));
+                    return minA - minB;
+                } else if (activeSort === 'grade-desc') {
+                    const maxA = Math.max(...a.routes.map(r => getRouteGradient(r)));
+                    const maxB = Math.max(...b.routes.map(r => getRouteGradient(r)));
+                    return maxB - maxA;
+                } else if (activeSort === 'grade-asc') {
+                    const minA = Math.min(...a.routes.map(r => getRouteGradient(r)));
+                    const minB = Math.min(...b.routes.map(r => getRouteGradient(r)));
                     return minA - minB;
                 }
                 return 0;
@@ -1255,6 +1343,7 @@
                 renderMapRoutes();
                 renderRouteList();
                 updateStats();
+                updateResetButtonState();
             });
 
             // Distance Filter Segment Controls
@@ -1265,6 +1354,7 @@
                     renderMapRoutes();
                     renderRouteList();
                     updateStats();
+                    updateResetButtonState();
                 });
             });
 
@@ -1276,6 +1366,7 @@
                     renderMapRoutes();
                     renderRouteList();
                     updateStats();
+                    updateResetButtonState();
                 });
             });
 
@@ -1284,6 +1375,7 @@
                 renderMapRoutes();
                 renderRouteList();
                 updateStats();
+                updateResetButtonState();
             });
 
             // Month Dropdown Filter
@@ -1291,6 +1383,7 @@
                 renderMapRoutes();
                 renderRouteList();
                 updateStats();
+                updateResetButtonState();
             });
 
             // Terrain Dropdown Filter
@@ -1298,11 +1391,13 @@
                 renderMapRoutes();
                 renderRouteList();
                 updateStats();
+                updateResetButtonState();
             });
 
             // Sorting Filter Dropdown
             document.getElementById('sort-filter').addEventListener('change', () => {
                 renderRouteList();
+                updateResetButtonState();
             });
 
             // Map Settings Gear Button Toggle
@@ -1346,6 +1441,11 @@
             // Clear isolation click
             document.getElementById('clear-isolation-btn').addEventListener('click', () => {
                 clearIsolation();
+            });
+
+            // Reset Filters Click Listener
+            document.getElementById('reset-filters-btn').addEventListener('click', () => {
+                resetAllFilters();
             });
 
             // Close info card overlay
