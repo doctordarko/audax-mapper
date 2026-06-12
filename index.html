@@ -29,12 +29,16 @@
 
         <!-- Top Filter Bar -->
         <header class="top-bar glass">
-            <div class="top-bar-left" style="display: none;"></div>
+            <div class="top-bar-left">
+                <button id="sidebar-toggle-btn" class="sidebar-toggle-btn tooltip" title="Collapse Sidebar">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+
 
             <div class="top-bar-filters">
                 <!-- Search Bar -->
                 <div class="filter-group-horizontal">
-                    <span class="filter-label">Search</span>
                     <div class="search-input-wrapper">
                         <i class="fa-solid fa-magnifying-glass"></i>
                         <input type="text" id="search-bar" class="search-input" placeholder="Search ride...">
@@ -105,7 +109,7 @@
                 <!-- Sorting Selector -->
                 <div class="filter-group-horizontal">
                     <span class="filter-label">Sort By</span>
-                    <select id="sort-filter" class="search-input" style="width: 150px;">
+                    <select id="sort-filter" class="search-input">
                         <option value="date-asc">Date: Earliest</option>
                         <option value="date-desc">Date: Latest</option>
                         <option value="name-asc">Event Name: A-Z</option>
@@ -1461,6 +1465,22 @@
             document.getElementById('close-info-card').addEventListener('click', () => {
                 deselectRoute();
             });
+
+            // Sidebar Toggle Click Listener
+            document.getElementById('sidebar-toggle-btn').addEventListener('click', () => {
+                const sidebar = document.querySelector('.sidebar');
+                const btn = document.getElementById('sidebar-toggle-btn');
+                const isCollapsed = sidebar.classList.toggle('collapsed');
+                btn.classList.toggle('active', isCollapsed);
+                btn.title = isCollapsed ? 'Expand Sidebar' : 'Collapse Sidebar';
+                
+                setTimeout(() => {
+                    if (map) {
+                        map.invalidateSize();
+                    }
+                }, 300);
+            });
+
 
             // Start/End overlay toggles (independent layers)
             document.getElementById('toggle-start-btn').addEventListener('click', () => toggleStartOverlay());
