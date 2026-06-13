@@ -1174,10 +1174,10 @@
     "limit": null,
     "route_rating": "Easy",
     "route_terrain": "Flat",
-    "route_surface": "Unknown",
-    "unsealed_km": -2.0,
-    "unpaved_pct": -1,
-    "paved_pct": 101
+    "route_surface": "Paved",
+    "unsealed_km": 0,
+    "unpaved_pct": 0,
+    "paved_pct": 100
   },
   {
     "event_id": "705",
