@@ -96,14 +96,14 @@ Benchmarking the physical difficulty rating of routes based on Audax / RideWithG
 
 | State   | Total Routes |    Easy    | Intermediate | Difficult  | Very Difficult |  Unknown  | Diff + V.Diff % | Visual Distribution |
 | :------ | :----------: | :--------: | :----------: | :--------: | :------------: | :-------: | :-------------: | :------------------ |
-| **SA**  |      64      | 19 (29.7%) |  40 (62.5%)  |  5 (7.8%)  |    0 (0.0%)    | 0 (0.0%)  |    **7.8%**     | `█░░░░░░░░░`        |
+| **SA**  |      64      |  5 (7.8%)  |  54 (84.4%)  |  5 (7.8%)  |    0 (0.0%)    | 0 (0.0%)  |    **7.8%**     | `█░░░░░░░░░`        |
 | **NSW** |     176      | 50 (28.4%) |  92 (52.3%)  | 29 (16.5%) |    5 (2.8%)    | 0 (0.0%)  |    **19.3%**    | `██░░░░░░░░`        |
 | **QLD** |     202      | 40 (19.8%) | 116 (57.4%)  | 38 (18.8%) |    8 (4.0%)    | 0 (0.0%)  |    **22.8%**    | `██░░░░░░░░`        |
 | **VIC** |     263      | 85 (32.3%) | 133 (50.6%)  | 39 (14.8%) |    4 (1.5%)    | 2 (0.8%)  |    **16.3%**    | `██░░░░░░░░`        |
 | **TAS** |      17      | 10 (58.8%) |  2 (11.8%)   | 3 (17.6%)  |    1 (5.9%)    | 1 (5.9%)  |    **23.5%**    | `██░░░░░░░░`        |
 | **ACT** |      84      | 28 (33.3%) |  40 (47.6%)  |  9 (10.7%) |    7 (8.3%)    | 0 (0.0%)  |    **19.0%**    | `██░░░░░░░░`        |
 | **WA**  |      52      | 16 (30.8%) |  26 (50.0%)  |  8 (15.4%) |    2 (3.8%)    | 0 (0.0%)  |    **19.2%**    | `██░░░░░░░░`        |
-| **AUS** |   **858**    | 248 (28.9%)| 449 (52.3%)  | 131 (15.3%)|   27 (3.1%)    | 3 (0.3%)  |    **18.4%**    | `██░░░░░░░░`        |
+| **AUS** |   **858**    | 234 (27.3%)| 463 (54.0%)  | 131 (15.3%)|   27 (3.1%)    | 3 (0.3%)  |    **18.4%**    | `██░░░░░░░░`        |
 
 ---
 
@@ -182,7 +182,7 @@ This table pulls the volume of active events and rider registrations for the fir
 - **South Australia's Balanced Performance:** SA sits in a solid middle position, averaging **5.1 riders per event** over its 14 active listings, placing it ahead of TAS (3.8), ACT (3.5), NSW (3.5), and WA (1.2).
 - **SA's Official Climbing Terrain Density:** Under the official RideWithGPS terrain classification, South Australia leads the nation with **57.8%** of its routes classified as `Climbing` (37 out of 64), significantly exceeding the national average of **31.9%** (274 out of 858). NSW follows closely at **50.6%** (89 out of 176).
 - **Victoria and Queensland's Gravel/Unsealed Dominance:** Victoria and Queensland are the premier destinations for unsealed and gravel randonneur routes. Unsealed/unpaved surfaces (Mixed Surfaces, Mostly Unpaved, or Unpaved) make up **33.7%** of Queensland's routes and **33.1%** of Victoria's routes, far exceeding the national average of **22.0%**. In contrast, South Australia's mapped routes are overwhelmingly sealed/paved (**96.9%**), with unsealed segments accounting for just **3.1%** of routes, while Tasmania and Western Australia feature 100% paved routes in the database.
-- **Official Route Rating Profiles:** Easy and Intermediate routes dominate the national landscape, accounting for **28.9%** and **52.3%** respectively (over 81% combined). South Australia is exceptionally beginner-friendly with **29.7%** Easy and **62.5%** Intermediate routes, and only **7.8%** classified as Difficult (with 0% Very Difficult). Nationally, **18.4%** of routes are classified as Difficult or Very Difficult, with ACT having the highest proportion of Very Difficult routes at **8.3%** (7 out of 84).
+- **Official Route Rating Profiles:** Easy and Intermediate routes dominate the national landscape, accounting for **27.3%** and **54.0%** respectively (over 81.3% combined). South Australia is exceptionally beginner-friendly with **7.8%** Easy and **84.4%** Intermediate routes, and only **7.8%** classified as Difficult (with 0% Very Difficult). Nationally, **18.4%** of routes are classified as Difficult or Very Difficult, with ACT having the highest proportion of Very Difficult routes at **8.3%** (7 out of 84).
 - **SA's Average Gradient:** SA routes have a mean average gradient of **1.17%** (Median: **1.19%**). This is higher than NSW (1.11%), VIC (0.99%), QLD (0.98%), TAS (0.84%), WA (0.82%), and ACT (0.74%).
 - **WA's Rolling Pack Nature:** Western Australia has a low average gradient (0.82%) and the lowest standard deviation (0.29%). This indicates WA's routes are extremely consistent rolling courses with very few sudden steep ramps.
 - **ACT Flat vs. Climbs:** ACT contains the highest percentage of Flat routes (38.1%), but also features 4 Hilly routes. Its standard deviation is high (0.35%), showing a stark division between flat lake cruises and steep mountain passes.

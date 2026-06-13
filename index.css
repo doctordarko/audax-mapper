@@ -1069,3 +1069,9 @@ path.leaflet-interactive:focus,
     margin: 0;
 }
 
+/* Month Dropdown Full Height */
+#month-multiselect .multiselect-dropdown {
+    max-height: none;
+    overflow-y: visible;
+}
+
