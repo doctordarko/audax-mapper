@@ -65,12 +65,17 @@
                 <!-- Ride Type Filter -->
                 <div class="filter-group-horizontal">
                     <span class="filter-label">Type</span>
-                    <div class="segment-control" id="type-filter">
-                        <button class="segment-btn active" data-type="all">All</button>
-                        <button class="segment-btn" data-type="brm">BRM</button>
-                        <button class="segment-btn" data-type="ba">BA</button>
+                    <div class="custom-multiselect" id="type-multiselect">
+                        <div class="multiselect-trigger">
+                            <span class="multiselect-value">All Types</span>
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </div>
+                        <div class="multiselect-dropdown glass">
+                            <!-- Populated dynamically -->
+                        </div>
                     </div>
                 </div>
+
 
                 <!-- Organiser Filter -->
                 <div class="filter-group-horizontal">
@@ -154,6 +159,11 @@
                                 <input type="checkbox" value="12">
                                 <span>December</span>
                             </label>
+                            <label class="multiselect-option">
+                                <input type="checkbox" value="permanent">
+                                <span>Permanent / Year-Round</span>
+                            </label>
+
                         </div>
                     </div>
                 </div>
@@ -377,7 +387,19 @@
                         </div>
                     </div>
 
+                    <!-- Section: Ride Mode -->
+                    <div style="display: flex; flex-direction: column;">
+                        <div class="settings-section-lbl">Ride Mode</div>
+                        <div class="segment-control" id="ride-mode-filter"
+                            style="width: 100%; grid-template-columns: 1fr 1fr 1fr; margin-bottom: 8px;">
+                            <button class="segment-btn active" data-mode="calendar">Calendar</button>
+                            <button class="segment-btn" data-mode="permanents">Permanents</button>
+                            <button class="segment-btn" data-mode="combined">Combined</button>
+                        </div>
+                    </div>
+
                     <!-- Section: Route Styling Mode -->
+
                     <div style="display: flex; flex-direction: column;">
                         <div class="settings-section-lbl">Route Overlay Style</div>
                         <div class="segment-control" id="theme-mode-filter"
@@ -549,41 +571,82 @@
 
         // Core application state
         let map;
+        let allCalendarRoutes = [];
+        let allPermanentRoutes = [];
         let allRoutes = [];
+        let activeRideMode = 'calendar'; // 'calendar', 'permanents', 'combined'
         let mapLayers = {}; // eventId_routeId -> Leaflet PolyLine layer
 
         // Track loaded state geodata bundles to prevent redundant network requests
         let loadedStatesGeodata = new Set();
+        let loadedPermanentsGeodata = false;
+
 
         // Dynamically load track geodata for a specific state if not already loaded
-        async function ensureGeodataLoaded(state) {
-            if (!state) return;
-            if (state === 'all') {
-                const uniqueStates = [...new Set(allRoutes.map(r => r.state))].filter(s => s);
-                await Promise.all(uniqueStates.map(s => ensureGeodataLoaded(s)));
-                return;
-            }
-            const stateUpper = state.toUpperCase();
-            if (loadedStatesGeodata.has(stateUpper)) return;
-
+        async function ensurePermanentsGeodataLoaded() {
+            if (loadedPermanentsGeodata) return;
             try {
-                const response = await fetch(`data/geodata_${stateUpper}.json?t=` + Date.now());
+                const response = await fetch(`data/geodata_permanents_SA.json?t=` + Date.now());
                 if (response.ok) {
                     const geodata = await response.json();
-                    allRoutes.forEach(r => {
-                        if (r.state === stateUpper && geodata[r.route_id]) {
+                    allPermanentRoutes.forEach(r => {
+                        if (geodata[r.route_id]) {
                             r.track = geodata[r.route_id];
                         }
                     });
-                    loadedStatesGeodata.add(stateUpper);
-                    console.log(`Successfully loaded and merged geodata for ${stateUpper}.`);
-                } else {
-                    console.warn(`Geodata file for state ${stateUpper} is not available.`);
+                    loadedPermanentsGeodata = true;
+                    console.log(`Successfully loaded and merged permanents geodata.`);
                 }
             } catch (e) {
-                console.error(`Failed to load geodata for state ${stateUpper}:`, e);
+                console.error(`Failed to load permanents geodata:`, e);
             }
         }
+
+        async function ensureGeodataLoaded(state) {
+            if (!state) return;
+            if (state === 'all') {
+                const uniqueStates = [...new Set(allCalendarRoutes.map(r => r.state))].filter(s => s);
+                await Promise.all([
+                    ...uniqueStates.map(s => ensureGeodataLoaded(s)),
+                    ensurePermanentsGeodataLoaded()
+                ]);
+                return;
+            }
+            const stateUpper = state.toUpperCase();
+            
+            const promises = [];
+            
+            if (!loadedStatesGeodata.has(stateUpper)) {
+                promises.push((async () => {
+                    try {
+                        const response = await fetch(`data/geodata_${stateUpper}.json?t=` + Date.now());
+                        if (response.ok) {
+                            const geodata = await response.json();
+                            allCalendarRoutes.forEach(r => {
+                                if (r.state === stateUpper && geodata[r.route_id]) {
+                                    r.track = geodata[r.route_id];
+                                }
+                            });
+                            loadedStatesGeodata.add(stateUpper);
+                            console.log(`Successfully loaded and merged geodata for ${stateUpper}.`);
+                        } else {
+                            console.warn(`Geodata file for state ${stateUpper} is not available.`);
+                        }
+                    } catch (e) {
+                        console.error(`Failed to load geodata for state ${stateUpper}:`, e);
+                    }
+                })());
+            }
+
+            if (stateUpper === 'SA' && !loadedPermanentsGeodata) {
+                promises.push(ensurePermanentsGeodataLoaded());
+            }
+
+            if (promises.length > 0) {
+                await Promise.all(promises);
+            }
+        }
+
 
         let activeTileLayer; // Active Leaflet tile layer reference
 
@@ -665,13 +728,17 @@
         }
 
         // Helper to hash string to a color hue
-        function getHueForRoute(routeId) {
+        function getHueForRoute(routeId, isPermanent) {
             let hash = 0;
             const idStr = String(routeId);
             for (let i = 0; i < idStr.length; i++) {
                 hash = idStr.charCodeAt(i) + ((hash << 5) - hash);
             }
-            return Math.abs(hash % 360);
+            if (isPermanent) {
+                return 160 + (Math.abs(hash) % 110); // 160 to 270 (cyan/blue/purple cool tones)
+            } else {
+                return (Math.abs(hash) % 130) - 10; // -10 to 120 (red/orange/yellow/green warm tones)
+            }
         }
 
         // Calculate average gradient percentage for a route
@@ -696,28 +763,154 @@
             return { class: cls, label: terrain, grade: grade.toFixed(1) + '%' };
         }
 
+        // Helper to update the active working routes array based on active Ride Mode selection
+        function updateWorkingRoutes() {
+            if (activeRideMode === 'calendar') {
+                allRoutes = allCalendarRoutes;
+            } else if (activeRideMode === 'permanents') {
+                allRoutes = allPermanentRoutes;
+            } else {
+                allRoutes = [...allCalendarRoutes, ...allPermanentRoutes];
+            }
+        }
+
         // Fetch and load route tracks
         async function loadRoutesData() {
             try {
-                const response = await fetch('data/routes_metadata.json?t=' + Date.now());
-                allRoutes = await response.json();
-                console.log(`Loaded ${allRoutes.length} route metadata entries.`);
+                const [calendarRes, permanentRes] = await Promise.all([
+                    fetch('data/routes_metadata.json?t=' + Date.now()),
+                    fetch('data/permanents_metadata.json?t=' + Date.now())
+                ]);
 
-                // Prefetch SA geodata immediately since SA is the currently upgraded state
+                if (!calendarRes.ok || !permanentRes.ok) {
+                    throw new Error("Failed to load metadata files.");
+                }
+
+                allCalendarRoutes = await calendarRes.json();
+                allPermanentRoutes = await permanentRes.json();
+
+                console.log(`Loaded ${allCalendarRoutes.length} calendar routes and ${allPermanentRoutes.length} permanent routes.`);
+
+                // Initialize working array
+                updateWorkingRoutes();
+
+                // Prefetch SA geodata immediately since SA is the default active state
                 await ensureGeodataLoaded('SA');
 
+                // Re-sync working array after geodata load to ensure SA tracks are active
+                updateWorkingRoutes();
+
                 populateOrganisersDropdown();
+                populateTypeDropdown(); // Setup the type multiselect checklist
                 renderMapRoutes();
                 renderRouteList();
                 updateStats();
             } catch (error) {
                 console.error("Error loading routes metadata:", error);
-                alert("Failed to load routes_metadata.json.");
+                alert("Failed to load routes metadata.");
             }
         }
 
 
+
+        // Extract unique types and fill Type dropdown dynamically based on Ride Mode
+        function populateTypeDropdown() {
+            const container = document.getElementById('type-multiselect');
+            if (!container) return;
+            const dropdown = container.querySelector('.multiselect-dropdown');
+            const valueSpan = container.querySelector('.multiselect-value');
+            
+            // Get currently checked type values
+            const previouslyChecked = [];
+            dropdown.querySelectorAll('input[type="checkbox"]').forEach(cb => {
+                if (cb.checked) previouslyChecked.push(cb.value);
+            });
+
+            // Rebuild dropdown HTML
+            dropdown.innerHTML = '';
+
+            // Options list based on mode
+            let types = [];
+            if (activeRideMode === 'calendar') {
+                types = ['BA', 'BRM'];
+            } else if (activeRideMode === 'permanents') {
+                types = ['BP', 'BPD', 'BPG', 'BPR', 'SR'];
+            } else {
+                types = ['BA', 'BRM', 'BP', 'BPD', 'BPG', 'BPR', 'SR'];
+            }
+
+            types.forEach(type => {
+                const label = document.createElement('label');
+                label.className = 'multiselect-option';
+                
+                const input = document.createElement('input');
+                input.type = 'checkbox';
+                input.value = type.toLowerCase();
+                
+                // If it was checked before, keep it checked
+                if (previouslyChecked.includes(type.toLowerCase())) {
+                    input.checked = true;
+                }
+                
+                const span = document.createElement('span');
+                span.textContent = type;
+                
+                label.appendChild(input);
+                label.appendChild(span);
+                dropdown.appendChild(label);
+            });
+
+            // Attach event listeners to new checkboxes
+            const checkboxes = dropdown.querySelectorAll('input[type="checkbox"]');
+            checkboxes.forEach(cb => {
+                cb.addEventListener('change', () => {
+                    updateDisplayText();
+                    renderMapRoutes();
+                    renderRouteList();
+                    updateStats();
+                    updateResetButtonState();
+                });
+            });
+
+            function updateDisplayText() {
+                const checked = [];
+                dropdown.querySelectorAll('input[type="checkbox"]').forEach(cb => {
+                    if (cb.checked) checked.push(cb.value.toUpperCase());
+                });
+
+                const trigger = container.querySelector('.multiselect-trigger');
+
+                if (checked.length === 0) {
+                    valueSpan.textContent = 'All Types';
+                    if (trigger) trigger.classList.remove('active-filter');
+                } else if (checked.length === checkboxes.length) {
+                    valueSpan.textContent = 'All Types';
+                    if (trigger) trigger.classList.remove('active-filter');
+                } else {
+                    valueSpan.textContent = checked.join(', ');
+                    if (trigger) trigger.classList.add('active-filter');
+                }
+            }
+
+            container.reset = function() {
+                dropdown.querySelectorAll('input[type="checkbox"]').forEach(cb => cb.checked = false);
+                updateDisplayText();
+            };
+
+            container.getSelectedValues = function() {
+                const vals = [];
+                dropdown.querySelectorAll('input[type="checkbox"]').forEach(cb => {
+                    if (cb.checked) vals.push(cb.value.toLowerCase());
+                });
+                return vals;
+            };
+
+            // Initialize display text
+            updateDisplayText();
+        }
+
         // Extract unique organizers and fill dropdown
+
         function populateOrganisersDropdown() {
             const container = document.getElementById('organiser-multiselect');
             if (!container) return;
@@ -829,11 +1022,13 @@
                 if (!route.track || route.track.length === 0) return;
 
                 let color;
+                const isPermanent = !route.event_date;
                 if (currentMode === "heatmap") {
-                    color = "#f43f5e";
+                    color = isPermanent ? "#06b6d4" : "#f43f5e"; // Teal for permanents, Rose for calendar
                 } else {
-                    color = `hsl(${getHueForRoute(route.route_id)}, 85%, 60%)`;
+                    color = `hsl(${getHueForRoute(route.route_id, isPermanent)}, 85%, 60%)`;
                 }
+
 
                 const latlngs = route.track.map(pt => [pt[0], pt[1]]);
 
@@ -938,11 +1133,13 @@
                 const isEventHovered = hoveredEventId === route.event_id;
 
                 let color;
+                const isPermanent = !route.event_date;
                 if (currentMode === "heatmap") {
-                    color = "#f43f5e";
+                    color = isPermanent ? "#06b6d4" : "#f43f5e"; // Teal for permanents, Rose for calendar
                 } else {
-                    color = `hsl(${getHueForRoute(route.route_id)}, 85%, 60%)`;
+                    color = `hsl(${getHueForRoute(route.route_id, isPermanent)}, 85%, 60%)`;
                 }
+
 
                 let strokeColor = color;
                 let weight = 3;
@@ -993,17 +1190,18 @@
             // Reset search input
             document.getElementById('search-bar').value = '';
 
-            // Reset segment buttons for Type
-            document.querySelectorAll('#type-filter .segment-btn').forEach(btn => {
-                btn.classList.remove('active');
-            });
-            document.querySelector('#type-filter .segment-btn[data-type="all"]').classList.add('active');
+            // Reset Type multiselect dropdown
+            if (document.getElementById('type-multiselect') && document.getElementById('type-multiselect').reset) {
+                document.getElementById('type-multiselect').reset();
+            }
+            populateTypeDropdown();
 
             // Reset segment buttons for Distance
             document.querySelectorAll('#distance-filter .segment-btn').forEach(btn => {
                 btn.classList.remove('active');
             });
             document.querySelector('#distance-filter .segment-btn[data-dist="all"]').classList.add('active');
+
 
             // Reset dropdowns
             document.getElementById('state-filter').value = 'SA';
@@ -1043,8 +1241,9 @@
         function updateResetButtonState() {
             const hasSearch = document.getElementById('search-bar').value.trim() !== '';
             
-            const activeTypeEl = document.querySelector('#type-filter .segment-btn.active');
-            const hasType = activeTypeEl ? activeTypeEl.dataset.type !== 'all' : false;
+            const typeEl = document.getElementById('type-multiselect');
+            const selectedTypes = typeEl && typeEl.getSelectedValues ? typeEl.getSelectedValues() : [];
+            const hasType = selectedTypes.length > 0;
             
             const activeDistEl = document.querySelector('#distance-filter .segment-btn.active');
             const hasDist = activeDistEl ? activeDistEl.dataset.dist !== 'all' : false;
@@ -1079,13 +1278,17 @@
             // Toggle highlight class for active filters/sorting
             document.getElementById('search-bar').classList.toggle('active-filter', hasSearch);
             document.getElementById('state-filter').classList.toggle('active-filter', hasState);
-            document.getElementById('type-filter').classList.toggle('active-filter', hasType);
             document.getElementById('distance-filter').classList.toggle('active-filter', hasDist);
             
+            if (typeEl) {
+                const trigger = typeEl.querySelector('.multiselect-trigger');
+                if (trigger) trigger.classList.toggle('active-filter', hasType);
+            }
             if (orgEl) {
                 const trigger = orgEl.querySelector('.multiselect-trigger');
                 if (trigger) trigger.classList.toggle('active-filter', hasOrg);
             }
+
             if (monthEl) {
                 const trigger = monthEl.querySelector('.multiselect-trigger');
                 if (trigger) trigger.classList.toggle('active-filter', hasMonth);
@@ -1207,7 +1410,8 @@
             if (route.registrations_raw != null && route.registrations_raw !== "") {
                 regStr = ` | Registrations: ${route.registrations_raw}`;
             }
-            document.getElementById('info-event').textContent = `Type: ${route.route_type} | Event: ${route.event_title} (${formatDate(route.event_date)})${regStr}`;
+            const dateStr = route.event_date ? formatDate(route.event_date) : 'Permanent';
+            document.getElementById('info-event').textContent = `Type: ${route.route_type} | Event: ${route.event_title} (${dateStr})${regStr}`;
             document.getElementById('info-stat-dist').textContent = `${route.distance_km} km`;
             document.getElementById('info-stat-climb').textContent = `${route.elevation_gain_m} m`;
 
@@ -1439,7 +1643,9 @@
 
             const searchQuery = document.getElementById('search-bar').value.toLowerCase().trim();
             const activeDistance = document.querySelector('#distance-filter .segment-btn.active').dataset.dist;
-            const activeType = document.querySelector('#type-filter .segment-btn.active').dataset.type;
+            const selectedTypes = document.getElementById('type-multiselect') && document.getElementById('type-multiselect').getSelectedValues
+                ? document.getElementById('type-multiselect').getSelectedValues()
+                : [];
             const activeState = document.getElementById('state-filter').value;
             const selectedOrganisers = document.getElementById('organiser-multiselect') && document.getElementById('organiser-multiselect').getSelectedValues
                 ? document.getElementById('organiser-multiselect').getSelectedValues()
@@ -1466,10 +1672,9 @@
                 const idMatch = String(route.route_id || "").includes(searchQuery) || String(route.event_id || "").includes(searchQuery);
                 if (searchQuery && !nameMatch && !eventMatch && !orgMatch && !idMatch) return false;
 
-                if (activeType !== 'all') {
-                    const rType = route.route_type.toLowerCase();
-                    if (activeType === 'brm' && rType !== 'brm') return false;
-                    if (activeType === 'ba' && rType !== 'ba') return false;
+                if (selectedTypes.length > 0) {
+                    const rType = (route.route_type || "").toLowerCase();
+                    if (!selectedTypes.includes(rType)) return false;
                 }
 
                 if (selectedOrganisers.length > 0) {
@@ -1483,13 +1688,17 @@
                 if (activeDistance === 'long' && dist < 300) return false;
 
                 if (selectedMonths.length > 0) {
-                    if (!route.event_date) return false;
-                    const dateParts = route.event_date.split('-');
-                    if (dateParts.length >= 2) {
-                        const m = dateParts[1];
-                        if (!selectedMonths.includes(m)) return false;
+                    if (!route.event_date) {
+                        // Permanent/Year-Round rides
+                        if (!selectedMonths.includes('permanent')) return false;
                     } else {
-                        return false;
+                        const dateParts = route.event_date.split('-');
+                        if (dateParts.length >= 2) {
+                            const m = dateParts[1];
+                            if (!selectedMonths.includes(m)) return false;
+                        } else {
+                            return false;
+                        }
                     }
                 }
 
@@ -1511,6 +1720,7 @@
                 return true;
             });
         }
+
 
 
         // Isolation trigger methods
@@ -1603,8 +1813,14 @@
 
             groupsArray.sort((a, b) => {
                 if (activeSort === 'date-asc') {
+                    if (!a.date && !b.date) return a.title.localeCompare(b.title);
+                    if (!a.date) return 1;
+                    if (!b.date) return -1;
                     return a.date.localeCompare(b.date);
                 } else if (activeSort === 'date-desc') {
+                    if (!a.date && !b.date) return a.title.localeCompare(b.title);
+                    if (!a.date) return 1;
+                    if (!b.date) return -1;
                     return b.date.localeCompare(a.date);
                 } else if (activeSort === 'name-asc') {
                     return a.title.localeCompare(b.title);
@@ -1643,13 +1859,14 @@
                         <div class="event-group-title">${groupData.title}</div>
                         <div class="event-group-meta">
                             <span>Organiser: ${groupData.organiser}</span>
-                            <span>Date: ${formatDate(groupData.date)}</span>
+                            <span>Date: ${groupData.date ? formatDate(groupData.date) : 'Permanent'}</span>
                         </div>
                     </div>
                     <button class="isolate-btn tooltip ${isEventIsolated ? 'active' : ''}" title="${isEventIsolated ? 'Show All Events' : 'Isolate Event'}" data-eventid="${eventId}">
                         <i class="fa-solid ${isEventIsolated ? 'fa-eye' : 'fa-eye-slash'}"></i>
                     </button>
                 `;
+
 
                 // Bind hover events to title
                 const titleContainer = headerEl.querySelector('.event-group-title-container');
@@ -1783,17 +2000,41 @@
                 });
             });
 
-            // Type Filter Segment Controls
-            document.querySelectorAll('#type-filter .segment-btn').forEach(btn => {
-                btn.addEventListener('click', (e) => {
-                    document.querySelectorAll('#type-filter .segment-btn').forEach(b => b.classList.remove('active'));
+            // Ride Mode Filter Segment Controls inside Settings Gear Menu
+            document.querySelectorAll('#ride-mode-filter .segment-btn').forEach(btn => {
+                btn.addEventListener('click', async (e) => {
+                    document.querySelectorAll('#ride-mode-filter .segment-btn').forEach(b => b.classList.remove('active'));
                     e.target.classList.add('active');
+                    activeRideMode = e.target.dataset.mode;
+                    
+                    // Update active working routes dataset array
+                    updateWorkingRoutes();
+
+                    // Lazy load geodata for current state if not already loaded
+                    const selectedState = document.getElementById('state-filter').value;
+                    await ensureGeodataLoaded(selectedState);
+                    
+                    // Re-sync working array after geodata loading
+                    updateWorkingRoutes();
+
+                    // Rebuild dynamic dropdowns
+                    populateOrganisersDropdown();
+                    populateTypeDropdown();
+
+                    // Deselect active route if it is no longer visible in current mode
+                    if (selectedRouteId) {
+                        const exists = allRoutes.some(r => r.route_id === selectedRouteId);
+                        if (!exists) deselectRoute();
+                    }
+
+                    // Refresh page visual content
                     renderMapRoutes();
                     renderRouteList();
                     updateStats();
                     updateResetButtonState();
                 });
             });
+
 
 
 
@@ -2041,6 +2282,23 @@
                     });
                 }
             }
+
+            // Trigger setup for type-multiselect
+            const typeContainer = document.getElementById('type-multiselect');
+            if (typeContainer) {
+                const trigger = typeContainer.querySelector('.multiselect-trigger');
+                const dropdown = typeContainer.querySelector('.multiselect-dropdown');
+                if (trigger && dropdown) {
+                    trigger.addEventListener('click', (e) => {
+                        e.stopPropagation();
+                        document.querySelectorAll('.multiselect-dropdown').forEach(d => {
+                            if (d !== dropdown) d.classList.remove('show');
+                        });
+                        dropdown.classList.toggle('show');
+                    });
+                }
+            }
+
 
             document.addEventListener('click', (e) => {
                 if (!e.target.closest('.custom-multiselect')) {

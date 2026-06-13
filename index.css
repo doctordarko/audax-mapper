@@ -1075,3 +1075,15 @@ path.leaflet-interactive:focus,
     overflow-y: visible;
 }
 
+/* Light mode overrides for custom multiselect dropdowns */
+[data-theme="light"] .multiselect-dropdown.glass {
+    background: rgba(255, 255, 255, 0.95);
+    border-color: rgba(0, 0, 0, 0.15);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+[data-theme="light"] .multiselect-option:hover {
+    background: var(--bg-hover-item);
+}
+
+

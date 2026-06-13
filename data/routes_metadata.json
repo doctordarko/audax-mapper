@@ -16,7 +16,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Climbing",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11813",
@@ -35,7 +35,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Rolling",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11685",
@@ -54,7 +54,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Climbing",
     "route_surface": "Paved",
-    "unsealed_km": "2"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11685",
@@ -73,7 +73,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Rolling",
     "route_surface": "Paved",
-    "unsealed_km": "4"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11685",
@@ -92,7 +92,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Rolling",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11672",
@@ -111,7 +111,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Climbing",
     "route_surface": "Mostly Paved",
-    "unsealed_km": "7.5"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11672",
@@ -130,7 +130,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Rolling",
     "route_surface": "Paved",
-    "unsealed_km": "2.1"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11672",
@@ -149,7 +149,7 @@
     "route_rating": "Difficult",
     "route_terrain": "Rolling",
     "route_surface": "Paved",
-    "unsealed_km": "4.1"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11671",
@@ -168,7 +168,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Climbing",
     "route_surface": "Mostly Paved",
-    "unsealed_km": "8.1"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11321",
@@ -187,7 +187,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Climbing",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11320",
@@ -206,7 +206,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Climbing",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11316",
@@ -225,7 +225,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Climbing",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11316",
@@ -244,7 +244,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Climbing",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11316",
@@ -263,7 +263,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Climbing",
     "route_surface": "Mostly Paved",
-    "unsealed_km": "14.0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11316",
@@ -282,7 +282,7 @@
     "route_rating": "Difficult",
     "route_terrain": "Climbing",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11316",
@@ -301,7 +301,7 @@
     "route_rating": "Difficult",
     "route_terrain": "Rolling",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11314",
@@ -320,7 +320,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Climbing",
     "route_surface": "Mostly Paved",
-    "unsealed_km": "6.8"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11313",
@@ -339,7 +339,7 @@
     "route_rating": "Easy",
     "route_terrain": "Flat",
     "route_surface": "Mixed Surfaces",
-    "unsealed_km": "17.2"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11313",
@@ -358,7 +358,7 @@
     "route_rating": "Easy",
     "route_terrain": "Flat",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11313",
@@ -377,7 +377,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Flat",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11313",
@@ -396,7 +396,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Flat",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11313",
@@ -415,7 +415,7 @@
     "route_rating": "Difficult",
     "route_terrain": "Flat",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11312",
@@ -434,7 +434,7 @@
     "route_rating": "Easy",
     "route_terrain": "Rolling",
     "route_surface": "Mostly Paved",
-    "unsealed_km": "5.3"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11312",
@@ -453,7 +453,7 @@
     "route_rating": "Easy",
     "route_terrain": "Flat",
     "route_surface": "Mostly Paved",
-    "unsealed_km": "6.4"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11312",
@@ -472,7 +472,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Rolling",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11311",
@@ -491,7 +491,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Climbing",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11311",
@@ -510,7 +510,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Rolling",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11311",
@@ -529,7 +529,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Rolling",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11310",
@@ -548,7 +548,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Climbing",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11310",
@@ -567,7 +567,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Climbing",
     "route_surface": "Mostly Paved",
-    "unsealed_km": "6.1"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11309",
@@ -586,7 +586,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Rolling",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11309",
@@ -605,7 +605,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Rolling",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11308",
@@ -624,7 +624,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Climbing",
     "route_surface": "Paved",
-    "unsealed_km": "2"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11307",
@@ -643,7 +643,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Climbing",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11305",
@@ -662,7 +662,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Climbing",
     "route_surface": "Mostly Paved",
-    "unsealed_km": "5"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11305",
@@ -681,7 +681,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Climbing",
     "route_surface": "Mostly Paved",
-    "unsealed_km": "6.1"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11305",
@@ -700,7 +700,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Rolling",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11304",
@@ -719,7 +719,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Climbing",
     "route_surface": "Paved",
-    "unsealed_km": "1.2"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11304",
@@ -738,7 +738,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Climbing",
     "route_surface": "Paved",
-    "unsealed_km": "4.1"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11304",
@@ -757,7 +757,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Climbing",
     "route_surface": "Paved",
-    "unsealed_km": "2.6"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11302",
@@ -776,7 +776,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Climbing",
     "route_surface": "Paved",
-    "unsealed_km": "3"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11302",
@@ -795,7 +795,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Climbing",
     "route_surface": "Paved",
-    "unsealed_km": "3"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11301",
@@ -814,7 +814,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Climbing",
     "route_surface": "Mostly Paved",
-    "unsealed_km": "6"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11301",
@@ -833,7 +833,7 @@
     "route_rating": "Difficult",
     "route_terrain": "Climbing",
     "route_surface": "Mixed Surfaces",
-    "unsealed_km": "66"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11317",
@@ -852,7 +852,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Rolling",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11318",
@@ -871,7 +871,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Rolling",
     "route_surface": "Paved",
-    "unsealed_km": "3.3"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11319",
@@ -890,7 +890,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Rolling",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11317",
@@ -909,7 +909,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Climbing",
     "route_surface": "Paved",
-    "unsealed_km": "2"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11318",
@@ -928,7 +928,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Climbing",
     "route_surface": "Paved",
-    "unsealed_km": "1.1"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11319",
@@ -947,7 +947,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Climbing",
     "route_surface": "Paved",
-    "unsealed_km": "1.2"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11317",
@@ -966,7 +966,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Climbing",
     "route_surface": "Paved",
-    "unsealed_km": "1.6"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11317",
@@ -985,7 +985,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Climbing",
     "route_surface": "Paved",
-    "unsealed_km": "2.0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11318",
@@ -1004,7 +1004,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Rolling",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11319",
@@ -1023,7 +1023,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Climbing",
     "route_surface": "Paved",
-    "unsealed_km": "2.0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11317",
@@ -1042,7 +1042,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Rolling",
     "route_surface": "Paved",
-    "unsealed_km": "3.0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11318",
@@ -1061,7 +1061,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Climbing",
     "route_surface": "Paved",
-    "unsealed_km": "3.0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11319",
@@ -1080,7 +1080,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Rolling",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11317",
@@ -1099,7 +1099,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Rolling",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11318",
@@ -1118,7 +1118,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Climbing",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11319",
@@ -1137,7 +1137,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Climbing",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11317",
@@ -1156,7 +1156,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Climbing",
     "route_surface": "Mostly Paved",
-    "unsealed_km": "2"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11318",
@@ -1175,7 +1175,7 @@
     "route_rating": "Easy",
     "route_terrain": "Climbing",
     "route_surface": "Paved",
-    "unsealed_km": "1"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11319",
@@ -1194,7 +1194,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Climbing",
     "route_surface": "Paved",
-    "unsealed_km": "1"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11318",
@@ -1213,7 +1213,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Rolling",
     "route_surface": "Paved",
-    "unsealed_km": "2.5"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11766",
@@ -1232,7 +1232,7 @@
     "route_rating": "Unknown",
     "route_terrain": "Unknown",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11650",
@@ -1251,7 +1251,7 @@
     "route_rating": "Difficult",
     "route_terrain": "Rolling",
     "route_surface": "Paved",
-    "unsealed_km": "4.0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11636",
@@ -1270,7 +1270,7 @@
     "route_rating": "Easy",
     "route_terrain": "Rolling",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11634",
@@ -1289,7 +1289,7 @@
     "route_rating": "Easy",
     "route_terrain": "Rolling",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11633",
@@ -1308,7 +1308,7 @@
     "route_rating": "Easy",
     "route_terrain": "Rolling",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11632",
@@ -1327,7 +1327,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Rolling",
     "route_surface": "Paved",
-    "unsealed_km": "3.0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11631",
@@ -1346,7 +1346,7 @@
     "route_rating": "Difficult",
     "route_terrain": "Rolling",
     "route_surface": "Paved",
-    "unsealed_km": "6.0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11630",
@@ -1365,7 +1365,7 @@
     "route_rating": "Very Difficult",
     "route_terrain": "Climbing",
     "route_surface": "Mostly Paved",
-    "unsealed_km": "34"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11620",
@@ -1384,7 +1384,7 @@
     "route_rating": "Easy",
     "route_terrain": "Rolling",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11417",
@@ -1403,7 +1403,7 @@
     "route_rating": "Easy",
     "route_terrain": "Rolling",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11416",
@@ -1422,7 +1422,7 @@
     "route_rating": "Easy",
     "route_terrain": "Rolling",
     "route_surface": "Paved",
-    "unsealed_km": "4"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11416",
@@ -1441,7 +1441,7 @@
     "route_rating": "Easy",
     "route_terrain": "Rolling",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11410",
@@ -1460,7 +1460,7 @@
     "route_rating": "Easy",
     "route_terrain": "Rolling",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11410",
@@ -1479,7 +1479,7 @@
     "route_rating": "Easy",
     "route_terrain": "Rolling",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11410",
@@ -1498,7 +1498,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Rolling",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11409",
@@ -1517,7 +1517,7 @@
     "route_rating": "Easy",
     "route_terrain": "Rolling",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11353",
@@ -1536,7 +1536,7 @@
     "route_rating": "Difficult",
     "route_terrain": "Climbing",
     "route_surface": "Mostly Paved",
-    "unsealed_km": "68.2"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11809",
@@ -1555,7 +1555,7 @@
     "route_rating": "Unknown",
     "route_terrain": "Flat",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11800",
@@ -1574,7 +1574,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Rolling",
     "route_surface": "Mixed Surfaces",
-    "unsealed_km": "26"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11800",
@@ -1593,7 +1593,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Rolling",
     "route_surface": "Mixed Surfaces",
-    "unsealed_km": "26"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11753",
@@ -1612,7 +1612,7 @@
     "route_rating": "Easy",
     "route_terrain": "Flat",
     "route_surface": "Mostly Paved",
-    "unsealed_km": "2"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11752",
@@ -1631,7 +1631,7 @@
     "route_rating": "Easy",
     "route_terrain": "Flat",
     "route_surface": "Mostly Paved",
-    "unsealed_km": "12"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11751",
@@ -1650,7 +1650,7 @@
     "route_rating": "Easy",
     "route_terrain": "Flat",
     "route_surface": "Paved",
-    "unsealed_km": "3"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11750",
@@ -1669,7 +1669,7 @@
     "route_rating": "Easy",
     "route_terrain": "Flat",
     "route_surface": "Paved",
-    "unsealed_km": "3"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11750",
@@ -1688,7 +1688,7 @@
     "route_rating": "Easy",
     "route_terrain": "Flat",
     "route_surface": "Paved",
-    "unsealed_km": "3"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11750",
@@ -1707,7 +1707,7 @@
     "route_rating": "Easy",
     "route_terrain": "Flat",
     "route_surface": "Paved",
-    "unsealed_km": "3"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11728",
@@ -1726,7 +1726,7 @@
     "route_rating": "Easy",
     "route_terrain": "Flat",
     "route_surface": "Paved",
-    "unsealed_km": "3"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11728",
@@ -1745,7 +1745,7 @@
     "route_rating": "Easy",
     "route_terrain": "Flat",
     "route_surface": "Paved",
-    "unsealed_km": "3"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11727",
@@ -1764,7 +1764,7 @@
     "route_rating": "Easy",
     "route_terrain": "Flat",
     "route_surface": "Paved",
-    "unsealed_km": "10.8"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11727",
@@ -1783,7 +1783,7 @@
     "route_rating": "Easy",
     "route_terrain": "Flat",
     "route_surface": "Paved",
-    "unsealed_km": "1"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11726",
@@ -1802,7 +1802,7 @@
     "route_rating": "Easy",
     "route_terrain": "Flat",
     "route_surface": "Paved",
-    "unsealed_km": "10.8"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11719",
@@ -1821,7 +1821,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Climbing",
     "route_surface": "Mostly Unpaved",
-    "unsealed_km": "96"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11719",
@@ -1840,7 +1840,7 @@
     "route_rating": "Difficult",
     "route_terrain": "Climbing",
     "route_surface": "Mostly Unpaved",
-    "unsealed_km": "119"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11717",
@@ -1859,7 +1859,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Climbing",
     "route_surface": "Mixed Surfaces",
-    "unsealed_km": "58"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11717",
@@ -1878,7 +1878,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Climbing",
     "route_surface": "Mixed Surfaces",
-    "unsealed_km": "65"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11717",
@@ -1897,7 +1897,7 @@
     "route_rating": "Difficult",
     "route_terrain": "Climbing",
     "route_surface": "Mixed Surfaces",
-    "unsealed_km": "115"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11689",
@@ -1916,7 +1916,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Rolling",
     "route_surface": "Mostly Unpaved",
-    "unsealed_km": "100"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11689",
@@ -1935,7 +1935,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Rolling",
     "route_surface": "Mostly Unpaved",
-    "unsealed_km": "45"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11689",
@@ -1954,7 +1954,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Rolling",
     "route_surface": "Mostly Unpaved",
-    "unsealed_km": "72"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11689",
@@ -1973,7 +1973,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Rolling",
     "route_surface": "Mostly Unpaved",
-    "unsealed_km": "100"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11686",
@@ -1992,7 +1992,7 @@
     "route_rating": "Difficult",
     "route_terrain": "Rolling",
     "route_surface": "Mixed Surfaces",
-    "unsealed_km": "50.0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11682",
@@ -2011,7 +2011,7 @@
     "route_rating": "Unknown",
     "route_terrain": "Unknown",
     "route_surface": "Unknown",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11670",
@@ -2030,7 +2030,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Climbing",
     "route_surface": "Mostly Unpaved",
-    "unsealed_km": "72.8"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11670",
@@ -2049,7 +2049,7 @@
     "route_rating": "Difficult",
     "route_terrain": "Climbing",
     "route_surface": "Mostly Unpaved",
-    "unsealed_km": "108.9"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11670",
@@ -2068,7 +2068,7 @@
     "route_rating": "Difficult",
     "route_terrain": "Climbing",
     "route_surface": "Mixed Surfaces",
-    "unsealed_km": "121.9"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11668",
@@ -2087,7 +2087,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Rolling",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11668",
@@ -2106,7 +2106,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Rolling",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11668",
@@ -2125,7 +2125,7 @@
     "route_rating": "Difficult",
     "route_terrain": "Rolling",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11668",
@@ -2144,7 +2144,7 @@
     "route_rating": "Difficult",
     "route_terrain": "Rolling",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11611",
@@ -2163,7 +2163,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Rolling",
     "route_surface": "Mostly Unpaved",
-    "unsealed_km": "60.4"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11611",
@@ -2182,7 +2182,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Rolling",
     "route_surface": "Mostly Unpaved",
-    "unsealed_km": "67.8"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11611",
@@ -2201,7 +2201,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Climbing",
     "route_surface": "Mostly Unpaved",
-    "unsealed_km": "79.9"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11611",
@@ -2220,7 +2220,7 @@
     "route_rating": "Difficult",
     "route_terrain": "Climbing",
     "route_surface": "Mostly Unpaved",
-    "unsealed_km": "94.5"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11500",
@@ -2239,7 +2239,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Climbing",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11500",
@@ -2258,7 +2258,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Climbing",
     "route_surface": "Mostly Paved",
-    "unsealed_km": "13"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11500",
@@ -2277,7 +2277,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Climbing",
     "route_surface": "Mixed Surfaces",
-    "unsealed_km": "65"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11500",
@@ -2296,7 +2296,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Climbing",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11500",
@@ -2315,7 +2315,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Climbing",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11499",
@@ -2334,7 +2334,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Climbing",
     "route_surface": "Mostly Unpaved",
-    "unsealed_km": "97"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11499",
@@ -2353,7 +2353,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Climbing",
     "route_surface": "Mixed Surfaces",
-    "unsealed_km": "72"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11499",
@@ -2372,7 +2372,7 @@
     "route_rating": "Difficult",
     "route_terrain": "Climbing",
     "route_surface": "Mixed Surfaces",
-    "unsealed_km": "96"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11498",
@@ -2391,7 +2391,7 @@
     "route_rating": "Easy",
     "route_terrain": "Rolling",
     "route_surface": "Mostly Paved",
-    "unsealed_km": "5"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11498",
@@ -2410,7 +2410,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Climbing",
     "route_surface": "Mostly Paved",
-    "unsealed_km": "10"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11498",
@@ -2429,7 +2429,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Rolling",
     "route_surface": "Mostly Paved",
-    "unsealed_km": "5"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11473",
@@ -2448,7 +2448,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Rolling",
     "route_surface": "Mostly Paved",
-    "unsealed_km": "16.3"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11473",
@@ -2467,7 +2467,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Rolling",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11473",
@@ -2486,7 +2486,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Rolling",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11473",
@@ -2505,7 +2505,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Rolling",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11473",
@@ -2524,7 +2524,7 @@
     "route_rating": "Easy",
     "route_terrain": "Flat",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11473",
@@ -2543,7 +2543,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Rolling",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11473",
@@ -2562,7 +2562,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Rolling",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11473",
@@ -2581,7 +2581,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Rolling",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11473",
@@ -2600,7 +2600,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Rolling",
     "route_surface": "Mixed Surfaces",
-    "unsealed_km": "94"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11473",
@@ -2619,7 +2619,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Rolling",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11473",
@@ -2638,7 +2638,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Rolling",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11473",
@@ -2657,7 +2657,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Rolling",
     "route_surface": "Paved",
-    "unsealed_km": "3.7"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11473",
@@ -2676,7 +2676,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Flat",
     "route_surface": "Paved",
-    "unsealed_km": "3.6"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11473",
@@ -2695,7 +2695,7 @@
     "route_rating": "Difficult",
     "route_terrain": "Rolling",
     "route_surface": "Mixed Surfaces",
-    "unsealed_km": "245"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11453",
@@ -2714,7 +2714,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Flat",
     "route_surface": "Mixed Surfaces",
-    "unsealed_km": "159.1"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11452",
@@ -2733,7 +2733,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Flat",
     "route_surface": "Mixed Surfaces",
-    "unsealed_km": "116.6"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11451",
@@ -2752,7 +2752,7 @@
     "route_rating": "Easy",
     "route_terrain": "Rolling",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11451",
@@ -2771,7 +2771,7 @@
     "route_rating": "Easy",
     "route_terrain": "Rolling",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11449",
@@ -2790,7 +2790,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Rolling",
     "route_surface": "Paved",
-    "unsealed_km": "3.0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11448",
@@ -2809,7 +2809,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Rolling",
     "route_surface": "Paved",
-    "unsealed_km": "2.0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11447",
@@ -2828,7 +2828,7 @@
     "route_rating": "Very Difficult",
     "route_terrain": "Rolling",
     "route_surface": "Mixed Surfaces",
-    "unsealed_km": "270"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11446",
@@ -2847,7 +2847,7 @@
     "route_rating": "Difficult",
     "route_terrain": "Rolling",
     "route_surface": "Mixed Surfaces",
-    "unsealed_km": "216"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11446",
@@ -2866,7 +2866,7 @@
     "route_rating": "Very Difficult",
     "route_terrain": "Rolling",
     "route_surface": "Mixed Surfaces",
-    "unsealed_km": "391"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11445",
@@ -2885,7 +2885,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Climbing",
     "route_surface": "Mixed Surfaces",
-    "unsealed_km": "23"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11445",
@@ -2904,7 +2904,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Rolling",
     "route_surface": "Mixed Surfaces",
-    "unsealed_km": "58"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11444",
@@ -2923,7 +2923,7 @@
     "route_rating": "Difficult",
     "route_terrain": "Climbing",
     "route_surface": "Mostly Unpaved",
-    "unsealed_km": "96"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11444",
@@ -2942,7 +2942,7 @@
     "route_rating": "Difficult",
     "route_terrain": "Rolling",
     "route_surface": "Mixed Surfaces",
-    "unsealed_km": "164"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11443",
@@ -2961,7 +2961,7 @@
     "route_rating": "Easy",
     "route_terrain": "Rolling",
     "route_surface": "Paved",
-    "unsealed_km": "52.5"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11443",
@@ -2980,7 +2980,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Rolling",
     "route_surface": "Mixed Surfaces",
-    "unsealed_km": "52"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11443",
@@ -2999,7 +2999,7 @@
     "route_rating": "Easy",
     "route_terrain": "Rolling",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11442",
@@ -3018,7 +3018,7 @@
     "route_rating": "Easy",
     "route_terrain": "Flat",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11442",
@@ -3037,7 +3037,7 @@
     "route_rating": "Easy",
     "route_terrain": "Flat",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11442",
@@ -3056,7 +3056,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Rolling",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11440",
@@ -3075,7 +3075,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Rolling",
     "route_surface": "Mixed Surfaces",
-    "unsealed_km": "86"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11440",
@@ -3094,7 +3094,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Rolling",
     "route_surface": "Paved",
-    "unsealed_km": "3"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11439",
@@ -3113,7 +3113,7 @@
     "route_rating": "Difficult",
     "route_terrain": "Rolling",
     "route_surface": "Mixed Surfaces",
-    "unsealed_km": "119"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11438",
@@ -3132,7 +3132,7 @@
     "route_rating": "Difficult",
     "route_terrain": "Flat",
     "route_surface": "Mixed Surfaces",
-    "unsealed_km": "234"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11438",
@@ -3151,7 +3151,7 @@
     "route_rating": "Difficult",
     "route_terrain": "Flat",
     "route_surface": "Mixed Surfaces",
-    "unsealed_km": "234"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11438",
@@ -3170,7 +3170,7 @@
     "route_rating": "Difficult",
     "route_terrain": "Flat",
     "route_surface": "Mixed Surfaces",
-    "unsealed_km": "234"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11437",
@@ -3189,7 +3189,7 @@
     "route_rating": "Easy",
     "route_terrain": "Flat",
     "route_surface": "Mostly Unpaved",
-    "unsealed_km": "77"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11437",
@@ -3208,7 +3208,7 @@
     "route_rating": "Difficult",
     "route_terrain": "Rolling",
     "route_surface": "Mixed Surfaces",
-    "unsealed_km": "165"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11435",
@@ -3227,7 +3227,7 @@
     "route_rating": "Easy",
     "route_terrain": "Rolling",
     "route_surface": "Mostly Paved",
-    "unsealed_km": "14"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11435",
@@ -3246,7 +3246,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Rolling",
     "route_surface": "Mostly Paved",
-    "unsealed_km": "14"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11432",
@@ -3265,7 +3265,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Climbing",
     "route_surface": "Paved",
-    "unsealed_km": "1.5"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11432",
@@ -3284,7 +3284,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Climbing",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11431",
@@ -3303,7 +3303,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Climbing",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11431",
@@ -3322,7 +3322,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Climbing",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11431",
@@ -3341,7 +3341,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Rolling",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11430",
@@ -3360,7 +3360,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Climbing",
     "route_surface": "Mostly Unpaved",
-    "unsealed_km": "41"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11430",
@@ -3379,7 +3379,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Climbing",
     "route_surface": "Mostly Unpaved",
-    "unsealed_km": "93"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11428",
@@ -3398,7 +3398,7 @@
     "route_rating": "Difficult",
     "route_terrain": "Rolling",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11427",
@@ -3417,7 +3417,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Rolling",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11425",
@@ -3436,7 +3436,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Climbing",
     "route_surface": "Paved",
-    "unsealed_km": "2"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11425",
@@ -3455,7 +3455,7 @@
     "route_rating": "Difficult",
     "route_terrain": "Climbing",
     "route_surface": "Mostly Paved",
-    "unsealed_km": "8"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11425",
@@ -3474,7 +3474,7 @@
     "route_rating": "Very Difficult",
     "route_terrain": "Climbing",
     "route_surface": "Paved",
-    "unsealed_km": "9"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11423",
@@ -3493,7 +3493,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Climbing",
     "route_surface": "Mostly Unpaved",
-    "unsealed_km": "71"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11423",
@@ -3512,7 +3512,7 @@
     "route_rating": "Difficult",
     "route_terrain": "Climbing",
     "route_surface": "Mostly Unpaved",
-    "unsealed_km": "119"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11420",
@@ -3531,7 +3531,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Climbing",
     "route_surface": "Mostly Unpaved",
-    "unsealed_km": "67"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11420",
@@ -3550,7 +3550,7 @@
     "route_rating": "Difficult",
     "route_terrain": "Climbing",
     "route_surface": "Mostly Unpaved",
-    "unsealed_km": "107"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11420",
@@ -3569,7 +3569,7 @@
     "route_rating": "Difficult",
     "route_terrain": "Climbing",
     "route_surface": "Mostly Unpaved",
-    "unsealed_km": "161"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11408",
@@ -3588,7 +3588,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Climbing",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11407",
@@ -3607,7 +3607,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Climbing",
     "route_surface": "Paved",
-    "unsealed_km": "0.5"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11407",
@@ -3626,7 +3626,7 @@
     "route_rating": "Easy",
     "route_terrain": "Rolling",
     "route_surface": "Paved",
-    "unsealed_km": "2"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11407",
@@ -3645,7 +3645,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Rolling",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11406",
@@ -3664,7 +3664,7 @@
     "route_rating": "Easy",
     "route_terrain": "Unknown",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11397",
@@ -3683,7 +3683,7 @@
     "route_rating": "Easy",
     "route_terrain": "Flat",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11397",
@@ -3702,7 +3702,7 @@
     "route_rating": "Easy",
     "route_terrain": "Flat",
     "route_surface": "Paved",
-    "unsealed_km": "2.1"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11397",
@@ -3721,7 +3721,7 @@
     "route_rating": "Easy",
     "route_terrain": "Flat",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11397",
@@ -3740,7 +3740,7 @@
     "route_rating": "Easy",
     "route_terrain": "Flat",
     "route_surface": "Paved",
-    "unsealed_km": "2.0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11396",
@@ -3759,7 +3759,7 @@
     "route_rating": "Easy",
     "route_terrain": "Flat",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11396",
@@ -3778,7 +3778,7 @@
     "route_rating": "Easy",
     "route_terrain": "Flat",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11396",
@@ -3797,7 +3797,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Flat",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11396",
@@ -3816,7 +3816,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Flat",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11396",
@@ -3835,7 +3835,7 @@
     "route_rating": "Difficult",
     "route_terrain": "Flat",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11396",
@@ -3854,7 +3854,7 @@
     "route_rating": "Very Difficult",
     "route_terrain": "Flat",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11395",
@@ -3873,7 +3873,7 @@
     "route_rating": "Easy",
     "route_terrain": "Flat",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11395",
@@ -3892,7 +3892,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Flat",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11395",
@@ -3911,7 +3911,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Flat",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11393",
@@ -3930,7 +3930,7 @@
     "route_rating": "Easy",
     "route_terrain": "Flat",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11393",
@@ -3949,7 +3949,7 @@
     "route_rating": "Easy",
     "route_terrain": "Flat",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11392",
@@ -3968,7 +3968,7 @@
     "route_rating": "Easy",
     "route_terrain": "Flat",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11392",
@@ -3987,7 +3987,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Rolling",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11392",
@@ -4006,7 +4006,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Rolling",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11392",
@@ -4025,7 +4025,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Rolling",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11391",
@@ -4044,7 +4044,7 @@
     "route_rating": "Easy",
     "route_terrain": "Flat",
     "route_surface": "Mostly Paved",
-    "unsealed_km": "1.7"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11391",
@@ -4063,7 +4063,7 @@
     "route_rating": "Easy",
     "route_terrain": "Flat",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11391",
@@ -4082,7 +4082,7 @@
     "route_rating": "Easy",
     "route_terrain": "Flat",
     "route_surface": "Paved",
-    "unsealed_km": "3.1"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11391",
@@ -4101,7 +4101,7 @@
     "route_rating": "Easy",
     "route_terrain": "Flat",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11388",
@@ -4120,7 +4120,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Climbing",
     "route_surface": "Paved",
-    "unsealed_km": "1.0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11388",
@@ -4139,7 +4139,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Climbing",
     "route_surface": "Mostly Unpaved",
-    "unsealed_km": "50.7"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11388",
@@ -4158,7 +4158,7 @@
     "route_rating": "Easy",
     "route_terrain": "Rolling",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11388",
@@ -4177,7 +4177,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Climbing",
     "route_surface": "Mostly Unpaved",
-    "unsealed_km": "87.4"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11388",
@@ -4196,7 +4196,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Rolling",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11388",
@@ -4215,7 +4215,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Rolling",
     "route_surface": "Mostly Paved",
-    "unsealed_km": "8.1"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11387",
@@ -4234,7 +4234,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Climbing",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11385",
@@ -4253,7 +4253,7 @@
     "route_rating": "Easy",
     "route_terrain": "Rolling",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11385",
@@ -4272,7 +4272,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Rolling",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11384",
@@ -4291,7 +4291,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Climbing",
     "route_surface": "Mostly Unpaved",
-    "unsealed_km": "47.6"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11384",
@@ -4310,7 +4310,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Climbing",
     "route_surface": "Mostly Unpaved",
-    "unsealed_km": "87"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11384",
@@ -4329,7 +4329,7 @@
     "route_rating": "Difficult",
     "route_terrain": "Climbing",
     "route_surface": "Mostly Unpaved",
-    "unsealed_km": "126"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11384",
@@ -4348,7 +4348,7 @@
     "route_rating": "Difficult",
     "route_terrain": "Climbing",
     "route_surface": "Mostly Unpaved",
-    "unsealed_km": "161"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11383",
@@ -4367,7 +4367,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Climbing",
     "route_surface": "Mixed Surfaces",
-    "unsealed_km": "71"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11382",
@@ -4386,7 +4386,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Climbing",
     "route_surface": "Mixed Surfaces",
-    "unsealed_km": "79"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11382",
@@ -4405,7 +4405,7 @@
     "route_rating": "Difficult",
     "route_terrain": "Climbing",
     "route_surface": "Mostly Unpaved",
-    "unsealed_km": "46"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11381",
@@ -4424,7 +4424,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Climbing",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11381",
@@ -4443,7 +4443,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Climbing",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11380",
@@ -4462,7 +4462,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Climbing",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11378",
@@ -4481,7 +4481,7 @@
     "route_rating": "Easy",
     "route_terrain": "Rolling",
     "route_surface": "Paved",
-    "unsealed_km": "0.6"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11378",
@@ -4500,7 +4500,7 @@
     "route_rating": "Easy",
     "route_terrain": "Rolling",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11378",
@@ -4519,7 +4519,7 @@
     "route_rating": "Easy",
     "route_terrain": "Rolling",
     "route_surface": "Mostly Paved",
-    "unsealed_km": "5.3"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11378",
@@ -4538,7 +4538,7 @@
     "route_rating": "Easy",
     "route_terrain": "Rolling",
     "route_surface": "Paved",
-    "unsealed_km": "1"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11378",
@@ -4557,7 +4557,7 @@
     "route_rating": "Easy",
     "route_terrain": "Flat",
     "route_surface": "Mostly Paved",
-    "unsealed_km": "6.8"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11378",
@@ -4576,7 +4576,7 @@
     "route_rating": "Easy",
     "route_terrain": "Rolling",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11378",
@@ -4595,7 +4595,7 @@
     "route_rating": "Easy",
     "route_terrain": "Flat",
     "route_surface": "Paved",
-    "unsealed_km": "1"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11378",
@@ -4614,7 +4614,7 @@
     "route_rating": "Easy",
     "route_terrain": "Rolling",
     "route_surface": "Mostly Paved",
-    "unsealed_km": "12.5"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11378",
@@ -4633,7 +4633,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Rolling",
     "route_surface": "Mostly Paved",
-    "unsealed_km": "9.2"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11378",
@@ -4652,7 +4652,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Rolling",
     "route_surface": "Mostly Paved",
-    "unsealed_km": "10"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11377",
@@ -4671,7 +4671,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Rolling",
     "route_surface": "Mostly Paved",
-    "unsealed_km": "20.1"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11377",
@@ -4690,7 +4690,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Rolling",
     "route_surface": "Mixed Surfaces",
-    "unsealed_km": "80"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11377",
@@ -4709,7 +4709,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Rolling",
     "route_surface": "Mostly Paved",
-    "unsealed_km": "9.0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11376",
@@ -4728,7 +4728,7 @@
     "route_rating": "Easy",
     "route_terrain": "Rolling",
     "route_surface": "Paved",
-    "unsealed_km": "0.6"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11376",
@@ -4747,7 +4747,7 @@
     "route_rating": "Easy",
     "route_terrain": "Rolling",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11376",
@@ -4766,7 +4766,7 @@
     "route_rating": "Easy",
     "route_terrain": "Rolling",
     "route_surface": "Mostly Paved",
-    "unsealed_km": "5.3"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11376",
@@ -4785,7 +4785,7 @@
     "route_rating": "Easy",
     "route_terrain": "Rolling",
     "route_surface": "Paved",
-    "unsealed_km": "1"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11376",
@@ -4804,7 +4804,7 @@
     "route_rating": "Easy",
     "route_terrain": "Flat",
     "route_surface": "Mostly Paved",
-    "unsealed_km": "6.8"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11376",
@@ -4823,7 +4823,7 @@
     "route_rating": "Easy",
     "route_terrain": "Rolling",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11376",
@@ -4842,7 +4842,7 @@
     "route_rating": "Easy",
     "route_terrain": "Flat",
     "route_surface": "Paved",
-    "unsealed_km": "1"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11376",
@@ -4861,7 +4861,7 @@
     "route_rating": "Easy",
     "route_terrain": "Rolling",
     "route_surface": "Mostly Paved",
-    "unsealed_km": "12.5"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11376",
@@ -4880,7 +4880,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Rolling",
     "route_surface": "Mostly Paved",
-    "unsealed_km": "9.2"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11376",
@@ -4899,7 +4899,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Rolling",
     "route_surface": "Mostly Paved",
-    "unsealed_km": "10"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11375",
@@ -4918,7 +4918,7 @@
     "route_rating": "Easy",
     "route_terrain": "Rolling",
     "route_surface": "Paved",
-    "unsealed_km": "0.6"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11375",
@@ -4937,7 +4937,7 @@
     "route_rating": "Easy",
     "route_terrain": "Rolling",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11375",
@@ -4956,7 +4956,7 @@
     "route_rating": "Easy",
     "route_terrain": "Rolling",
     "route_surface": "Mostly Paved",
-    "unsealed_km": "5.3"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11375",
@@ -4975,7 +4975,7 @@
     "route_rating": "Easy",
     "route_terrain": "Rolling",
     "route_surface": "Paved",
-    "unsealed_km": "1"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11375",
@@ -4994,7 +4994,7 @@
     "route_rating": "Easy",
     "route_terrain": "Flat",
     "route_surface": "Mostly Paved",
-    "unsealed_km": "6.8"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11375",
@@ -5013,7 +5013,7 @@
     "route_rating": "Easy",
     "route_terrain": "Rolling",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11375",
@@ -5032,7 +5032,7 @@
     "route_rating": "Easy",
     "route_terrain": "Flat",
     "route_surface": "Paved",
-    "unsealed_km": "1"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11375",
@@ -5051,7 +5051,7 @@
     "route_rating": "Easy",
     "route_terrain": "Rolling",
     "route_surface": "Mostly Paved",
-    "unsealed_km": "12.5"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11375",
@@ -5070,7 +5070,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Rolling",
     "route_surface": "Mostly Paved",
-    "unsealed_km": "9.2"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11375",
@@ -5089,7 +5089,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Rolling",
     "route_surface": "Mostly Paved",
-    "unsealed_km": "10"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11374",
@@ -5108,7 +5108,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Rolling",
     "route_surface": "Mostly Paved",
-    "unsealed_km": "20.1"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11374",
@@ -5127,7 +5127,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Rolling",
     "route_surface": "Mixed Surfaces",
-    "unsealed_km": "80"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11374",
@@ -5146,7 +5146,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Rolling",
     "route_surface": "Mostly Paved",
-    "unsealed_km": "9.0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11371",
@@ -5165,7 +5165,7 @@
     "route_rating": "Easy",
     "route_terrain": "Flat",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11371",
@@ -5184,7 +5184,7 @@
     "route_rating": "Easy",
     "route_terrain": "Flat",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11371",
@@ -5203,7 +5203,7 @@
     "route_rating": "Easy",
     "route_terrain": "Flat",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11370",
@@ -5222,7 +5222,7 @@
     "route_rating": "Easy",
     "route_terrain": "Flat",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11370",
@@ -5241,7 +5241,7 @@
     "route_rating": "Easy",
     "route_terrain": "Flat",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11369",
@@ -5260,7 +5260,7 @@
     "route_rating": "Easy",
     "route_terrain": "Flat",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11369",
@@ -5279,7 +5279,7 @@
     "route_rating": "Easy",
     "route_terrain": "Flat",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11368",
@@ -5298,7 +5298,7 @@
     "route_rating": "Easy",
     "route_terrain": "Flat",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11368",
@@ -5317,7 +5317,7 @@
     "route_rating": "Easy",
     "route_terrain": "Flat",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11368",
@@ -5336,7 +5336,7 @@
     "route_rating": "Easy",
     "route_terrain": "Flat",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11367",
@@ -5355,7 +5355,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Climbing",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11359",
@@ -5374,7 +5374,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Climbing",
     "route_surface": "Mixed Surfaces",
-    "unsealed_km": "39"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11359",
@@ -5393,7 +5393,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Climbing",
     "route_surface": "Mostly Unpaved",
-    "unsealed_km": "64"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11358",
@@ -5412,7 +5412,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Climbing",
     "route_surface": "Paved",
-    "unsealed_km": "60.4"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11358",
@@ -5431,7 +5431,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Climbing",
     "route_surface": "Mixed Surfaces",
-    "unsealed_km": "30"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11358",
@@ -5450,7 +5450,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Climbing",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11358",
@@ -5469,7 +5469,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Climbing",
     "route_surface": "Mixed Surfaces",
-    "unsealed_km": "30"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11358",
@@ -5488,7 +5488,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Climbing",
     "route_surface": "Paved",
-    "unsealed_km": "1.0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11358",
@@ -5507,7 +5507,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Climbing",
     "route_surface": "Mixed Surfaces",
-    "unsealed_km": "30"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11358",
@@ -5526,7 +5526,7 @@
     "route_rating": "Difficult",
     "route_terrain": "Climbing",
     "route_surface": "Mixed Surfaces",
-    "unsealed_km": "30"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11357",
@@ -5545,7 +5545,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Climbing",
     "route_surface": "Mixed Surfaces",
-    "unsealed_km": "61"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11357",
@@ -5564,7 +5564,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Climbing",
     "route_surface": "Mixed Surfaces",
-    "unsealed_km": "25"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11357",
@@ -5583,7 +5583,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Climbing",
     "route_surface": "Mixed Surfaces",
-    "unsealed_km": "26"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11357",
@@ -5602,7 +5602,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Climbing",
     "route_surface": "Mixed Surfaces",
-    "unsealed_km": "50"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11357",
@@ -5621,7 +5621,7 @@
     "route_rating": "Difficult",
     "route_terrain": "Climbing",
     "route_surface": "Mixed Surfaces",
-    "unsealed_km": "84"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11342",
@@ -5640,7 +5640,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Rolling",
     "route_surface": "Mostly Paved",
-    "unsealed_km": "4"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11281",
@@ -5659,7 +5659,7 @@
     "route_rating": "Easy",
     "route_terrain": "Flat",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11280",
@@ -5678,7 +5678,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Rolling",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11280",
@@ -5697,7 +5697,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Rolling",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11280",
@@ -5716,7 +5716,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Rolling",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11280",
@@ -5735,7 +5735,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Rolling",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11280",
@@ -5754,7 +5754,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Rolling",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11279",
@@ -5773,7 +5773,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Rolling",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11279",
@@ -5792,7 +5792,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Rolling",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11279",
@@ -5811,7 +5811,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Rolling",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11279",
@@ -5830,7 +5830,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Rolling",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11279",
@@ -5849,7 +5849,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Rolling",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11278",
@@ -5868,7 +5868,7 @@
     "route_rating": "Difficult",
     "route_terrain": "Rolling",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11278",
@@ -5887,7 +5887,7 @@
     "route_rating": "Difficult",
     "route_terrain": "Rolling",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11278",
@@ -5906,7 +5906,7 @@
     "route_rating": "Difficult",
     "route_terrain": "Rolling",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11278",
@@ -5925,7 +5925,7 @@
     "route_rating": "Difficult",
     "route_terrain": "Rolling",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11278",
@@ -5944,7 +5944,7 @@
     "route_rating": "Difficult",
     "route_terrain": "Rolling",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11277",
@@ -5963,7 +5963,7 @@
     "route_rating": "Easy",
     "route_terrain": "Rolling",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11277",
@@ -5982,7 +5982,7 @@
     "route_rating": "Easy",
     "route_terrain": "Rolling",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11277",
@@ -6001,7 +6001,7 @@
     "route_rating": "Easy",
     "route_terrain": "Rolling",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11277",
@@ -6020,7 +6020,7 @@
     "route_rating": "Easy",
     "route_terrain": "Rolling",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11277",
@@ -6039,7 +6039,7 @@
     "route_rating": "Easy",
     "route_terrain": "Rolling",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11275",
@@ -6058,7 +6058,7 @@
     "route_rating": "Difficult",
     "route_terrain": "Climbing",
     "route_surface": "Mostly Unpaved",
-    "unsealed_km": "166"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11274",
@@ -6077,7 +6077,7 @@
     "route_rating": "Difficult",
     "route_terrain": "Climbing",
     "route_surface": "Mostly Unpaved",
-    "unsealed_km": "166"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11271",
@@ -6096,7 +6096,7 @@
     "route_rating": "Easy",
     "route_terrain": "Rolling",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11271",
@@ -6115,7 +6115,7 @@
     "route_rating": "Easy",
     "route_terrain": "Rolling",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11271",
@@ -6134,7 +6134,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Rolling",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11271",
@@ -6153,7 +6153,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Rolling",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11270",
@@ -6172,7 +6172,7 @@
     "route_rating": "Easy",
     "route_terrain": "Rolling",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11270",
@@ -6191,7 +6191,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Rolling",
     "route_surface": "Paved",
-    "unsealed_km": "1.5"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11270",
@@ -6210,7 +6210,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Rolling",
     "route_surface": "Paved",
-    "unsealed_km": "2.0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11269",
@@ -6229,7 +6229,7 @@
     "route_rating": "Easy",
     "route_terrain": "Flat",
     "route_surface": "Mixed Surfaces",
-    "unsealed_km": "11.3"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11269",
@@ -6248,7 +6248,7 @@
     "route_rating": "Easy",
     "route_terrain": "Rolling",
     "route_surface": "Mostly Paved",
-    "unsealed_km": "11.1"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11269",
@@ -6267,7 +6267,7 @@
     "route_rating": "Easy",
     "route_terrain": "Flat",
     "route_surface": "Paved",
-    "unsealed_km": "2.0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11268",
@@ -6286,7 +6286,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Rolling",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11264",
@@ -6305,7 +6305,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Rolling",
     "route_surface": "Mostly Unpaved",
-    "unsealed_km": "39.2"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11264",
@@ -6324,7 +6324,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Rolling",
     "route_surface": "Mostly Unpaved",
-    "unsealed_km": "100"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11264",
@@ -6343,7 +6343,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Rolling",
     "route_surface": "Mostly Unpaved",
-    "unsealed_km": "140.7"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11264",
@@ -6362,7 +6362,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Flat",
     "route_surface": "Mostly Unpaved",
-    "unsealed_km": "200"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11264",
@@ -6381,7 +6381,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Flat",
     "route_surface": "Mostly Unpaved",
-    "unsealed_km": "270"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11263",
@@ -6400,7 +6400,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Climbing",
     "route_surface": "Mostly Unpaved",
-    "unsealed_km": "86"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11263",
@@ -6419,7 +6419,7 @@
     "route_rating": "Difficult",
     "route_terrain": "Climbing",
     "route_surface": "Mostly Unpaved",
-    "unsealed_km": "128"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11263",
@@ -6438,7 +6438,7 @@
     "route_rating": "Difficult",
     "route_terrain": "Climbing",
     "route_surface": "Mostly Unpaved",
-    "unsealed_km": "142"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11262",
@@ -6457,7 +6457,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Climbing",
     "route_surface": "Mostly Unpaved",
-    "unsealed_km": "94"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11261",
@@ -6476,7 +6476,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Climbing",
     "route_surface": "Mostly Unpaved",
-    "unsealed_km": "94"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11260",
@@ -6495,7 +6495,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Climbing",
     "route_surface": "Mostly Unpaved",
-    "unsealed_km": "38"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11260",
@@ -6514,7 +6514,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Climbing",
     "route_surface": "Mostly Unpaved",
-    "unsealed_km": "69"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11260",
@@ -6533,7 +6533,7 @@
     "route_rating": "Difficult",
     "route_terrain": "Climbing",
     "route_surface": "Mostly Unpaved",
-    "unsealed_km": "126"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11747",
@@ -6552,7 +6552,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Climbing",
     "route_surface": "Mostly Unpaved",
-    "unsealed_km": "39"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11746",
@@ -6571,7 +6571,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Climbing",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11745",
@@ -6590,7 +6590,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Climbing",
     "route_surface": "Mostly Unpaved",
-    "unsealed_km": "69"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11723",
@@ -6609,7 +6609,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Climbing",
     "route_surface": "Mixed Surfaces",
-    "unsealed_km": "25"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11692",
@@ -6628,7 +6628,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Flat",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11692",
@@ -6647,7 +6647,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Rolling",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11692",
@@ -6666,7 +6666,7 @@
     "route_rating": "Easy",
     "route_terrain": "Rolling",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11692",
@@ -6685,7 +6685,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Rolling",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11692",
@@ -6704,7 +6704,7 @@
     "route_rating": "Easy",
     "route_terrain": "Rolling",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11692",
@@ -6723,7 +6723,7 @@
     "route_rating": "Easy",
     "route_terrain": "Rolling",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11646",
@@ -6742,7 +6742,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Rolling",
     "route_surface": "Mostly Unpaved",
-    "unsealed_km": "150"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11646",
@@ -6761,7 +6761,7 @@
     "route_rating": "Difficult",
     "route_terrain": "Climbing",
     "route_surface": "Mostly Unpaved",
-    "unsealed_km": "215"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11646",
@@ -6780,7 +6780,7 @@
     "route_rating": "Difficult",
     "route_terrain": "Rolling",
     "route_surface": "Mostly Unpaved",
-    "unsealed_km": "278"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11641",
@@ -6799,7 +6799,7 @@
     "route_rating": "Difficult",
     "route_terrain": "Rolling",
     "route_surface": "Mostly Paved",
-    "unsealed_km": "20"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11641",
@@ -6818,7 +6818,7 @@
     "route_rating": "Very Difficult",
     "route_terrain": "Rolling",
     "route_surface": "Paved",
-    "unsealed_km": "10"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11363",
@@ -6837,7 +6837,7 @@
     "route_rating": "Easy",
     "route_terrain": "Flat",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11363",
@@ -6856,7 +6856,7 @@
     "route_rating": "Easy",
     "route_terrain": "Flat",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11363",
@@ -6875,7 +6875,7 @@
     "route_rating": "Easy",
     "route_terrain": "Flat",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11362",
@@ -6894,7 +6894,7 @@
     "route_rating": "Easy",
     "route_terrain": "Flat",
     "route_surface": "Mostly Paved",
-    "unsealed_km": "2.0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11362",
@@ -6913,7 +6913,7 @@
     "route_rating": "Easy",
     "route_terrain": "Flat",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11362",
@@ -6932,7 +6932,7 @@
     "route_rating": "Easy",
     "route_terrain": "Flat",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11362",
@@ -6951,7 +6951,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Flat",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11362",
@@ -6970,7 +6970,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Flat",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11362",
@@ -6989,7 +6989,7 @@
     "route_rating": "Difficult",
     "route_terrain": "Flat",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11361",
@@ -7008,7 +7008,7 @@
     "route_rating": "Easy",
     "route_terrain": "Flat",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11361",
@@ -7027,7 +7027,7 @@
     "route_rating": "Easy",
     "route_terrain": "Flat",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11361",
@@ -7046,7 +7046,7 @@
     "route_rating": "Easy",
     "route_terrain": "Flat",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11360",
@@ -7065,7 +7065,7 @@
     "route_rating": "Easy",
     "route_terrain": "Flat",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11360",
@@ -7084,7 +7084,7 @@
     "route_rating": "Easy",
     "route_terrain": "Flat",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11360",
@@ -7103,7 +7103,7 @@
     "route_rating": "Easy",
     "route_terrain": "Flat",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11360",
@@ -7122,7 +7122,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Flat",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11360",
@@ -7141,7 +7141,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Flat",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11360",
@@ -7160,7 +7160,7 @@
     "route_rating": "Difficult",
     "route_terrain": "Flat",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11352",
@@ -7179,7 +7179,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Rolling",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11351",
@@ -7198,7 +7198,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Rolling",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11350",
@@ -7217,7 +7217,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Climbing",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11338",
@@ -7236,7 +7236,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Rolling",
     "route_surface": "Mostly Paved",
-    "unsealed_km": "19"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11337",
@@ -7255,7 +7255,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Rolling",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11336",
@@ -7274,7 +7274,7 @@
     "route_rating": "Easy",
     "route_terrain": "Flat",
     "route_surface": "Paved",
-    "unsealed_km": "3"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11335",
@@ -7293,7 +7293,7 @@
     "route_rating": "Easy",
     "route_terrain": "Rolling",
     "route_surface": "Mostly Paved",
-    "unsealed_km": "6"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11334",
@@ -7312,7 +7312,7 @@
     "route_rating": "Easy",
     "route_terrain": "Rolling",
     "route_surface": "Mostly Paved",
-    "unsealed_km": "5.0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11333",
@@ -7331,7 +7331,7 @@
     "route_rating": "Easy",
     "route_terrain": "Rolling",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11332",
@@ -7350,7 +7350,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Rolling",
     "route_surface": "Mixed Surfaces",
-    "unsealed_km": "96"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11331",
@@ -7369,7 +7369,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Rolling",
     "route_surface": "Mixed Surfaces",
-    "unsealed_km": "96"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11331",
@@ -7388,7 +7388,7 @@
     "route_rating": "Difficult",
     "route_terrain": "Rolling",
     "route_surface": "Mixed Surfaces",
-    "unsealed_km": "130"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11330",
@@ -7407,7 +7407,7 @@
     "route_rating": "Easy",
     "route_terrain": "Flat",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11330",
@@ -7426,7 +7426,7 @@
     "route_rating": "Easy",
     "route_terrain": "Flat",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11330",
@@ -7445,7 +7445,7 @@
     "route_rating": "Easy",
     "route_terrain": "Flat",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11329",
@@ -7464,7 +7464,7 @@
     "route_rating": "Easy",
     "route_terrain": "Flat",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11329",
@@ -7483,7 +7483,7 @@
     "route_rating": "Easy",
     "route_terrain": "Flat",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11329",
@@ -7502,7 +7502,7 @@
     "route_rating": "Easy",
     "route_terrain": "Flat",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11329",
@@ -7521,7 +7521,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Flat",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11329",
@@ -7540,7 +7540,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Flat",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11328",
@@ -7559,7 +7559,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Flat",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11327",
@@ -7578,7 +7578,7 @@
     "route_rating": "Easy",
     "route_terrain": "Rolling",
     "route_surface": "Mostly Paved",
-    "unsealed_km": "5"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11325",
@@ -7597,7 +7597,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Climbing",
     "route_surface": "Mostly Unpaved",
-    "unsealed_km": "97"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11325",
@@ -7616,7 +7616,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Rolling",
     "route_surface": "Mostly Unpaved",
-    "unsealed_km": "112"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11324",
@@ -7635,7 +7635,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Flat",
     "route_surface": "Mixed Surfaces",
-    "unsealed_km": "83"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11323",
@@ -7654,7 +7654,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Rolling",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11322",
@@ -7673,7 +7673,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Rolling",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11299",
@@ -7692,7 +7692,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Rolling",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11298",
@@ -7711,7 +7711,7 @@
     "route_rating": "Easy",
     "route_terrain": "Flat",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11297",
@@ -7730,7 +7730,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Rolling",
     "route_surface": "Paved",
-    "unsealed_km": "2.1"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11297",
@@ -7749,7 +7749,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Rolling",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11296",
@@ -7768,7 +7768,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Rolling",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11295",
@@ -7787,7 +7787,7 @@
     "route_rating": "Very Difficult",
     "route_terrain": "Flat",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11294",
@@ -7806,7 +7806,7 @@
     "route_rating": "Very Difficult",
     "route_terrain": "Flat",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11293",
@@ -7825,7 +7825,7 @@
     "route_rating": "Very Difficult",
     "route_terrain": "Flat",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11292",
@@ -7844,7 +7844,7 @@
     "route_rating": "Very Difficult",
     "route_terrain": "Flat",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11291",
@@ -7863,7 +7863,7 @@
     "route_rating": "Very Difficult",
     "route_terrain": "Flat",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11289",
@@ -7882,7 +7882,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Rolling",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11266",
@@ -7901,7 +7901,7 @@
     "route_rating": "Very Difficult",
     "route_terrain": "Climbing",
     "route_surface": "Mostly Paved",
-    "unsealed_km": "17"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11265",
@@ -7920,7 +7920,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Rolling",
     "route_surface": "Paved",
-    "unsealed_km": "15"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11085",
@@ -7939,7 +7939,7 @@
     "route_rating": "Easy",
     "route_terrain": "Rolling",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11085",
@@ -7958,7 +7958,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Rolling",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11085",
@@ -7977,7 +7977,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Rolling",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11085",
@@ -7996,7 +7996,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Rolling",
     "route_surface": "Mostly Paved",
-    "unsealed_km": "8.0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11085",
@@ -8015,7 +8015,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Rolling",
     "route_surface": "Paved",
-    "unsealed_km": "6.0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11085",
@@ -8034,7 +8034,7 @@
     "route_rating": "Difficult",
     "route_terrain": "Rolling",
     "route_surface": "Paved",
-    "unsealed_km": "4.1"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11085",
@@ -8053,7 +8053,7 @@
     "route_rating": "Difficult",
     "route_terrain": "Rolling",
     "route_surface": "Paved",
-    "unsealed_km": "12.3"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11085",
@@ -8072,7 +8072,7 @@
     "route_rating": "Difficult",
     "route_terrain": "Rolling",
     "route_surface": "Paved",
-    "unsealed_km": "7"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "10926",
@@ -8091,7 +8091,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Climbing",
     "route_surface": "Mostly Unpaved",
-    "unsealed_km": "90"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "10925",
@@ -8110,7 +8110,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Climbing",
     "route_surface": "Mostly Unpaved",
-    "unsealed_km": "67"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "10924",
@@ -8129,7 +8129,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Climbing",
     "route_surface": "Mostly Unpaved",
-    "unsealed_km": "33"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11749",
@@ -8148,7 +8148,7 @@
     "route_rating": "Easy",
     "route_terrain": "Climbing",
     "route_surface": "Mostly Paved",
-    "unsealed_km": "1.0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11666",
@@ -8167,7 +8167,7 @@
     "route_rating": "Easy",
     "route_terrain": "Rolling",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11666",
@@ -8186,7 +8186,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Climbing",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11666",
@@ -8205,7 +8205,7 @@
     "route_rating": "Difficult",
     "route_terrain": "Climbing",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11666",
@@ -8224,7 +8224,7 @@
     "route_rating": "Difficult",
     "route_terrain": "Climbing",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11665",
@@ -8243,7 +8243,7 @@
     "route_rating": "Easy",
     "route_terrain": "Rolling",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11665",
@@ -8262,7 +8262,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Climbing",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11665",
@@ -8281,7 +8281,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Climbing",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11664",
@@ -8300,7 +8300,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Climbing",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11664",
@@ -8319,7 +8319,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Climbing",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11664",
@@ -8338,7 +8338,7 @@
     "route_rating": "Difficult",
     "route_terrain": "Climbing",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11663",
@@ -8357,7 +8357,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Climbing",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11663",
@@ -8376,7 +8376,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Climbing",
     "route_surface": "Paved",
-    "unsealed_km": "2"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11662",
@@ -8395,7 +8395,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Climbing",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11662",
@@ -8414,7 +8414,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Climbing",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11662",
@@ -8433,7 +8433,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Climbing",
     "route_surface": "Paved",
-    "unsealed_km": "1"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11662",
@@ -8452,7 +8452,7 @@
     "route_rating": "Difficult",
     "route_terrain": "Climbing",
     "route_surface": "Paved",
-    "unsealed_km": "1"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11661",
@@ -8471,7 +8471,7 @@
     "route_rating": "Easy",
     "route_terrain": "Flat",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11660",
@@ -8490,7 +8490,7 @@
     "route_rating": "Easy",
     "route_terrain": "Flat",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11660",
@@ -8509,7 +8509,7 @@
     "route_rating": "Easy",
     "route_terrain": "Flat",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11660",
@@ -8528,7 +8528,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Flat",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11660",
@@ -8547,7 +8547,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Flat",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11658",
@@ -8566,7 +8566,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Climbing",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11658",
@@ -8585,7 +8585,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Climbing",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11658",
@@ -8604,7 +8604,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Climbing",
     "route_surface": "Mostly Paved",
-    "unsealed_km": "22"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11658",
@@ -8623,7 +8623,7 @@
     "route_rating": "Difficult",
     "route_terrain": "Climbing",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11658",
@@ -8642,7 +8642,7 @@
     "route_rating": "Difficult",
     "route_terrain": "Rolling",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11657",
@@ -8661,7 +8661,7 @@
     "route_rating": "Easy",
     "route_terrain": "Rolling",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11657",
@@ -8680,7 +8680,7 @@
     "route_rating": "Easy",
     "route_terrain": "Rolling",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11657",
@@ -8699,7 +8699,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Rolling",
     "route_surface": "Paved",
-    "unsealed_km": "1"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11657",
@@ -8718,7 +8718,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Climbing",
     "route_surface": "Mostly Paved",
-    "unsealed_km": "11"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11655",
@@ -8737,7 +8737,7 @@
     "route_rating": "Very Difficult",
     "route_terrain": "Rolling",
     "route_surface": "Paved",
-    "unsealed_km": "14.0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11629",
@@ -8756,7 +8756,7 @@
     "route_rating": "Difficult",
     "route_terrain": "Rolling",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11628",
@@ -8775,7 +8775,7 @@
     "route_rating": "Difficult",
     "route_terrain": "Rolling",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11627",
@@ -8794,7 +8794,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Rolling",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11625",
@@ -8813,7 +8813,7 @@
     "route_rating": "Easy",
     "route_terrain": "Rolling",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11624",
@@ -8832,7 +8832,7 @@
     "route_rating": "Easy",
     "route_terrain": "Rolling",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11619",
@@ -8851,7 +8851,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Climbing",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11619",
@@ -8870,7 +8870,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Climbing",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11619",
@@ -8889,7 +8889,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Climbing",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11619",
@@ -8908,7 +8908,7 @@
     "route_rating": "Difficult",
     "route_terrain": "Climbing",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11618",
@@ -8927,7 +8927,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Climbing",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11618",
@@ -8946,7 +8946,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Climbing",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11618",
@@ -8965,7 +8965,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Climbing",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11618",
@@ -8984,7 +8984,7 @@
     "route_rating": "Difficult",
     "route_terrain": "Climbing",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11617",
@@ -9003,7 +9003,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Climbing",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11617",
@@ -9022,7 +9022,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Climbing",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11617",
@@ -9041,7 +9041,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Rolling",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11616",
@@ -9060,7 +9060,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Climbing",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11616",
@@ -9079,7 +9079,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Rolling",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11616",
@@ -9098,7 +9098,7 @@
     "route_rating": "Difficult",
     "route_terrain": "Climbing",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11616",
@@ -9117,7 +9117,7 @@
     "route_rating": "Difficult",
     "route_terrain": "Climbing",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11615",
@@ -9136,7 +9136,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Climbing",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11615",
@@ -9155,7 +9155,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Climbing",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11615",
@@ -9174,7 +9174,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Climbing",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11615",
@@ -9193,7 +9193,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Climbing",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11615",
@@ -9212,7 +9212,7 @@
     "route_rating": "Difficult",
     "route_terrain": "Climbing",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11614",
@@ -9231,7 +9231,7 @@
     "route_rating": "Easy",
     "route_terrain": "Rolling",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11614",
@@ -9250,7 +9250,7 @@
     "route_rating": "Easy",
     "route_terrain": "Rolling",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11614",
@@ -9269,7 +9269,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Rolling",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11613",
@@ -9288,7 +9288,7 @@
     "route_rating": "Easy",
     "route_terrain": "Rolling",
     "route_surface": "Mostly Paved",
-    "unsealed_km": "1.6"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11613",
@@ -9307,7 +9307,7 @@
     "route_rating": "Easy",
     "route_terrain": "Rolling",
     "route_surface": "Paved",
-    "unsealed_km": "1.1"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11612",
@@ -9326,7 +9326,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Climbing",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11612",
@@ -9345,7 +9345,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Climbing",
     "route_surface": "Paved",
-    "unsealed_km": "2.0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11612",
@@ -9364,7 +9364,7 @@
     "route_rating": "Difficult",
     "route_terrain": "Climbing",
     "route_surface": "Paved",
-    "unsealed_km": "3.0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11608",
@@ -9383,7 +9383,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Climbing",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11608",
@@ -9402,7 +9402,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Climbing",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11608",
@@ -9421,7 +9421,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Rolling",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11608",
@@ -9440,7 +9440,7 @@
     "route_rating": "Difficult",
     "route_terrain": "Climbing",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11607",
@@ -9459,7 +9459,7 @@
     "route_rating": "Easy",
     "route_terrain": "Rolling",
     "route_surface": "Paved",
-    "unsealed_km": "0.5"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11607",
@@ -9478,7 +9478,7 @@
     "route_rating": "Easy",
     "route_terrain": "Rolling",
     "route_surface": "Paved",
-    "unsealed_km": "1.2"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11607",
@@ -9497,7 +9497,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Rolling",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11606",
@@ -9516,7 +9516,7 @@
     "route_rating": "Easy",
     "route_terrain": "Rolling",
     "route_surface": "Paved",
-    "unsealed_km": "0.5"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11606",
@@ -9535,7 +9535,7 @@
     "route_rating": "Easy",
     "route_terrain": "Rolling",
     "route_surface": "Paved",
-    "unsealed_km": "1.2"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11606",
@@ -9554,7 +9554,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Rolling",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11605",
@@ -9573,7 +9573,7 @@
     "route_rating": "Easy",
     "route_terrain": "Rolling",
     "route_surface": "Paved",
-    "unsealed_km": "0.5"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11605",
@@ -9592,7 +9592,7 @@
     "route_rating": "Easy",
     "route_terrain": "Rolling",
     "route_surface": "Paved",
-    "unsealed_km": "1.2"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11605",
@@ -9611,7 +9611,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Rolling",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11604",
@@ -9630,7 +9630,7 @@
     "route_rating": "Easy",
     "route_terrain": "Rolling",
     "route_surface": "Paved",
-    "unsealed_km": "0.5"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11604",
@@ -9649,7 +9649,7 @@
     "route_rating": "Easy",
     "route_terrain": "Rolling",
     "route_surface": "Paved",
-    "unsealed_km": "1.2"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11604",
@@ -9668,7 +9668,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Rolling",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11603",
@@ -9687,7 +9687,7 @@
     "route_rating": "Easy",
     "route_terrain": "Rolling",
     "route_surface": "Paved",
-    "unsealed_km": "0.5"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11603",
@@ -9706,7 +9706,7 @@
     "route_rating": "Easy",
     "route_terrain": "Rolling",
     "route_surface": "Paved",
-    "unsealed_km": "1.2"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11603",
@@ -9725,7 +9725,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Rolling",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11602",
@@ -9744,7 +9744,7 @@
     "route_rating": "Easy",
     "route_terrain": "Rolling",
     "route_surface": "Paved",
-    "unsealed_km": "0.5"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11602",
@@ -9763,7 +9763,7 @@
     "route_rating": "Easy",
     "route_terrain": "Rolling",
     "route_surface": "Paved",
-    "unsealed_km": "1.2"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11602",
@@ -9782,7 +9782,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Rolling",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11601",
@@ -9801,7 +9801,7 @@
     "route_rating": "Easy",
     "route_terrain": "Rolling",
     "route_surface": "Paved",
-    "unsealed_km": "0.5"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11601",
@@ -9820,7 +9820,7 @@
     "route_rating": "Easy",
     "route_terrain": "Rolling",
     "route_surface": "Paved",
-    "unsealed_km": "1.2"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11601",
@@ -9839,7 +9839,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Rolling",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11600",
@@ -9858,7 +9858,7 @@
     "route_rating": "Easy",
     "route_terrain": "Rolling",
     "route_surface": "Paved",
-    "unsealed_km": "0.5"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11600",
@@ -9877,7 +9877,7 @@
     "route_rating": "Easy",
     "route_terrain": "Rolling",
     "route_surface": "Paved",
-    "unsealed_km": "1.2"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11600",
@@ -9896,7 +9896,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Rolling",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11599",
@@ -9915,7 +9915,7 @@
     "route_rating": "Easy",
     "route_terrain": "Rolling",
     "route_surface": "Paved",
-    "unsealed_km": "0.5"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11599",
@@ -9934,7 +9934,7 @@
     "route_rating": "Easy",
     "route_terrain": "Rolling",
     "route_surface": "Paved",
-    "unsealed_km": "1.2"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11599",
@@ -9953,7 +9953,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Rolling",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11598",
@@ -9972,7 +9972,7 @@
     "route_rating": "Easy",
     "route_terrain": "Rolling",
     "route_surface": "Paved",
-    "unsealed_km": "0.5"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11598",
@@ -9991,7 +9991,7 @@
     "route_rating": "Easy",
     "route_terrain": "Rolling",
     "route_surface": "Paved",
-    "unsealed_km": "1.2"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11598",
@@ -10010,7 +10010,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Rolling",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11505",
@@ -10029,7 +10029,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Climbing",
     "route_surface": "Mostly Paved",
-    "unsealed_km": "12.1"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11505",
@@ -10048,7 +10048,7 @@
     "route_rating": "Difficult",
     "route_terrain": "Climbing",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11497",
@@ -10067,7 +10067,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Climbing",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11497",
@@ -10086,7 +10086,7 @@
     "route_rating": "Easy",
     "route_terrain": "Climbing",
     "route_surface": "Paved",
-    "unsealed_km": "0.5"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11497",
@@ -10105,7 +10105,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Climbing",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11497",
@@ -10124,7 +10124,7 @@
     "route_rating": "Easy",
     "route_terrain": "Climbing",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11496",
@@ -10143,7 +10143,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Climbing",
     "route_surface": "Mixed Surfaces",
-    "unsealed_km": "55"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11496",
@@ -10162,7 +10162,7 @@
     "route_rating": "Difficult",
     "route_terrain": "Climbing",
     "route_surface": "Mixed Surfaces",
-    "unsealed_km": "66.3"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11494",
@@ -10181,7 +10181,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Rolling",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11492",
@@ -10200,7 +10200,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Climbing",
     "route_surface": "Paved",
-    "unsealed_km": "0.5"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11487",
@@ -10219,7 +10219,7 @@
     "route_rating": "Difficult",
     "route_terrain": "Climbing",
     "route_surface": "Mixed Surfaces",
-    "unsealed_km": "206"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11486",
@@ -10238,7 +10238,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Climbing",
     "route_surface": "Mixed Surfaces",
-    "unsealed_km": "53.8"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11486",
@@ -10257,7 +10257,7 @@
     "route_rating": "Difficult",
     "route_terrain": "Climbing",
     "route_surface": "Mixed Surfaces",
-    "unsealed_km": "39.4"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11486",
@@ -10276,7 +10276,7 @@
     "route_rating": "Difficult",
     "route_terrain": "Climbing",
     "route_surface": "Mixed Surfaces",
-    "unsealed_km": "49.4"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11486",
@@ -10295,7 +10295,7 @@
     "route_rating": "Very Difficult",
     "route_terrain": "Climbing",
     "route_surface": "Mixed Surfaces",
-    "unsealed_km": "68.7"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11486",
@@ -10314,7 +10314,7 @@
     "route_rating": "Very Difficult",
     "route_terrain": "Climbing",
     "route_surface": "Mostly Paved",
-    "unsealed_km": "78.4"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11484",
@@ -10333,7 +10333,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Climbing",
     "route_surface": "Mixed Surfaces",
-    "unsealed_km": "44.0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11484",
@@ -10352,7 +10352,7 @@
     "route_rating": "Difficult",
     "route_terrain": "Climbing",
     "route_surface": "Mixed Surfaces",
-    "unsealed_km": "66.6"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11483",
@@ -10371,7 +10371,7 @@
     "route_rating": "Easy",
     "route_terrain": "Rolling",
     "route_surface": "Paved",
-    "unsealed_km": "3.0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11483",
@@ -10390,7 +10390,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Rolling",
     "route_surface": "Paved",
-    "unsealed_km": "2.0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11483",
@@ -10409,7 +10409,7 @@
     "route_rating": "Difficult",
     "route_terrain": "Climbing",
     "route_surface": "Paved",
-    "unsealed_km": "3.1"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11483",
@@ -10428,7 +10428,7 @@
     "route_rating": "Difficult",
     "route_terrain": "Climbing",
     "route_surface": "Paved",
-    "unsealed_km": "8.2"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11482",
@@ -10447,7 +10447,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Rolling",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11482",
@@ -10466,7 +10466,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Rolling",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11482",
@@ -10485,7 +10485,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Flat",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11482",
@@ -10504,7 +10504,7 @@
     "route_rating": "Easy",
     "route_terrain": "Flat",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11482",
@@ -10523,7 +10523,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Rolling",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11482",
@@ -10542,7 +10542,7 @@
     "route_rating": "Easy",
     "route_terrain": "Flat",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11482",
@@ -10561,7 +10561,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Rolling",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11482",
@@ -10580,7 +10580,7 @@
     "route_rating": "Easy",
     "route_terrain": "Rolling",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11481",
@@ -10599,7 +10599,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Flat",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11481",
@@ -10618,7 +10618,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Flat",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11481",
@@ -10637,7 +10637,7 @@
     "route_rating": "Easy",
     "route_terrain": "Flat",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11481",
@@ -10656,7 +10656,7 @@
     "route_rating": "Easy",
     "route_terrain": "Flat",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11481",
@@ -10675,7 +10675,7 @@
     "route_rating": "Easy",
     "route_terrain": "Rolling",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11481",
@@ -10694,7 +10694,7 @@
     "route_rating": "Easy",
     "route_terrain": "Flat",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11481",
@@ -10713,7 +10713,7 @@
     "route_rating": "Easy",
     "route_terrain": "Flat",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11481",
@@ -10732,7 +10732,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Flat",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11481",
@@ -10751,7 +10751,7 @@
     "route_rating": "Easy",
     "route_terrain": "Flat",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11478",
@@ -10770,7 +10770,7 @@
     "route_rating": "Easy",
     "route_terrain": "Rolling",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11478",
@@ -10789,7 +10789,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Climbing",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11478",
@@ -10808,7 +10808,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Climbing",
     "route_surface": "Mostly Paved",
-    "unsealed_km": "8.1"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11477",
@@ -10827,7 +10827,7 @@
     "route_rating": "Easy",
     "route_terrain": "Rolling",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11477",
@@ -10846,7 +10846,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Climbing",
     "route_surface": "Mostly Paved",
-    "unsealed_km": "7.3"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11477",
@@ -10865,7 +10865,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Climbing",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11476",
@@ -10884,7 +10884,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Climbing",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11476",
@@ -10903,7 +10903,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Climbing",
     "route_surface": "Paved",
-    "unsealed_km": "1.0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11476",
@@ -10922,7 +10922,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Rolling",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11476",
@@ -10941,7 +10941,7 @@
     "route_rating": "Difficult",
     "route_terrain": "Climbing",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11476",
@@ -10960,7 +10960,7 @@
     "route_rating": "Difficult",
     "route_terrain": "Rolling",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11476",
@@ -10979,7 +10979,7 @@
     "route_rating": "Difficult",
     "route_terrain": "Rolling",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11476",
@@ -10998,7 +10998,7 @@
     "route_rating": "Very Difficult",
     "route_terrain": "Rolling",
     "route_surface": "Paved",
-    "unsealed_km": "10.0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11475",
@@ -11017,7 +11017,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Rolling",
     "route_surface": "Mostly Unpaved",
-    "unsealed_km": "36.9"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11475",
@@ -11036,7 +11036,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Climbing",
     "route_surface": "Mixed Surfaces",
-    "unsealed_km": "51.0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11475",
@@ -11055,7 +11055,7 @@
     "route_rating": "Difficult",
     "route_terrain": "Climbing",
     "route_surface": "Mostly Unpaved",
-    "unsealed_km": "98.6"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11474",
@@ -11074,7 +11074,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Rolling",
     "route_surface": "Mostly Unpaved",
-    "unsealed_km": "36"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11474",
@@ -11093,7 +11093,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Climbing",
     "route_surface": "Mixed Surfaces",
-    "unsealed_km": "49"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11474",
@@ -11112,7 +11112,7 @@
     "route_rating": "Difficult",
     "route_terrain": "Climbing",
     "route_surface": "Mostly Unpaved",
-    "unsealed_km": "100"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11474",
@@ -11131,7 +11131,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Climbing",
     "route_surface": "Mixed Surfaces",
-    "unsealed_km": "49"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11470",
@@ -11150,7 +11150,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Climbing",
     "route_surface": "Mostly Paved",
-    "unsealed_km": "14.1"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11470",
@@ -11169,7 +11169,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Climbing",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11470",
@@ -11188,7 +11188,7 @@
     "route_rating": "Difficult",
     "route_terrain": "Climbing",
     "route_surface": "Mixed Surfaces",
-    "unsealed_km": "32.0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11470",
@@ -11207,7 +11207,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Climbing",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11469",
@@ -11226,7 +11226,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Climbing",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11469",
@@ -11245,7 +11245,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Climbing",
     "route_surface": "Paved",
-    "unsealed_km": "2.1"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11468",
@@ -11264,7 +11264,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Climbing",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11468",
@@ -11283,7 +11283,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Climbing",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11468",
@@ -11302,7 +11302,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Climbing",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11466",
@@ -11321,7 +11321,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Climbing",
     "route_surface": "Paved",
-    "unsealed_km": "1.0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11465",
@@ -11340,7 +11340,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Climbing",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11464",
@@ -11359,7 +11359,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Climbing",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11463",
@@ -11378,7 +11378,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Climbing",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11462",
@@ -11397,7 +11397,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Climbing",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11354",
@@ -11416,7 +11416,7 @@
     "route_rating": "Very Difficult",
     "route_terrain": "Rolling",
     "route_surface": "Mostly Paved",
-    "unsealed_km": "29"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11144",
@@ -11435,7 +11435,7 @@
     "route_rating": "Easy",
     "route_terrain": "Rolling",
     "route_surface": "Paved",
-    "unsealed_km": "0.5"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11144",
@@ -11454,7 +11454,7 @@
     "route_rating": "Easy",
     "route_terrain": "Rolling",
     "route_surface": "Paved",
-    "unsealed_km": "1.2"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11144",
@@ -11473,7 +11473,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Rolling",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11812",
@@ -11492,7 +11492,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Rolling",
     "route_surface": "Mostly Unpaved",
-    "unsealed_km": "41"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11812",
@@ -11511,7 +11511,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Rolling",
     "route_surface": "Mostly Unpaved",
-    "unsealed_km": "83"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11801",
@@ -11530,7 +11530,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Rolling",
     "route_surface": "Mostly Unpaved",
-    "unsealed_km": "36"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11801",
@@ -11549,7 +11549,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Rolling",
     "route_surface": "Mostly Unpaved",
-    "unsealed_km": "75"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11799",
@@ -11568,7 +11568,7 @@
     "route_rating": "Difficult",
     "route_terrain": "Rolling",
     "route_surface": "Unpaved",
-    "unsealed_km": "311"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11799",
@@ -11587,7 +11587,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Rolling",
     "route_surface": "Mostly Unpaved",
-    "unsealed_km": "101"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11799",
@@ -11606,7 +11606,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Rolling",
     "route_surface": "Unpaved",
-    "unsealed_km": "148"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11798",
@@ -11625,7 +11625,7 @@
     "route_rating": "Easy",
     "route_terrain": "Rolling",
     "route_surface": "Unknown",
-    "unsealed_km": "39"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11798",
@@ -11644,7 +11644,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Rolling",
     "route_surface": "Mostly Unpaved",
-    "unsealed_km": "81"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11762",
@@ -11663,7 +11663,7 @@
     "route_rating": "Easy",
     "route_terrain": "Flat",
     "route_surface": "Paved",
-    "unsealed_km": "0.5"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11761",
@@ -11682,7 +11682,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Rolling",
     "route_surface": "Mixed Surfaces",
-    "unsealed_km": "40"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11761",
@@ -11701,7 +11701,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Rolling",
     "route_surface": "Mixed Surfaces",
-    "unsealed_km": "54"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11760",
@@ -11720,7 +11720,7 @@
     "route_rating": "Easy",
     "route_terrain": "Rolling",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11760",
@@ -11739,7 +11739,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Rolling",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11759",
@@ -11758,7 +11758,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Rolling",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11757",
@@ -11777,7 +11777,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Climbing",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11757",
@@ -11796,7 +11796,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Rolling",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11757",
@@ -11815,7 +11815,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Climbing",
     "route_surface": "Paved",
-    "unsealed_km": "2.2"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11757",
@@ -11834,7 +11834,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Rolling",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11735",
@@ -11853,7 +11853,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Rolling",
     "route_surface": "Mostly Unpaved",
-    "unsealed_km": "98"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11734",
@@ -11872,7 +11872,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Rolling",
     "route_surface": "Mostly Unpaved",
-    "unsealed_km": "98"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11733",
@@ -11891,7 +11891,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Rolling",
     "route_surface": "Unpaved",
-    "unsealed_km": "107"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11731",
@@ -11910,7 +11910,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Rolling",
     "route_surface": "Mostly Unpaved",
-    "unsealed_km": "85"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11730",
@@ -11929,7 +11929,7 @@
     "route_rating": "Easy",
     "route_terrain": "Rolling",
     "route_surface": "Mostly Paved",
-    "unsealed_km": "1.5"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11730",
@@ -11948,7 +11948,7 @@
     "route_rating": "Easy",
     "route_terrain": "Rolling",
     "route_surface": "Mostly Paved",
-    "unsealed_km": "3.0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11729",
@@ -11967,7 +11967,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Rolling",
     "route_surface": "Mostly Unpaved",
-    "unsealed_km": "98"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11725",
@@ -11986,7 +11986,7 @@
     "route_rating": "Easy",
     "route_terrain": "Flat",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11725",
@@ -12005,7 +12005,7 @@
     "route_rating": "Easy",
     "route_terrain": "Flat",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11725",
@@ -12024,7 +12024,7 @@
     "route_rating": "Easy",
     "route_terrain": "Rolling",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11724",
@@ -12043,7 +12043,7 @@
     "route_rating": "Easy",
     "route_terrain": "Flat",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11724",
@@ -12062,7 +12062,7 @@
     "route_rating": "Easy",
     "route_terrain": "Flat",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11709",
@@ -12081,7 +12081,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Rolling",
     "route_surface": "Mostly Unpaved",
-    "unsealed_km": "85"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11708",
@@ -12100,7 +12100,7 @@
     "route_rating": "Easy",
     "route_terrain": "Rolling",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11707",
@@ -12119,7 +12119,7 @@
     "route_rating": "Easy",
     "route_terrain": "Rolling",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11706",
@@ -12138,7 +12138,7 @@
     "route_rating": "Easy",
     "route_terrain": "Rolling",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11705",
@@ -12157,7 +12157,7 @@
     "route_rating": "Easy",
     "route_terrain": "Rolling",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11704",
@@ -12176,7 +12176,7 @@
     "route_rating": "Easy",
     "route_terrain": "Rolling",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11700",
@@ -12195,7 +12195,7 @@
     "route_rating": "Easy",
     "route_terrain": "Rolling",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11700",
@@ -12214,7 +12214,7 @@
     "route_rating": "Easy",
     "route_terrain": "Rolling",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11697",
@@ -12233,7 +12233,7 @@
     "route_rating": "Easy",
     "route_terrain": "Rolling",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11697",
@@ -12252,7 +12252,7 @@
     "route_rating": "Easy",
     "route_terrain": "Rolling",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11680",
@@ -12271,7 +12271,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Climbing",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11669",
@@ -12290,7 +12290,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Rolling",
     "route_surface": "Mostly Paved",
-    "unsealed_km": "8.2"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11669",
@@ -12309,7 +12309,7 @@
     "route_rating": "Difficult",
     "route_terrain": "Climbing",
     "route_surface": "Mostly Paved",
-    "unsealed_km": "33.7"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11621",
@@ -12328,7 +12328,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Rolling",
     "route_surface": "Mostly Unpaved",
-    "unsealed_km": "43"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11621",
@@ -12347,7 +12347,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Climbing",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11621",
@@ -12366,7 +12366,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Climbing",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11584",
@@ -12385,7 +12385,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Climbing",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11584",
@@ -12404,7 +12404,7 @@
     "route_rating": "Difficult",
     "route_terrain": "Climbing",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11583",
@@ -12423,7 +12423,7 @@
     "route_rating": "Easy",
     "route_terrain": "Rolling",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11583",
@@ -12442,7 +12442,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Rolling",
     "route_surface": "Paved",
-    "unsealed_km": "1.5"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11583",
@@ -12461,7 +12461,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Rolling",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11583",
@@ -12480,7 +12480,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Rolling",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11583",
@@ -12499,7 +12499,7 @@
     "route_rating": "Difficult",
     "route_terrain": "Rolling",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11583",
@@ -12518,7 +12518,7 @@
     "route_rating": "Difficult",
     "route_terrain": "Rolling",
     "route_surface": "Paved",
-    "unsealed_km": "6.0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11582",
@@ -12537,7 +12537,7 @@
     "route_rating": "Easy",
     "route_terrain": "Flat",
     "route_surface": "Paved",
-    "unsealed_km": "2.0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11581",
@@ -12556,7 +12556,7 @@
     "route_rating": "Difficult",
     "route_terrain": "Rolling",
     "route_surface": "Mostly Unpaved",
-    "unsealed_km": "294.2"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11580",
@@ -12575,7 +12575,7 @@
     "route_rating": "Easy",
     "route_terrain": "Rolling",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11580",
@@ -12594,7 +12594,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Rolling",
     "route_surface": "Mostly Paved",
-    "unsealed_km": "12.0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11579",
@@ -12613,7 +12613,7 @@
     "route_rating": "Difficult",
     "route_terrain": "Climbing",
     "route_surface": "Mixed Surfaces",
-    "unsealed_km": "40"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11578",
@@ -12632,7 +12632,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Rolling",
     "route_surface": "Mixed Surfaces",
-    "unsealed_km": "46"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11577",
@@ -12651,7 +12651,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Rolling",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11577",
@@ -12670,7 +12670,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Rolling",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11576",
@@ -12689,7 +12689,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Climbing",
     "route_surface": "Mixed Surfaces",
-    "unsealed_km": "25.4"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11576",
@@ -12708,7 +12708,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Climbing",
     "route_surface": "Mixed Surfaces",
-    "unsealed_km": "54.4"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11576",
@@ -12727,7 +12727,7 @@
     "route_rating": "Difficult",
     "route_terrain": "Climbing",
     "route_surface": "Mixed Surfaces",
-    "unsealed_km": "60.0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11576",
@@ -12746,7 +12746,7 @@
     "route_rating": "Difficult",
     "route_terrain": "Climbing",
     "route_surface": "Mixed Surfaces",
-    "unsealed_km": "99.4"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11575",
@@ -12765,7 +12765,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Rolling",
     "route_surface": "Mixed Surfaces",
-    "unsealed_km": "44"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11575",
@@ -12784,7 +12784,7 @@
     "route_rating": "Difficult",
     "route_terrain": "Rolling",
     "route_surface": "Mixed Surfaces",
-    "unsealed_km": "139.7"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11574",
@@ -12803,7 +12803,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Climbing",
     "route_surface": "Paved",
-    "unsealed_km": "1.0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11574",
@@ -12822,7 +12822,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Climbing",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11573",
@@ -12841,7 +12841,7 @@
     "route_rating": "Difficult",
     "route_terrain": "Climbing",
     "route_surface": "Mixed Surfaces",
-    "unsealed_km": "87.1"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11572",
@@ -12860,7 +12860,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Rolling",
     "route_surface": "Mixed Surfaces",
-    "unsealed_km": "33"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11572",
@@ -12879,7 +12879,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Rolling",
     "route_surface": "Mostly Unpaved",
-    "unsealed_km": "59"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11571",
@@ -12898,7 +12898,7 @@
     "route_rating": "Very Difficult",
     "route_terrain": "Rolling",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11570",
@@ -12917,7 +12917,7 @@
     "route_rating": "Easy",
     "route_terrain": "Rolling",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11570",
@@ -12936,7 +12936,7 @@
     "route_rating": "Easy",
     "route_terrain": "Rolling",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11569",
@@ -12955,7 +12955,7 @@
     "route_rating": "Difficult",
     "route_terrain": "Climbing",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11567",
@@ -12974,7 +12974,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Climbing",
     "route_surface": "Mostly Paved",
-    "unsealed_km": "3.1"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11566",
@@ -12993,7 +12993,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Climbing",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11565",
@@ -13012,7 +13012,7 @@
     "route_rating": "Easy",
     "route_terrain": "Rolling",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11565",
@@ -13031,7 +13031,7 @@
     "route_rating": "Easy",
     "route_terrain": "Rolling",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11565",
@@ -13050,7 +13050,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Climbing",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11564",
@@ -13069,7 +13069,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Rolling",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11563",
@@ -13088,7 +13088,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Climbing",
     "route_surface": "Paved",
-    "unsealed_km": "3"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11562",
@@ -13107,7 +13107,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Rolling",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11561",
@@ -13126,7 +13126,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Climbing",
     "route_surface": "Mixed Surfaces",
-    "unsealed_km": "28"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11561",
@@ -13145,7 +13145,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Rolling",
     "route_surface": "Mixed Surfaces",
-    "unsealed_km": "48"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11561",
@@ -13164,7 +13164,7 @@
     "route_rating": "Difficult",
     "route_terrain": "Climbing",
     "route_surface": "Mixed Surfaces",
-    "unsealed_km": "65"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11560",
@@ -13183,7 +13183,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Climbing",
     "route_surface": "Mixed Surfaces",
-    "unsealed_km": "49.9"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11560",
@@ -13202,7 +13202,7 @@
     "route_rating": "Difficult",
     "route_terrain": "Climbing",
     "route_surface": "Mostly Unpaved",
-    "unsealed_km": "117.8"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11559",
@@ -13221,7 +13221,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Climbing",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11559",
@@ -13240,7 +13240,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Rolling",
     "route_surface": "Mostly Paved",
-    "unsealed_km": "8.2"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11559",
@@ -13259,7 +13259,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Rolling",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11558",
@@ -13278,7 +13278,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Climbing",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11557",
@@ -13297,7 +13297,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Climbing",
     "route_surface": "Mixed Surfaces",
-    "unsealed_km": "49.2"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11557",
@@ -13316,7 +13316,7 @@
     "route_rating": "Difficult",
     "route_terrain": "Climbing",
     "route_surface": "Mostly Unpaved",
-    "unsealed_km": "139.5"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11557",
@@ -13335,7 +13335,7 @@
     "route_rating": "Difficult",
     "route_terrain": "Rolling",
     "route_surface": "Mostly Unpaved",
-    "unsealed_km": "209.2"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11557",
@@ -13354,7 +13354,7 @@
     "route_rating": "Difficult",
     "route_terrain": "Rolling",
     "route_surface": "Mostly Unpaved",
-    "unsealed_km": "307.2"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11557",
@@ -13373,7 +13373,7 @@
     "route_rating": "Very Difficult",
     "route_terrain": "Rolling",
     "route_surface": "Mixed Surfaces",
-    "unsealed_km": "300.4"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11557",
@@ -13392,7 +13392,7 @@
     "route_rating": "Very Difficult",
     "route_terrain": "Rolling",
     "route_surface": "Mixed Surfaces",
-    "unsealed_km": "306.6"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11556",
@@ -13411,7 +13411,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Rolling",
     "route_surface": "Mostly Paved",
-    "unsealed_km": "9.1"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11556",
@@ -13430,7 +13430,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Rolling",
     "route_surface": "Mostly Paved",
-    "unsealed_km": "12.1"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11555",
@@ -13449,7 +13449,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Climbing",
     "route_surface": "Mixed Surfaces",
-    "unsealed_km": "57"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11554",
@@ -13468,7 +13468,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Rolling",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11554",
@@ -13487,7 +13487,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Rolling",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11554",
@@ -13506,7 +13506,7 @@
     "route_rating": "Difficult",
     "route_terrain": "Rolling",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11554",
@@ -13525,7 +13525,7 @@
     "route_rating": "Difficult",
     "route_terrain": "Rolling",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11553",
@@ -13544,7 +13544,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Climbing",
     "route_surface": "Paved",
-    "unsealed_km": "2.0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11552",
@@ -13563,7 +13563,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Climbing",
     "route_surface": "Paved",
-    "unsealed_km": "2.1"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11551",
@@ -13582,7 +13582,7 @@
     "route_rating": "Difficult",
     "route_terrain": "Rolling",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11551",
@@ -13601,7 +13601,7 @@
     "route_rating": "Difficult",
     "route_terrain": "Rolling",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11550",
@@ -13620,7 +13620,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Rolling",
     "route_surface": "Mostly Unpaved",
-    "unsealed_km": "50"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11550",
@@ -13639,7 +13639,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Rolling",
     "route_surface": "Mixed Surfaces",
-    "unsealed_km": "90.2"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11549",
@@ -13658,7 +13658,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Rolling",
     "route_surface": "Mostly Unpaved",
-    "unsealed_km": "98"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11549",
@@ -13677,7 +13677,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Rolling",
     "route_surface": "Mostly Unpaved",
-    "unsealed_km": "149"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11548",
@@ -13696,7 +13696,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Climbing",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11548",
@@ -13715,7 +13715,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Climbing",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11547",
@@ -13734,7 +13734,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Climbing",
     "route_surface": "Mixed Surfaces",
-    "unsealed_km": "49.2"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11547",
@@ -13753,7 +13753,7 @@
     "route_rating": "Difficult",
     "route_terrain": "Climbing",
     "route_surface": "Mostly Unpaved",
-    "unsealed_km": "139.5"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11547",
@@ -13772,7 +13772,7 @@
     "route_rating": "Difficult",
     "route_terrain": "Rolling",
     "route_surface": "Mostly Unpaved",
-    "unsealed_km": "209.2"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11547",
@@ -13791,7 +13791,7 @@
     "route_rating": "Difficult",
     "route_terrain": "Rolling",
     "route_surface": "Mostly Unpaved",
-    "unsealed_km": "307.2"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11547",
@@ -13810,7 +13810,7 @@
     "route_rating": "Very Difficult",
     "route_terrain": "Rolling",
     "route_surface": "Mixed Surfaces",
-    "unsealed_km": "300.4"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11547",
@@ -13829,7 +13829,7 @@
     "route_rating": "Very Difficult",
     "route_terrain": "Rolling",
     "route_surface": "Mixed Surfaces",
-    "unsealed_km": "306.6"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11546",
@@ -13848,7 +13848,7 @@
     "route_rating": "Difficult",
     "route_terrain": "Rolling",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11545",
@@ -13867,7 +13867,7 @@
     "route_rating": "Difficult",
     "route_terrain": "Rolling",
     "route_surface": "Unpaved",
-    "unsealed_km": "311"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11545",
@@ -13886,7 +13886,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Rolling",
     "route_surface": "Mostly Unpaved",
-    "unsealed_km": "53"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11545",
@@ -13905,7 +13905,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Rolling",
     "route_surface": "Mostly Unpaved",
-    "unsealed_km": "101"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11545",
@@ -13924,7 +13924,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Rolling",
     "route_surface": "Unpaved",
-    "unsealed_km": "148"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11544",
@@ -13943,7 +13943,7 @@
     "route_rating": "Easy",
     "route_terrain": "Rolling",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11544",
@@ -13962,7 +13962,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Rolling",
     "route_surface": "Paved",
-    "unsealed_km": "1.5"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11544",
@@ -13981,7 +13981,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Rolling",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11544",
@@ -14000,7 +14000,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Rolling",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11544",
@@ -14019,7 +14019,7 @@
     "route_rating": "Difficult",
     "route_terrain": "Rolling",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11544",
@@ -14038,7 +14038,7 @@
     "route_rating": "Difficult",
     "route_terrain": "Rolling",
     "route_surface": "Paved",
-    "unsealed_km": "6.0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11543",
@@ -14057,7 +14057,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Climbing",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11543",
@@ -14076,7 +14076,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Climbing",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11543",
@@ -14095,7 +14095,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Climbing",
     "route_surface": "Mostly Paved",
-    "unsealed_km": "8.5"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11542",
@@ -14114,7 +14114,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Rolling",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11542",
@@ -14133,7 +14133,7 @@
     "route_rating": "Difficult",
     "route_terrain": "Rolling",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11541",
@@ -14152,7 +14152,7 @@
     "route_rating": "Difficult",
     "route_terrain": "Climbing",
     "route_surface": "Mixed Surfaces",
-    "unsealed_km": "71.4"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11540",
@@ -14171,7 +14171,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Rolling",
     "route_surface": "Paved",
-    "unsealed_km": "2.0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11540",
@@ -14190,7 +14190,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Rolling",
     "route_surface": "Mixed Surfaces",
-    "unsealed_km": "100"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11539",
@@ -14209,7 +14209,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Rolling",
     "route_surface": "Unpaved",
-    "unsealed_km": "153"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11538",
@@ -14228,7 +14228,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Rolling",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11538",
@@ -14247,7 +14247,7 @@
     "route_rating": "Difficult",
     "route_terrain": "Rolling",
     "route_surface": "Paved",
-    "unsealed_km": "4.1"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11538",
@@ -14266,7 +14266,7 @@
     "route_rating": "Difficult",
     "route_terrain": "Rolling",
     "route_surface": "Paved",
-    "unsealed_km": "6.1"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11537",
@@ -14285,7 +14285,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Rolling",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11536",
@@ -14304,7 +14304,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Rolling",
     "route_surface": "Unpaved",
-    "unsealed_km": "106.9"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11535",
@@ -14323,7 +14323,7 @@
     "route_rating": "Easy",
     "route_terrain": "Rolling",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11535",
@@ -14342,7 +14342,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Rolling",
     "route_surface": "Paved",
-    "unsealed_km": "1.5"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11535",
@@ -14361,7 +14361,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Rolling",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11535",
@@ -14380,7 +14380,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Rolling",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11535",
@@ -14399,7 +14399,7 @@
     "route_rating": "Difficult",
     "route_terrain": "Rolling",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11535",
@@ -14418,7 +14418,7 @@
     "route_rating": "Difficult",
     "route_terrain": "Rolling",
     "route_surface": "Paved",
-    "unsealed_km": "6.0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11534",
@@ -14437,7 +14437,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Climbing",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11533",
@@ -14456,7 +14456,7 @@
     "route_rating": "Very Difficult",
     "route_terrain": "Rolling",
     "route_surface": "Paved",
-    "unsealed_km": "22"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11531",
@@ -14475,7 +14475,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Climbing",
     "route_surface": "Paved",
-    "unsealed_km": "0.5"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11531",
@@ -14494,7 +14494,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Climbing",
     "route_surface": "Paved",
-    "unsealed_km": "0.5"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11530",
@@ -14513,7 +14513,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Climbing",
     "route_surface": "Paved",
-    "unsealed_km": "2.0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11529",
@@ -14532,7 +14532,7 @@
     "route_rating": "Easy",
     "route_terrain": "Rolling",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11528",
@@ -14551,7 +14551,7 @@
     "route_rating": "Easy",
     "route_terrain": "Rolling",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11528",
@@ -14570,7 +14570,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Rolling",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11527",
@@ -14589,7 +14589,7 @@
     "route_rating": "Difficult",
     "route_terrain": "Climbing",
     "route_surface": "Mixed Surfaces",
-    "unsealed_km": "83"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11526",
@@ -14608,7 +14608,7 @@
     "route_rating": "Easy",
     "route_terrain": "Rolling",
     "route_surface": "Mostly Paved",
-    "unsealed_km": "4.2"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11525",
@@ -14627,7 +14627,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Climbing",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11524",
@@ -14646,7 +14646,7 @@
     "route_rating": "Easy",
     "route_terrain": "Rolling",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11524",
@@ -14665,7 +14665,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Rolling",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11524",
@@ -14684,7 +14684,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Rolling",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11523",
@@ -14703,7 +14703,7 @@
     "route_rating": "Easy",
     "route_terrain": "Flat",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11522",
@@ -14722,7 +14722,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Climbing",
     "route_surface": "Paved",
-    "unsealed_km": "2.0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11522",
@@ -14741,7 +14741,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Climbing",
     "route_surface": "Paved",
-    "unsealed_km": "2.0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11521",
@@ -14760,7 +14760,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Rolling",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11521",
@@ -14779,7 +14779,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Rolling",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11521",
@@ -14798,7 +14798,7 @@
     "route_rating": "Difficult",
     "route_terrain": "Rolling",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11521",
@@ -14817,7 +14817,7 @@
     "route_rating": "Difficult",
     "route_terrain": "Rolling",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11520",
@@ -14836,7 +14836,7 @@
     "route_rating": "Easy",
     "route_terrain": "Rolling",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11520",
@@ -14855,7 +14855,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Rolling",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11520",
@@ -14874,7 +14874,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Rolling",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11519",
@@ -14893,7 +14893,7 @@
     "route_rating": "Easy",
     "route_terrain": "Flat",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11519",
@@ -14912,7 +14912,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Rolling",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11518",
@@ -14931,7 +14931,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Rolling",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11518",
@@ -14950,7 +14950,7 @@
     "route_rating": "Difficult",
     "route_terrain": "Rolling",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11517",
@@ -14969,7 +14969,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Climbing",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11517",
@@ -14988,7 +14988,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Climbing",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11516",
@@ -15007,7 +15007,7 @@
     "route_rating": "Easy",
     "route_terrain": "Flat",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11515",
@@ -15026,7 +15026,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Rolling",
     "route_surface": "Mostly Unpaved",
-    "unsealed_km": "41.0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11252",
@@ -15045,7 +15045,7 @@
     "route_rating": "Very Difficult",
     "route_terrain": "Rolling",
     "route_surface": "Mixed Surfaces",
-    "unsealed_km": "333"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11249",
@@ -15064,7 +15064,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Rolling",
     "route_surface": "Mostly Unpaved",
-    "unsealed_km": "101"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11248",
@@ -15083,7 +15083,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Rolling",
     "route_surface": "Mostly Unpaved",
-    "unsealed_km": "53"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "10917",
@@ -15102,7 +15102,7 @@
     "route_rating": "Very Difficult",
     "route_terrain": "Climbing",
     "route_surface": "Mostly Paved",
-    "unsealed_km": "21"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "10904",
@@ -15121,7 +15121,7 @@
     "route_rating": "Easy",
     "route_terrain": "Rolling",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "10904",
@@ -15140,7 +15140,7 @@
     "route_rating": "Easy",
     "route_terrain": "Rolling",
     "route_surface": "Paved",
-    "unsealed_km": "0.4"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "10904",
@@ -15159,7 +15159,7 @@
     "route_rating": "Easy",
     "route_terrain": "Rolling",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "10904",
@@ -15178,7 +15178,7 @@
     "route_rating": "Easy",
     "route_terrain": "Rolling",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "10889",
@@ -15197,7 +15197,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Climbing",
     "route_surface": "Mostly Unpaved",
-    "unsealed_km": "66.7"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "10878",
@@ -15216,7 +15216,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Rolling",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "10878",
@@ -15235,7 +15235,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Rolling",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "10475",
@@ -15254,7 +15254,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Rolling",
     "route_surface": "Paved",
-    "unsealed_km": "6.0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "10262",
@@ -15273,7 +15273,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Climbing",
     "route_surface": "Mixed Surfaces",
-    "unsealed_km": "26"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "9757",
@@ -15292,7 +15292,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Rolling",
     "route_surface": "Mostly Unpaved",
-    "unsealed_km": "40"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "9757",
@@ -15311,7 +15311,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Rolling",
     "route_surface": "Mixed Surfaces",
-    "unsealed_km": "61"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11656",
@@ -15330,7 +15330,7 @@
     "route_rating": "Easy",
     "route_terrain": "Rolling",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11656",
@@ -15349,7 +15349,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Rolling",
     "route_surface": "Mostly Paved",
-    "unsealed_km": "26.6"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11654",
@@ -15368,7 +15368,7 @@
     "route_rating": "Easy",
     "route_terrain": "Rolling",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11654",
@@ -15387,7 +15387,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Rolling",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11653",
@@ -15406,7 +15406,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Climbing",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11653",
@@ -15425,7 +15425,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Rolling",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11639",
@@ -15444,7 +15444,7 @@
     "route_rating": "Easy",
     "route_terrain": "Rolling",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11639",
@@ -15463,7 +15463,7 @@
     "route_rating": "Easy",
     "route_terrain": "Rolling",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11639",
@@ -15482,7 +15482,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Rolling",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11639",
@@ -15501,7 +15501,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Rolling",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11639",
@@ -15520,7 +15520,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Flat",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11639",
@@ -15539,7 +15539,7 @@
     "route_rating": "Difficult",
     "route_terrain": "Flat",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11638",
@@ -15558,7 +15558,7 @@
     "route_rating": "Easy",
     "route_terrain": "Rolling",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11638",
@@ -15577,7 +15577,7 @@
     "route_rating": "Easy",
     "route_terrain": "Flat",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11638",
@@ -15596,7 +15596,7 @@
     "route_rating": "Easy",
     "route_terrain": "Flat",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11637",
@@ -15615,7 +15615,7 @@
     "route_rating": "Easy",
     "route_terrain": "Rolling",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11637",
@@ -15634,7 +15634,7 @@
     "route_rating": "Easy",
     "route_terrain": "Rolling",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11637",
@@ -15653,7 +15653,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Rolling",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11461",
@@ -15672,7 +15672,7 @@
     "route_rating": "Easy",
     "route_terrain": "Rolling",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11461",
@@ -15691,7 +15691,7 @@
     "route_rating": "Easy",
     "route_terrain": "Rolling",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11460",
@@ -15710,7 +15710,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Climbing",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11460",
@@ -15729,7 +15729,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Climbing",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11460",
@@ -15748,7 +15748,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Climbing",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11459",
@@ -15767,7 +15767,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Rolling",
     "route_surface": "Mostly Paved",
-    "unsealed_km": "26.6"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11454",
@@ -15786,7 +15786,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Rolling",
     "route_surface": "Mostly Paved",
-    "unsealed_km": "8.0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11454",
@@ -15805,7 +15805,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Rolling",
     "route_surface": "Mostly Paved",
-    "unsealed_km": "9.1"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11454",
@@ -15824,7 +15824,7 @@
     "route_rating": "Difficult",
     "route_terrain": "Rolling",
     "route_surface": "Mostly Paved",
-    "unsealed_km": "24.0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11454",
@@ -15843,7 +15843,7 @@
     "route_rating": "Difficult",
     "route_terrain": "Rolling",
     "route_surface": "Paved",
-    "unsealed_km": "6.0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11433",
@@ -15862,7 +15862,7 @@
     "route_rating": "Easy",
     "route_terrain": "Rolling",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11433",
@@ -15881,7 +15881,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Rolling",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11433",
@@ -15900,7 +15900,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Flat",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11419",
@@ -15919,7 +15919,7 @@
     "route_rating": "Difficult",
     "route_terrain": "Rolling",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11418",
@@ -15938,7 +15938,7 @@
     "route_rating": "Easy",
     "route_terrain": "Rolling",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11418",
@@ -15957,7 +15957,7 @@
     "route_rating": "Easy",
     "route_terrain": "Rolling",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11418",
@@ -15976,7 +15976,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Rolling",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11418",
@@ -15995,7 +15995,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Rolling",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11418",
@@ -16014,7 +16014,7 @@
     "route_rating": "Difficult",
     "route_terrain": "Rolling",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11418",
@@ -16033,7 +16033,7 @@
     "route_rating": "Difficult",
     "route_terrain": "Rolling",
     "route_surface": "Paved",
-    "unsealed_km": "6.0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11418",
@@ -16052,7 +16052,7 @@
     "route_rating": "Very Difficult",
     "route_terrain": "Rolling",
     "route_surface": "Paved",
-    "unsealed_km": "10.0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11405",
@@ -16071,7 +16071,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Rolling",
     "route_surface": "Mostly Paved",
-    "unsealed_km": "8.0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11405",
@@ -16090,7 +16090,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Rolling",
     "route_surface": "Mostly Paved",
-    "unsealed_km": "9.1"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11405",
@@ -16109,7 +16109,7 @@
     "route_rating": "Difficult",
     "route_terrain": "Rolling",
     "route_surface": "Mostly Paved",
-    "unsealed_km": "20.2"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11405",
@@ -16128,7 +16128,7 @@
     "route_rating": "Difficult",
     "route_terrain": "Rolling",
     "route_surface": "Paved",
-    "unsealed_km": "6.0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11405",
@@ -16147,7 +16147,7 @@
     "route_rating": "Very Difficult",
     "route_terrain": "Rolling",
     "route_surface": "Paved",
-    "unsealed_km": "9"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11403",
@@ -16166,7 +16166,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Climbing",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11402",
@@ -16185,7 +16185,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Climbing",
     "route_surface": "Paved",
-    "unsealed_km": "2.0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11401",
@@ -16204,7 +16204,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Rolling",
     "route_surface": "Paved",
-    "unsealed_km": "2.0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11400",
@@ -16223,7 +16223,7 @@
     "route_rating": "Easy",
     "route_terrain": "Rolling",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11400",
@@ -16242,7 +16242,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Rolling",
     "route_surface": "Paved",
-    "unsealed_km": "2.0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11399",
@@ -16261,7 +16261,7 @@
     "route_rating": "Easy",
     "route_terrain": "Rolling",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11288",
@@ -16280,7 +16280,7 @@
     "route_rating": "Intermediate",
     "route_terrain": "Rolling",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   },
   {
     "event_id": "11288",
@@ -16299,6 +16299,6 @@
     "route_rating": "Intermediate",
     "route_terrain": "Flat",
     "route_surface": "Paved",
-    "unsealed_km": "0"
+    "unsealed_km": 0.0
   }
 ]
