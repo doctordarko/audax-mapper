@@ -75,9 +75,15 @@
                 <!-- Organiser Filter -->
                 <div class="filter-group-horizontal">
                     <span class="filter-label">Organiser</span>
-                    <select id="organiser-filter" class="search-input">
-                        <option value="all">All Organisers</option>
-                    </select>
+                    <div class="custom-multiselect" id="organiser-multiselect">
+                        <div class="multiselect-trigger">
+                            <span class="multiselect-value">All Organisers</span>
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </div>
+                        <div class="multiselect-dropdown glass">
+                            <!-- Populated dynamically -->
+                        </div>
+                    </div>
                 </div>
 
                 <!-- Distance Filter -->
@@ -94,33 +100,161 @@
                 <!-- Month Filter -->
                 <div class="filter-group-horizontal">
                     <span class="filter-label">Month</span>
-                    <select id="month-filter" class="search-input">
-                        <option value="all">All Months</option>
-                        <option value="01">January</option>
-                        <option value="02">February</option>
-                        <option value="03">March</option>
-                        <option value="04">April</option>
-                        <option value="05">May</option>
-                        <option value="06">June</option>
-                        <option value="07">July</option>
-                        <option value="08">August</option>
-                        <option value="09">September</option>
-                        <option value="10">October</option>
-                        <option value="11">November</option>
-                        <option value="12">December</option>
-                    </select>
+                    <div class="custom-multiselect" id="month-multiselect">
+                        <div class="multiselect-trigger">
+                            <span class="multiselect-value">All Months</span>
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </div>
+                        <div class="multiselect-dropdown glass">
+                            <label class="multiselect-option">
+                                <input type="checkbox" value="01">
+                                <span>January</span>
+                            </label>
+                            <label class="multiselect-option">
+                                <input type="checkbox" value="02">
+                                <span>February</span>
+                            </label>
+                            <label class="multiselect-option">
+                                <input type="checkbox" value="03">
+                                <span>March</span>
+                            </label>
+                            <label class="multiselect-option">
+                                <input type="checkbox" value="04">
+                                <span>April</span>
+                            </label>
+                            <label class="multiselect-option">
+                                <input type="checkbox" value="05">
+                                <span>May</span>
+                            </label>
+                            <label class="multiselect-option">
+                                <input type="checkbox" value="06">
+                                <span>June</span>
+                            </label>
+                            <label class="multiselect-option">
+                                <input type="checkbox" value="07">
+                                <span>July</span>
+                            </label>
+                            <label class="multiselect-option">
+                                <input type="checkbox" value="08">
+                                <span>August</span>
+                            </label>
+                            <label class="multiselect-option">
+                                <input type="checkbox" value="09">
+                                <span>September</span>
+                            </label>
+                            <label class="multiselect-option">
+                                <input type="checkbox" value="10">
+                                <span>October</span>
+                            </label>
+                            <label class="multiselect-option">
+                                <input type="checkbox" value="11">
+                                <span>November</span>
+                            </label>
+                            <label class="multiselect-option">
+                                <input type="checkbox" value="12">
+                                <span>December</span>
+                            </label>
+                        </div>
+                    </div>
                 </div>
 
                 <!-- Terrain Filter -->
                 <div class="filter-group-horizontal">
                     <span class="filter-label">Terrain</span>
-                    <select id="terrain-filter" class="search-input">
-                        <option value="all">All Terrains</option>
-                        <option value="flat">Flat (&lt;0.5%)</option>
-                        <option value="rolling">Rolling (0.5%–0.9%)</option>
-                        <option value="moderate">Moderate (0.9%–1.3%)</option>
-                        <option value="hilly">Hilly (&ge;1.3%)</option>
-                    </select>
+                    <div class="custom-multiselect" id="terrain-multiselect">
+                        <div class="multiselect-trigger">
+                            <span class="multiselect-value">All Terrains</span>
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </div>
+                        <div class="multiselect-dropdown glass">
+                            <label class="multiselect-option">
+                                <input type="checkbox" value="flat">
+                                <span>Flat</span>
+                            </label>
+                            <label class="multiselect-option">
+                                <input type="checkbox" value="rolling">
+                                <span>Rolling</span>
+                            </label>
+                            <label class="multiselect-option">
+                                <input type="checkbox" value="climbing">
+                                <span>Climbing</span>
+                            </label>
+                            <label class="multiselect-option">
+                                <input type="checkbox" value="unknown">
+                                <span>Unknown</span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Rating Filter -->
+                <div class="filter-group-horizontal">
+                    <span class="filter-label">Rating</span>
+                    <div class="custom-multiselect" id="rating-multiselect">
+                        <div class="multiselect-trigger">
+                            <span class="multiselect-value">All Ratings</span>
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </div>
+                        <div class="multiselect-dropdown glass">
+                            <label class="multiselect-option">
+                                <input type="checkbox" value="easy">
+                                <span>Easy</span>
+                            </label>
+                            <label class="multiselect-option">
+                                <input type="checkbox" value="intermediate">
+                                <span>Intermediate</span>
+                            </label>
+                            <label class="multiselect-option">
+                                <input type="checkbox" value="difficult">
+                                <span>Difficult</span>
+                            </label>
+                            <label class="multiselect-option">
+                                <input type="checkbox" value="very difficult">
+                                <span>Very Difficult</span>
+                            </label>
+                            <label class="multiselect-option">
+                                <input type="checkbox" value="unknown">
+                                <span>Unknown</span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Surface Filter -->
+                <div class="filter-group-horizontal">
+                    <span class="filter-label">Surface</span>
+                    <div class="custom-multiselect" id="surface-multiselect">
+                        <div class="multiselect-trigger">
+                            <span class="multiselect-value">All Surfaces</span>
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </div>
+                        <div class="multiselect-dropdown glass">
+                            <label class="multiselect-option">
+                                <input type="checkbox" value="paved">
+                                <span>Paved</span>
+                            </label>
+                            <label class="multiselect-option">
+                                <input type="checkbox" value="mostly paved">
+                                <span>Mostly Paved</span>
+                            </label>
+                            <label class="multiselect-option">
+                                <input type="checkbox" value="mixed surfaces">
+                                <span>Mixed Surfaces</span>
+                            </label>
+                            <label class="multiselect-option">
+                                <input type="checkbox" value="mostly unpaved">
+                                <span>Mostly Unpaved</span>
+                            </label>
+                            <label class="multiselect-option">
+                                <input type="checkbox" value="unpaved">
+                                <span>Unpaved</span>
+                            </label>
+                            <label class="multiselect-option">
+                                <input type="checkbox" value="unknown">
+                                <span>Unknown</span>
+                            </label>
+                        </div>
+                    </div>
                 </div>
 
                 <!-- Sorting Selector -->
@@ -329,6 +463,18 @@
                             <div class="info-stat-lbl">Terrain</div>
                             <div class="info-stat-val" id="info-stat-terrain">—</div>
                         </div>
+                        <div class="info-stat">
+                            <div class="info-stat-lbl">Rating</div>
+                            <div class="info-stat-val" id="info-stat-audax-rating">—</div>
+                        </div>
+                        <div class="info-stat">
+                            <div class="info-stat-lbl">Surface</div>
+                            <div class="info-stat-val" id="info-stat-route-surface">—</div>
+                        </div>
+                        <div class="info-stat">
+                            <div class="info-stat-lbl">Unsealed</div>
+                            <div class="info-stat-val" id="info-stat-unsealed">— km</div>
+                        </div>
                     </div>
 
                     <!-- Custom Elevation Chart -->
@@ -353,6 +499,54 @@
 
     <!-- Dashboard Core Script -->
     <script>
+        // Floating debug console for page load errors
+        (function() {
+            const logContainer = document.createElement('div');
+            logContainer.id = 'floating-debug-console';
+            logContainer.style.position = 'fixed';
+            logContainer.style.bottom = '10px';
+            logContainer.style.right = '10px';
+            logContainer.style.width = '380px';
+            logContainer.style.maxHeight = '250px';
+            logContainer.style.overflowY = 'auto';
+            logContainer.style.backgroundColor = 'rgba(15, 23, 42, 0.95)';
+            logContainer.style.border = '1px solid #f43f5e';
+            logContainer.style.color = '#f43f5e';
+            logContainer.style.fontFamily = 'monospace';
+            logContainer.style.fontSize = '0.7rem';
+            logContainer.style.padding = '12px';
+            logContainer.style.borderRadius = '8px';
+            logContainer.style.zIndex = '99999';
+            logContainer.style.boxShadow = '0 10px 25px rgba(0, 0, 0, 0.5)';
+            logContainer.style.display = 'none'; // only show if error occurs
+            document.body.appendChild(logContainer);
+
+            function addLog(msg) {
+                logContainer.style.display = 'block';
+                const div = document.createElement('div');
+                div.style.marginBottom = '6px';
+                div.style.borderBottom = '1px solid rgba(244, 63, 94, 0.1)';
+                div.style.paddingBottom = '4px';
+                div.textContent = msg;
+                logContainer.appendChild(div);
+            }
+
+            window.addEventListener('error', function(e) {
+                addLog(`ERROR: ${e.message} at ${e.filename || 'inline'}:${e.lineno || '?'}:${e.colno || '?'}`);
+            });
+
+            window.addEventListener('unhandledrejection', function(e) {
+                addLog(`PROMISE REJECTION: ${e.reason ? e.reason.message || e.reason : 'Unknown error'}`);
+            });
+
+            const originalConsoleError = console.error;
+            console.error = function() {
+                originalConsoleError.apply(console, arguments);
+                const argsStr = Array.from(arguments).map(x => typeof x === 'object' ? JSON.stringify(x) : x).join(' ');
+                addLog(`CONSOLE ERROR: ${argsStr}`);
+            };
+        })();
+
         // Core application state
         let map;
         let allRoutes = [];
@@ -373,7 +567,7 @@
             if (loadedStatesGeodata.has(stateUpper)) return;
 
             try {
-                const response = await fetch(`data/geodata_${stateUpper}.json`);
+                const response = await fetch(`data/geodata_${stateUpper}.json?t=` + Date.now());
                 if (response.ok) {
                     const geodata = await response.json();
                     allRoutes.forEach(r => {
@@ -490,24 +684,22 @@
             return 0;
         }
 
-        // Get class and label for terrain based on gradient
+        // Get class and label for terrain based on official classification
         function getTerrainClassAndLabel(route) {
             const grade = getRouteGradient(route);
-            if (grade < 0.5) {
-                return { class: 'terrain-flat', label: 'Flat', grade: grade.toFixed(1) + '%' };
-            } else if (grade < 0.9) {
-                return { class: 'terrain-rolling', label: 'Rolling', grade: grade.toFixed(1) + '%' };
-            } else if (grade < 1.3) {
-                return { class: 'terrain-moderate', label: 'Moderate', grade: grade.toFixed(1) + '%' };
-            } else {
-                return { class: 'terrain-hilly', label: 'Hilly', grade: grade.toFixed(1) + '%' };
-            }
+            const terrain = route.route_terrain || 'Unknown';
+            let cls = 'terrain-unknown';
+            const terrainLower = terrain.toLowerCase();
+            if (terrainLower === 'flat') cls = 'terrain-flat';
+            else if (terrainLower === 'rolling') cls = 'terrain-rolling';
+            else if (terrainLower === 'climbing') cls = 'terrain-climbing';
+            return { class: cls, label: terrain, grade: grade.toFixed(1) + '%' };
         }
 
         // Fetch and load route tracks
         async function loadRoutesData() {
             try {
-                const response = await fetch('data/routes_metadata.json');
+                const response = await fetch('data/routes_metadata.json?t=' + Date.now());
                 allRoutes = await response.json();
                 console.log(`Loaded ${allRoutes.length} route metadata entries.`);
 
@@ -527,10 +719,19 @@
 
         // Extract unique organizers and fill dropdown
         function populateOrganisersDropdown() {
-            const dropdown = document.getElementById('organiser-filter');
-            const currentSelected = dropdown.value;
+            const container = document.getElementById('organiser-multiselect');
+            if (!container) return;
+            const dropdown = container.querySelector('.multiselect-dropdown');
+            const valueSpan = container.querySelector('.multiselect-value');
+            
+            // Get currently checked organiser names
+            const previouslyChecked = [];
+            dropdown.querySelectorAll('input[type="checkbox"]').forEach(cb => {
+                if (cb.checked) previouslyChecked.push(cb.value);
+            });
 
-            dropdown.innerHTML = '<option value="all">All Organisers</option>';
+            // Rebuild dropdown HTML
+            dropdown.innerHTML = '';
 
             const selectedState = document.getElementById('state-filter').value;
             const organisers = new Set();
@@ -542,19 +743,75 @@
             });
 
             const sortedOrgs = Array.from(organisers).sort();
+            
             sortedOrgs.forEach(org => {
-                const opt = document.createElement('option');
-                opt.value = org;
-                opt.textContent = org;
-                dropdown.appendChild(opt);
+                const label = document.createElement('label');
+                label.className = 'multiselect-option';
+                
+                const input = document.createElement('input');
+                input.type = 'checkbox';
+                input.value = org;
+                
+                // If it was checked before, keep it checked
+                if (previouslyChecked.includes(org)) {
+                    input.checked = true;
+                }
+                
+                const span = document.createElement('span');
+                span.textContent = org;
+                
+                label.appendChild(input);
+                label.appendChild(span);
+                dropdown.appendChild(label);
             });
 
-            // Restore previously selected organiser if still available in current state
-            if (organisers.has(currentSelected)) {
-                dropdown.value = currentSelected;
-            } else {
-                dropdown.value = 'all';
+            // Attach event listeners to new checkboxes
+            const checkboxes = dropdown.querySelectorAll('input[type="checkbox"]');
+            checkboxes.forEach(cb => {
+                cb.addEventListener('change', () => {
+                    updateDisplayText();
+                    renderMapRoutes();
+                    renderRouteList();
+                    updateStats();
+                    updateResetButtonState();
+                });
+            });
+
+            function updateDisplayText() {
+                const checked = [];
+                dropdown.querySelectorAll('input[type="checkbox"]').forEach(cb => {
+                    if (cb.checked) checked.push(cb.value);
+                });
+
+                const trigger = container.querySelector('.multiselect-trigger');
+
+                if (checked.length === 0) {
+                    valueSpan.textContent = 'All Organisers';
+                    if (trigger) trigger.classList.remove('active-filter');
+                } else if (checked.length === checkboxes.length) {
+                    valueSpan.textContent = 'All Organisers';
+                    if (trigger) trigger.classList.remove('active-filter');
+                } else {
+                    valueSpan.textContent = checked.join(', ');
+                    if (trigger) trigger.classList.add('active-filter');
+                }
             }
+
+            container.reset = function() {
+                dropdown.querySelectorAll('input[type="checkbox"]').forEach(cb => cb.checked = false);
+                updateDisplayText();
+            };
+
+            container.getSelectedValues = function() {
+                const vals = [];
+                dropdown.querySelectorAll('input[type="checkbox"]').forEach(cb => {
+                    if (cb.checked) vals.push(cb.value.toLowerCase());
+                });
+                return vals;
+            };
+
+            // Initialize display text
+            updateDisplayText();
         }
 
         // Render polylines on map
@@ -750,11 +1007,23 @@
 
             // Reset dropdowns
             document.getElementById('state-filter').value = 'SA';
+            if (document.getElementById('organiser-multiselect') && document.getElementById('organiser-multiselect').reset) {
+                document.getElementById('organiser-multiselect').reset();
+            }
             populateOrganisersDropdown(); // Rebuild organiser list for "All States"
-            document.getElementById('organiser-filter').value = 'all';
 
-            document.getElementById('month-filter').value = 'all';
-            document.getElementById('terrain-filter').value = 'all';
+            if (document.getElementById('month-multiselect') && document.getElementById('month-multiselect').reset) {
+                document.getElementById('month-multiselect').reset();
+            }
+            if (document.getElementById('terrain-multiselect') && document.getElementById('terrain-multiselect').reset) {
+                document.getElementById('terrain-multiselect').reset();
+            }
+            if (document.getElementById('rating-multiselect') && document.getElementById('rating-multiselect').reset) {
+                document.getElementById('rating-multiselect').reset();
+            }
+            if (document.getElementById('surface-multiselect') && document.getElementById('surface-multiselect').reset) {
+                document.getElementById('surface-multiselect').reset();
+            }
             document.getElementById('sort-filter').value = 'date-asc'; // default sort
 
             // Reset isolation state
@@ -781,22 +1050,59 @@
             const hasDist = activeDistEl ? activeDistEl.dataset.dist !== 'all' : false;
             
             const hasState = document.getElementById('state-filter').value !== 'SA';
-            const hasOrg = document.getElementById('organiser-filter').value !== 'all';
-            const hasMonth = document.getElementById('month-filter').value !== 'all';
-            const hasTerrain = document.getElementById('terrain-filter').value !== 'all';
+
+            const orgEl = document.getElementById('organiser-multiselect');
+            const selectedOrganisers = orgEl && orgEl.getSelectedValues ? orgEl.getSelectedValues() : [];
+            const hasOrg = selectedOrganisers.length > 0;
+
+            const monthEl = document.getElementById('month-multiselect');
+            const selectedMonths = monthEl && monthEl.getSelectedValues ? monthEl.getSelectedValues() : [];
+            const hasMonth = selectedMonths.length > 0;
+
+            const terrainEl = document.getElementById('terrain-multiselect');
+            const selectedTerrains = terrainEl && terrainEl.getSelectedValues ? terrainEl.getSelectedValues() : [];
+            const hasTerrain = selectedTerrains.length > 0;
+
+            const ratingEl = document.getElementById('rating-multiselect');
+            const selectedRatings = ratingEl && ratingEl.getSelectedValues ? ratingEl.getSelectedValues() : [];
+            const hasRating = selectedRatings.length > 0;
+
+            const surfaceEl = document.getElementById('surface-multiselect');
+            const selectedSurfaces = surfaceEl && surfaceEl.getSelectedValues ? surfaceEl.getSelectedValues() : [];
+            const hasSurface = selectedSurfaces.length > 0;
+
             const hasSort = document.getElementById('sort-filter').value !== 'date-asc';
             const hasIsolation = isolatedEventId !== null || isolatedRouteId !== null;
 
-            const isFiltered = hasSearch || hasType || hasDist || hasOrg || hasMonth || hasTerrain || hasSort || hasIsolation || hasState;
+            const isFiltered = hasSearch || hasType || hasDist || hasOrg || hasMonth || hasTerrain || hasRating || hasSurface || hasSort || hasIsolation || hasState;
             
             // Toggle highlight class for active filters/sorting
             document.getElementById('search-bar').classList.toggle('active-filter', hasSearch);
             document.getElementById('state-filter').classList.toggle('active-filter', hasState);
             document.getElementById('type-filter').classList.toggle('active-filter', hasType);
             document.getElementById('distance-filter').classList.toggle('active-filter', hasDist);
-            document.getElementById('organiser-filter').classList.toggle('active-filter', hasOrg);
-            document.getElementById('month-filter').classList.toggle('active-filter', hasMonth);
-            document.getElementById('terrain-filter').classList.toggle('active-filter', hasTerrain);
+            
+            if (orgEl) {
+                const trigger = orgEl.querySelector('.multiselect-trigger');
+                if (trigger) trigger.classList.toggle('active-filter', hasOrg);
+            }
+            if (monthEl) {
+                const trigger = monthEl.querySelector('.multiselect-trigger');
+                if (trigger) trigger.classList.toggle('active-filter', hasMonth);
+            }
+            if (terrainEl) {
+                const trigger = terrainEl.querySelector('.multiselect-trigger');
+                if (trigger) trigger.classList.toggle('active-filter', hasTerrain);
+            }
+            if (ratingEl) {
+                const trigger = ratingEl.querySelector('.multiselect-trigger');
+                if (trigger) trigger.classList.toggle('active-filter', hasRating);
+            }
+            if (surfaceEl) {
+                const trigger = surfaceEl.querySelector('.multiselect-trigger');
+                if (trigger) trigger.classList.toggle('active-filter', hasSurface);
+            }
+            
             document.getElementById('sort-filter').classList.toggle('active-filter', hasSort);
 
 
@@ -897,13 +1203,21 @@
             card.style.display = 'block';
 
             document.getElementById('info-title').textContent = route.route_name;
-            document.getElementById('info-event').textContent = `Type: ${route.route_type} | Event: ${route.event_title} (${formatDate(route.event_date)})`;
+            let regStr = "";
+            if (route.registrations_raw != null && route.registrations_raw !== "") {
+                regStr = ` | Registrations: ${route.registrations_raw}`;
+            }
+            document.getElementById('info-event').textContent = `Type: ${route.route_type} | Event: ${route.event_title} (${formatDate(route.event_date)})${regStr}`;
             document.getElementById('info-stat-dist').textContent = `${route.distance_km} km`;
             document.getElementById('info-stat-climb').textContent = `${route.elevation_gain_m} m`;
 
             const terrainInfo = getTerrainClassAndLabel(route);
             document.getElementById('info-stat-grade').textContent = terrainInfo.grade;
             document.getElementById('info-stat-terrain').textContent = terrainInfo.label;
+            document.getElementById('info-stat-audax-rating').textContent = route.route_rating || '—';
+            document.getElementById('info-stat-route-surface').textContent = route.route_surface || '—';
+            const unsealedVal = route.unsealed_km != null ? parseFloat(route.unsealed_km) : 0;
+            document.getElementById('info-stat-unsealed').textContent = `${unsealedVal.toFixed(1)} km`;
 
             // Start / end elevation from track
             const track = route.track;
@@ -1127,9 +1441,21 @@
             const activeDistance = document.querySelector('#distance-filter .segment-btn.active').dataset.dist;
             const activeType = document.querySelector('#type-filter .segment-btn.active').dataset.type;
             const activeState = document.getElementById('state-filter').value;
-            const activeOrganiser = document.getElementById('organiser-filter').value;
-            const activeMonth = document.getElementById('month-filter').value;
-            const activeTerrain = document.getElementById('terrain-filter').value;
+            const selectedOrganisers = document.getElementById('organiser-multiselect') && document.getElementById('organiser-multiselect').getSelectedValues
+                ? document.getElementById('organiser-multiselect').getSelectedValues()
+                : [];
+            const selectedMonths = document.getElementById('month-multiselect') && document.getElementById('month-multiselect').getSelectedValues
+                ? document.getElementById('month-multiselect').getSelectedValues()
+                : [];
+            const selectedTerrains = document.getElementById('terrain-multiselect') && document.getElementById('terrain-multiselect').getSelectedValues
+                ? document.getElementById('terrain-multiselect').getSelectedValues()
+                : [];
+            const selectedRatings = document.getElementById('rating-multiselect') && document.getElementById('rating-multiselect').getSelectedValues
+                ? document.getElementById('rating-multiselect').getSelectedValues()
+                : [];
+            const selectedSurfaces = document.getElementById('surface-multiselect') && document.getElementById('surface-multiselect').getSelectedValues
+                ? document.getElementById('surface-multiselect').getSelectedValues()
+                : [];
 
             return pool.filter(route => {
                 if (activeState !== 'all' && route.state !== activeState) return false;
@@ -1146,30 +1472,40 @@
                     if (activeType === 'ba' && rType !== 'ba') return false;
                 }
 
-                if (activeOrganiser !== 'all' && route.organiser !== activeOrganiser) return false;
+                if (selectedOrganisers.length > 0) {
+                    const orgVal = (route.organiser || 'Unknown').toLowerCase();
+                    if (!selectedOrganisers.includes(orgVal)) return false;
+                }
 
                 const dist = route.distance_km;
                 if (activeDistance === 'short' && dist >= 150) return false;
                 if (activeDistance === 'medium' && (dist < 150 || dist >= 300)) return false;
                 if (activeDistance === 'long' && dist < 300) return false;
 
-                if (activeMonth !== 'all') {
+                if (selectedMonths.length > 0) {
                     if (!route.event_date) return false;
                     const dateParts = route.event_date.split('-');
                     if (dateParts.length >= 2) {
                         const m = dateParts[1];
-                        if (m !== activeMonth) return false;
+                        if (!selectedMonths.includes(m)) return false;
                     } else {
                         return false;
                     }
                 }
 
-                if (activeTerrain !== 'all') {
-                    const grade = getRouteGradient(route);
-                    if (activeTerrain === 'flat' && grade >= 0.5) return false;
-                    if (activeTerrain === 'rolling' && (grade < 0.5 || grade >= 0.9)) return false;
-                    if (activeTerrain === 'moderate' && (grade < 0.9 || grade >= 1.3)) return false;
-                    if (activeTerrain === 'hilly' && grade < 1.3) return false;
+                if (selectedTerrains.length > 0) {
+                    const terrainVal = (route.route_terrain || 'Unknown').toLowerCase();
+                    if (!selectedTerrains.includes(terrainVal)) return false;
+                }
+
+                if (selectedRatings.length > 0) {
+                    const ratingVal = (route.route_rating || 'Unknown').toLowerCase();
+                    if (!selectedRatings.includes(ratingVal)) return false;
+                }
+
+                if (selectedSurfaces.length > 0) {
+                    const surfaceVal = (route.route_surface || 'Unknown').toLowerCase();
+                    if (!selectedSurfaces.includes(surfaceVal)) return false;
                 }
 
                 return true;
@@ -1459,29 +1795,7 @@
                 });
             });
 
-            // Organiser Dropdown Filter
-            document.getElementById('organiser-filter').addEventListener('change', () => {
-                renderMapRoutes();
-                renderRouteList();
-                updateStats();
-                updateResetButtonState();
-            });
 
-            // Month Dropdown Filter
-            document.getElementById('month-filter').addEventListener('change', () => {
-                renderMapRoutes();
-                renderRouteList();
-                updateStats();
-                updateResetButtonState();
-            });
-
-            // Terrain Dropdown Filter
-            document.getElementById('terrain-filter').addEventListener('change', () => {
-                renderMapRoutes();
-                renderRouteList();
-                updateStats();
-                updateResetButtonState();
-            });
 
             // State Dropdown Filter
             document.getElementById('state-filter').addEventListener('change', async () => {
@@ -1639,9 +1953,106 @@
 
         }
 
+        // Custom Multiselect logic
+        function setupCustomMultiselect(containerId, placeholder, onChangeCallback) {
+            const container = document.getElementById(containerId);
+            if (!container) return;
+            const trigger = container.querySelector('.multiselect-trigger');
+            const dropdown = container.querySelector('.multiselect-dropdown');
+            const valueSpan = container.querySelector('.multiselect-value');
+            const checkboxes = container.querySelectorAll('input[type="checkbox"]');
+
+            trigger.addEventListener('click', (e) => {
+                e.stopPropagation();
+                // Close other multiselect dropdowns first
+                document.querySelectorAll('.multiselect-dropdown').forEach(d => {
+                    if (d !== dropdown) d.classList.remove('show');
+                });
+                dropdown.classList.toggle('show');
+            });
+
+            checkboxes.forEach(cb => {
+                cb.addEventListener('change', () => {
+                    updateDisplayText();
+                    if (onChangeCallback) onChangeCallback();
+                });
+            });
+
+            function updateDisplayText() {
+                const checked = [];
+                checkboxes.forEach(cb => {
+                    if (cb.checked) {
+                        const labelText = cb.nextElementSibling ? cb.nextElementSibling.textContent : cb.value;
+                        checked.push(labelText);
+                    }
+                });
+
+                if (checked.length === 0) {
+                    valueSpan.textContent = placeholder;
+                    trigger.classList.remove('active-filter');
+                } else if (checked.length === checkboxes.length) {
+                    valueSpan.textContent = placeholder;
+                    trigger.classList.remove('active-filter');
+                } else {
+                    valueSpan.textContent = checked.join(', ');
+                    trigger.classList.add('active-filter');
+                }
+            }
+
+            container.reset = function() {
+                checkboxes.forEach(cb => cb.checked = false);
+                updateDisplayText();
+            };
+
+            container.getSelectedValues = function() {
+                const vals = [];
+                checkboxes.forEach(cb => {
+                    if (cb.checked) vals.push(cb.value.toLowerCase());
+                });
+                return vals;
+            };
+        }
+
+        function setupMultiselects() {
+            const onFilterChange = () => {
+                renderMapRoutes();
+                renderRouteList();
+                updateStats();
+                updateResetButtonState();
+            };
+            
+            setupCustomMultiselect('month-multiselect', 'All Months', onFilterChange);
+            setupCustomMultiselect('terrain-multiselect', 'All Terrains', onFilterChange);
+            setupCustomMultiselect('rating-multiselect', 'All Ratings', onFilterChange);
+            setupCustomMultiselect('surface-multiselect', 'All Surfaces', onFilterChange);
+
+            // Trigger setup for organiser-multiselect
+            const orgContainer = document.getElementById('organiser-multiselect');
+            if (orgContainer) {
+                const trigger = orgContainer.querySelector('.multiselect-trigger');
+                const dropdown = orgContainer.querySelector('.multiselect-dropdown');
+                if (trigger && dropdown) {
+                    trigger.addEventListener('click', (e) => {
+                        e.stopPropagation();
+                        document.querySelectorAll('.multiselect-dropdown').forEach(d => {
+                            if (d !== dropdown) d.classList.remove('show');
+                        });
+                        dropdown.classList.toggle('show');
+                    });
+                }
+            }
+
+            document.addEventListener('click', (e) => {
+                if (!e.target.closest('.custom-multiselect')) {
+                    document.querySelectorAll('.multiselect-dropdown').forEach(d => d.classList.remove('show'));
+                }
+            });
+        }
+
         // Window Load
         window.addEventListener('load', () => {
             initMap();
+            setupMultiselects();
             initListeners();
             loadRoutesData();
 

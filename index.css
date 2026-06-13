@@ -133,7 +133,7 @@ body {
     align-items: center;
     justify-content: space-between;
     padding: 0 24px 0 18px;
-    z-index: 100;
+    z-index: 1010;
     border-bottom: 1px solid var(--border-color);
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
     background: var(--bg-sidebar);
@@ -201,10 +201,11 @@ body {
 .top-bar-filters {
     display: flex;
     align-items: center;
-    gap: 16px;
+    gap: 10px;
     flex: 1;
     justify-content: flex-start;
     max-width: none;
+    flex-wrap: wrap;
 }
 
 .filter-group-horizontal {
@@ -342,10 +343,10 @@ body {
 
 
 select.search-input {
-    padding-left: 10px;
-    padding-right: 28px;
+    padding-left: 8px;
+    padding-right: 24px;
     width: auto;
-    min-width: 120px;
+    min-width: 100px;
     cursor: pointer;
 }
 
@@ -644,6 +645,18 @@ select.search-input {
     background: rgba(244, 63, 94, 0.1);
     border: 1px solid rgba(244, 63, 94, 0.2);
     color: var(--accent-pink);
+}
+
+.route-subitem-terrain.terrain-climbing {
+    background: rgba(244, 63, 94, 0.1);
+    border: 1px solid rgba(244, 63, 94, 0.2);
+    color: var(--accent-pink);
+}
+
+.route-subitem-terrain.terrain-unknown {
+    background: rgba(156, 163, 175, 0.1);
+    border: 1px solid rgba(156, 163, 175, 0.2);
+    color: var(--text-secondary);
 }
 
 .route-subitem-dist {
@@ -962,5 +975,97 @@ select.search-input {
 path.leaflet-interactive:focus,
 .leaflet-marker-icon:focus {
     outline: none !important;
+}
+
+/* Custom Multiselect Checkbox Dropdowns */
+.custom-multiselect {
+    position: relative;
+    display: inline-block;
+    user-select: none;
+}
+
+.multiselect-trigger {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+    padding: 6px 10px;
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    color: var(--text-primary);
+    font-family: var(--font-body);
+    font-size: 0.8rem;
+    cursor: pointer;
+    min-height: 30px;
+    min-width: 120px;
+    transition: var(--transition-fast);
+}
+
+.multiselect-trigger:hover {
+    border-color: var(--accent-cyan);
+    background: var(--bg-card-hover);
+}
+
+.multiselect-trigger.active-filter {
+    border-color: var(--accent-cyan);
+    box-shadow: 0 0 8px rgba(6, 182, 212, 0.15);
+    background: var(--bg-card-hover);
+}
+
+.multiselect-value {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 95px;
+}
+
+.multiselect-dropdown {
+    position: absolute;
+    top: calc(100% + 4px);
+    left: 0;
+    min-width: 170px;
+    max-height: 250px;
+    overflow-y: auto;
+    background: var(--bg-sidebar);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+    padding: 6px 0;
+    z-index: 1000;
+    display: none;
+}
+
+.multiselect-dropdown.glass {
+    background: rgba(15, 23, 42, 0.95);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+}
+
+.multiselect-dropdown.show {
+    display: block;
+}
+
+.multiselect-option {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 8px 12px;
+    color: var(--text-primary);
+    font-size: 0.78rem;
+    cursor: pointer;
+    transition: background var(--transition-fast);
+}
+
+.multiselect-option:hover {
+    background: var(--bg-card-hover);
+}
+
+.multiselect-option input[type="checkbox"] {
+    cursor: pointer;
+    accent-color: var(--accent-cyan);
+    width: 14px;
+    height: 14px;
+    margin: 0;
 }
 
